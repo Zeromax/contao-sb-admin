@@ -1,0 +1,24 @@
+<nav>
+	<ul class="pagination">
+		<?php if ($this->hasFirst):?>
+			<li>
+				<a href="<?=$this->first['href']?>" class="first" title="<?=$this->first['title']?>"><?=$this->first['link']?></a>
+			</li>
+		<?php endif;?>
+		<?php if ($this->hasPrevious):?>
+			<li>
+				<a href="<?=$this->previous['href']?>" class="previous" title="<?=$this->previous['title']?>" aria-label="<?=$this->previous['link']?>"><span aria-hidden="true">&laquo;</span></a></li>
+		<?php endif;?>
+		<?=$this->items?>
+		<?php if ($this->hasNext):?>
+			<li>
+				<a href="<?=$this->next['href']?>" class="next" title="<?=$this->next['title']?>" aria-label="<?=$this->next['link']?>"><span aria-hidden="true">&raquo;</span></a>
+			</li>
+		<?php endif;?>
+		<?php if ($this->hasLast):?>
+			<li class="last">
+				<a href="<?=$this->last['href']?>" class="last" title="<?=$this->last['title']?>"><?=$this->last['link']?></a>
+			</li>
+		<?php endif;?>
+	</ul>
+</nav>
