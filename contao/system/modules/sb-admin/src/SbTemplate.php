@@ -27,38 +27,40 @@ class SbTemplate
 {
 	public function chooseTemplates()
 	{
-		if (TL_MODE != "BE")
+		$theme = $GLOBALS['TL_CONFIG']['backendTheme'];
+
+		// already set in autoload
+		if ($theme == "sb-admin")
 		{
 			return;
 		}
-		$theme = $GLOBALS['TL_CONFIG']['backendTheme'];
 
+		// check them for back end user
 		$objUser = \BackendUser::getInstance();
-		if ($objUser !== null && $objUser->backendTheme != "")
+		if ($objUser === null || ($objUser !== null && $objUser->backendTheme != "sb-admin"))
 		{
-			$theme = $GLOBALS['TL_CONFIG']['backendTheme'];
+			return;
 		}
-		if ($theme == "sb-admin")
-		{
-			/**
-			 * Register the templates
-			 */
-			\TemplateLoader::addFiles(array
-			(
-				'be_forbidden' => 'system/modules/sb-admin/templates/backend',
-				'be_login' => 'system/modules/sb-admin/templates/backend',
-				'be_main' => 'system/modules/sb-admin/templates/backend',
-				'be_navigation' => 'system/modules/sb-admin/templates/backend',
-				'be_no_active' => 'system/modules/sb-admin/templates/backend',
-				'be_no_layout' => 'system/modules/sb-admin/templates/backend',
-				'be_no_page' => 'system/modules/sb-admin/templates/backend',
-				'be_no_root' => 'system/modules/sb-admin/templates/backend',
-				'be_pagination' => 'system/modules/sb-admin/templates/backend',
-				'be_password' => 'system/modules/sb-admin/templates/backend',
-				'be_picker' => 'system/modules/sb-admin/templates/backend',
-				'be_unavailable' => 'system/modules/sb-admin/templates/backend',
-				'be_welcome' => 'system/modules/sb-admin/templates/backend',
-			));
-		}
+
+		/**
+		 * Register the templates
+		 */
+		\TemplateLoader::addFiles(array
+		(
+			'be_forbidden' => 'system/modules/sb-admin/templates/backend',
+			'be_login' => 'system/modules/sb-admin/templates/backend',
+			'be_main' => 'system/modules/sb-admin/templates/backend',
+			'be_navigation' => 'system/modules/sb-admin/templates/backend',
+			'be_no_active' => 'system/modules/sb-admin/templates/backend',
+			'be_no_layout' => 'system/modules/sb-admin/templates/backend',
+			'be_no_page' => 'system/modules/sb-admin/templates/backend',
+			'be_no_root' => 'system/modules/sb-admin/templates/backend',
+			'be_pagination' => 'system/modules/sb-admin/templates/backend',
+			'be_password' => 'system/modules/sb-admin/templates/backend',
+			'be_picker' => 'system/modules/sb-admin/templates/backend',
+			'be_switch' => 'system/modules/sb-admin/templates/backend',
+			'be_unavailable' => 'system/modules/sb-admin/templates/backend',
+			'be_welcome' => 'system/modules/sb-admin/templates/backend',
+		));
 	}
 }
