@@ -56,6 +56,7 @@ class SbTemplate
 				'be_pagination' => 'system/modules/sb-admin/templates/backend',
 				'be_password' => 'system/modules/sb-admin/templates/backend',
 				'be_picker' => 'system/modules/sb-admin/templates/backend',
+				'be_unavailable' => 'system/modules/sb-admin/templates/backend',
 				'be_welcome' => 'system/modules/sb-admin/templates/backend',
 			));
 		}
