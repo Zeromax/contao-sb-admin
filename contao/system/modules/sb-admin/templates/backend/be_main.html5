@@ -167,7 +167,6 @@
 				<?php if (!$this->isPopup):?>
 					<div class="row">
 						<div class="col-lg-12">
-							<? $arrBreadcrumo = explode("»", $this->headline); ?>
 							<ol class="breadcrumb">
 								<?foreach (explode("»", $this->headline) as $key=>$value): ?>
 									<li><?=$value; ?></li>
