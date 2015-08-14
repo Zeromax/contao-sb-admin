@@ -41,7 +41,7 @@ $backendUserLogIn = sha1(session_id() . (!Config::get('disableIpCheck') ? Enviro
 							<h3 class="panel-title">Contao Open Source CMS</h3>
 						</div>
 						<div class="panel-body">
-							<h3 class="error-headline"><?=$lang->noActive?></h3>
+							<h3 class="text-danger"><i class="fa fa-warning fa-fw"></i> <?=$lang->noActive?></h3>
 
 							<h4><?=$lang->matter?></h4>
 							<p><?=$lang->noActivePages?></p>

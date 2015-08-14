@@ -46,7 +46,6 @@
     background-color: #d9edf7;
     border-color: #bce8f1;
 }
-.error-headline:before,
 .tl_confirm:before,
 .tl_new:before,
 .tl_info:before,
@@ -69,7 +68,6 @@ fieldset.tl_box > legend:before {
 .tl_info:before {
     content: "\f05a";
 }
-.error-headline:before,
 .tl_error:before {
 	content: "\f071";
 }
@@ -533,9 +531,6 @@ div.clear {
 	font-size: 1.2em;
 	cursor: pointer;
 	display:inline;
-}
-.error-headline {
-	color: #a94442;
 }
 
 
