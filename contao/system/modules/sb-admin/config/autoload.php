@@ -39,6 +39,7 @@ if ($GLOBALS['TL_CONFIG']['backendTheme'] == "sb-admin")
 	TemplateLoader::addFiles(array
 	(
 		'be_forbidden' => 'system/modules/sb-admin/templates/backend',
+		'be_install' => 'system/modules/sb-admin/templates/backend',
 		'be_login' => 'system/modules/sb-admin/templates/backend',
 		'be_main' => 'system/modules/sb-admin/templates/backend',
 		'be_navigation' => 'system/modules/sb-admin/templates/backend',
