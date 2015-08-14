@@ -55,7 +55,7 @@ $backendUserLogIn = sha1(session_id() . (!Config::get('disableIpCheck') ? Enviro
 						</div>
 						<?if ($backendUserLogIn === true):?>
 							<div class="panel-footer">
-								<p class="text-muted"><small><?php printf($lang->hint, 'templates/be_no_active.html5');?></small></p>
+								<p class="text-muted"><small><?php printf($lang->hint, 'templates/be_referer.html5');?></small></p>
 							</div>
 						<?endif;?>
 					</div>

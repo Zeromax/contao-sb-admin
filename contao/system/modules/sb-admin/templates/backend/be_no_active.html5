@@ -47,7 +47,7 @@ $backendUserLogIn = sha1(session_id() . (!Config::get('disableIpCheck') ? Enviro
 							<p><?=$lang->noActivePages?></p>
 
 							<h4><?=$lang->howToFix?></h4>
-							<p><?php printf($lang->noActiveFix, Environment::get('base'), StringUtil::encodeEmail('mailto:' . Config::get('adminEmail')));?></p>
+							<p><?php printf($lang->noActiveFix, StringUtil::encodeEmail('mailto:' . Config::get('adminEmail')));?></p>
 						</div>
 						<?if ($backendUserLogIn === true):?>
 							<div class="panel-footer">
