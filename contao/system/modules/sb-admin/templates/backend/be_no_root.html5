@@ -39,12 +39,12 @@ if (!defined(TL_ASSETS_URL))
 							<h3 class="panel-title">Contao Open Source CMS</h3>
 						</div>
 						<div class="panel-body">
-							<h4 class="error-headline"><?=$lang->noRoot?></h4>
+							<h3 class="error-headline"><?=$lang->noRoot?></h3>
 
-							<h3><?=$lang->matter?></h3>
+							<h4><?=$lang->matter?></h4>
 							<p><?=$lang->noRootPage?></p>
 
-							<h3><?=$lang->howToFix?></h3>
+							<h4><?=$lang->howToFix?></h4>
 							<p><?php printf($lang->noRootFix, Environment::get('base'), StringUtil::encodeEmail('mailto:' . Config::get('adminEmail')));?></p>
 						</div>
 						<div class="panel-footer">
