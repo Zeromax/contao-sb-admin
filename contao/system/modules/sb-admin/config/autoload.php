@@ -43,6 +43,7 @@ if ($GLOBALS['TL_CONFIG']['backendTheme'] == "sb-admin")
 		'be_main' => 'system/modules/sb-admin/templates/backend',
 		'be_navigation' => 'system/modules/sb-admin/templates/backend',
 		'be_no_active' => 'system/modules/sb-admin/templates/backend',
+		'be_no_forward' => 'system/modules/sb-admin/templates/backend',
 		'be_no_layout' => 'system/modules/sb-admin/templates/backend',
 		'be_no_page' => 'system/modules/sb-admin/templates/backend',
 		'be_no_root' => 'system/modules/sb-admin/templates/backend',
