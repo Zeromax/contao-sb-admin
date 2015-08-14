@@ -1,0 +1,67 @@
+<?php
+$theme = Backend::getTheme();
+
+System::loadLanguageFile('exception');
+$lang = (object)$GLOBALS['TL_LANG']['XPT'];
+
+if (!defined(TL_ASSETS_URL))
+{
+	define(TL_ASSETS_URL, '');
+}
+
+$backendUserLogIn = sha1(session_id() . (!Config::get('disableIpCheck') ? Environment::get('ip') : '') . 'BE_USER_AUTH') == Input::cookie('BE_USER_AUTH');
+?>
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta charset="utf-8">
+		<title><?=$lang->requestToken?></title>
+		<meta name="generator" content="Contao Open Source CMS">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<base href="<?=Environment::get('base')?>">
+
+		<link rel="stylesheet" href="<?php
+		$objCombiner = new Combiner();
+		$version = filemtime(TL_ROOT . '/system/themes/' . $theme . '/css/bootstrap.css');
+		$objCombiner->add('system/themes/' . $theme . '/css/bootstrap.css', $version);
+		$version = filemtime(TL_ROOT . '/system/themes/' . $theme . '/css/style.css');
+		$objCombiner->add('system/themes/' . $theme . '/css/style.css', $version);
+		echo $objCombiner->getCombinedFile();
+		?>">
+
+	</head>
+	<body class="<?=Environment::get('agent')->class?>">
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<div class="login-panel panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Contao Open Source CMS</h3>
+						</div>
+						<div class="panel-body">
+							<h3 class="text-danger"><i class="fa fa-warning fa-fw"></i> <?=$lang->requestToken?></h3>
+
+							<h4><?=$lang->matter?></h4>
+							<p><?=$lang->invalidToken?></p>
+
+							<h4><?=$lang->howToFix?></h4>
+							<p><?= $lang->tokenRetry ?></p>
+
+							<h4><?= $lang->more ?></h4>
+							<p><?= $lang->tokenExplainOne ?></p>
+							<p><?= $lang->tokenExplainTwo ?></p>
+						</div>
+						<?if ($backendUserLogIn === true):?>
+							<div class="panel-footer">
+								<p class="text-muted"><small><?php printf($lang->hint, 'templates/be_no_active.html5');?></small></p>
+							</div>
+						<?endif;?>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>

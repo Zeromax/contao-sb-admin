@@ -49,6 +49,7 @@ if ($GLOBALS['TL_CONFIG']['backendTheme'] == "sb-admin")
 		'be_pagination' => 'system/modules/sb-admin/templates/backend',
 		'be_password' => 'system/modules/sb-admin/templates/backend',
 		'be_picker' => 'system/modules/sb-admin/templates/backend',
+		'be_referer' => 'system/modules/sb-admin/templates/backend',
 		'be_switch' => 'system/modules/sb-admin/templates/backend',
 		'be_unavailable' => 'system/modules/sb-admin/templates/backend',
 		'be_welcome' => 'system/modules/sb-admin/templates/backend',
