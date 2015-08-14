@@ -16,7 +16,7 @@ $backendUserLogIn = sha1(session_id() . (!Config::get('disableIpCheck') ? Enviro
 	<head>
 
 		<meta charset="utf-8">
-		<title><?= $lang->noLayout ?></title>
+		<title><?=$lang->noLayout?></title>
 		<meta name="generator" content="Contao Open Source CMS">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 		<base href="<?=Environment::get('base')?>">
@@ -49,14 +49,14 @@ $backendUserLogIn = sha1(session_id() . (!Config::get('disableIpCheck') ? Enviro
 							<h4><?=$lang->howToFix?></h4>
 							<p><?php printf($lang->noLayoutFix, Environment::get('base'), StringUtil::encodeEmail('mailto:' . Config::get('adminEmail')));?></p>
 
-							<h4><?= $lang->more ?></h4>
-							<p><?= $lang->noLayoutExplain ?></p>
+							<h4><?=$lang->more?></h4>
+							<p><?=$lang->noLayoutExplain?></p>
 						</div>
-						<? if($backendUserLogIn === true): ?>
+						<?if ($backendUserLogIn === true):?>
 							<div class="panel-footer">
 								<p class="text-muted"><small><?php printf($lang->hint, 'templates/be_no_layout.html5');?></small></p>
 							</div>
-						<?endif; ?>
+						<?endif;?>
 					</div>
 				</div>
 			</div>
