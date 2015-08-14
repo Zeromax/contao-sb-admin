@@ -8,6 +8,8 @@ if (!defined(TL_ASSETS_URL))
 {
 	define(TL_ASSETS_URL, '');
 }
+
+$backendUserLogIn = sha1(session_id() . (!Config::get('disableIpCheck') ? Environment::get('ip') : '') . 'BE_USER_AUTH') == Input::cookie('BE_USER_AUTH');
 ?>
 <!DOCTYPE html>
 <html>
@@ -47,9 +49,11 @@ if (!defined(TL_ASSETS_URL))
 							<h4><?=$lang->howToFix?></h4>
 							<p><?php printf($lang->noRootFix, Environment::get('base'), StringUtil::encodeEmail('mailto:' . Config::get('adminEmail')));?></p>
 						</div>
-						<div class="panel-footer">
-							<p class="text-muted"><small><?php printf($lang->hint, 'templates/be_no_root.html5');?></small></p>
-						</div>
+						<? if($backendUserLogIn === true): ?>
+							<div class="panel-footer">
+								<p class="text-muted"><small><?php printf($lang->hint, 'templates/be_no_root.html5');?></small></p>
+							</div>
+						<?endif; ?>
 					</div>
 				</div>
 			</div>
