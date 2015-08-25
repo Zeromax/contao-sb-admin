@@ -1,4 +1,4 @@
-//@prepros-append components/custom_contao_core.js
+//@prepros-append components/m_custom.js
 ;var BsAjaxRequest =
 {
 	/**
