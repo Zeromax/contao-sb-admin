@@ -3,5 +3,17 @@
 @import "../components/startbootstrap-sb-admin-2/css/sb-admin-2";
 @import "../components/font-awesome/scss/font-awesome";
 
+/* element styles */
+@import "components/notification";
+@import "components/panel";
+@import "components/form";
+@import "components/listing";
+@import "components/icon";
+@import "components/button";
+
+/* plugins */
+@import "components/plugins/chosen";
+@import "components/plugins/tooltip";
+
 /* custom styles */
 @import "components/custom";

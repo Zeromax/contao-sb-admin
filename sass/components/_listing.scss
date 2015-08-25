@@ -1,0 +1,95 @@
+a.show {
+	display: inline!important;
+}
+.tl_listing_container.parent_view ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+ul.tl_listing {
+	margin-right: 10px;
+	margin-left: 10px;
+	padding-left: 0px;
+	list-style-type: none;
+}
+ul.tl_listing ul {
+	list-style-type: none;
+}
+ul.tl_listing ul ul {
+	padding-left: 20px;
+}
+.tl_listing li {
+	line-height: 30px;
+}
+.tl_listing li div {
+	display: inline-block;
+}
+.tl_listing .tl_left,
+.tl_listing a img {
+	padding-left: 0 !important;
+	margin-left: 0 !important;
+}
+.tl_listing .tl_folder_top {
+	border-top: 1px #e7e7e7 solid;
+	border-bottom: 1px #e7e7e7 solid;
+}
+.tl_listing .tl_folder_top,
+.tl_listing .tl_folder {
+	background-color: #f8f8f8;
+}
+.tl_listing .tl_folder.has-children .tl_left a + a img {
+	margin-left: -20px !important;
+}
+.tl_folder.has-children .tl_left a:first-child {
+	background-color: #FFF;
+	display: inline-block;
+    position: relative;
+    left: -25px;
+}
+.tl_listing .tl_folder,
+.tl_listing .tl_file {
+	display: table-row;
+	border-collapse: collapse;
+}
+.tl_listing .tl_folder .tl_left,
+.tl_listing .tl_file .tl_left {
+	width: 70%;
+	border-bottom: 1px #e7e7e7 solid;
+	display: table-cell;
+}
+.tl_listing .tl_folder .tl_right,
+.tl_listing .tl_file .tl_right {
+	display: table-cell;
+	width: 30%;
+	text-align: right;
+	border-bottom: 1px #e7e7e7 solid;
+	padding-right: 10px;
+}
+.tl_listing .tl_file .tl_left {
+	padding-left: 20px !important;
+}
+/* content element */
+.limit_height {
+    overflow: hidden;
+}
+.tl_listing_container.parent_view ul > li .tl_content {
+	padding: 10px;
+}
+.cte_type.published, .cte_type.published a {
+    color: #77ac45;
+}
+.cte_type.published {
+    padding: 1px 0 2px 20px;
+    background: url("../images/published.gif") no-repeat left center;
+}
+.cte_type.unpublished, .cte_type.unpublished a {
+    color: #c33;
+}
+.cte_type.unpublished {
+    padding: 1px 0 2px 20px;
+    background: url("../images/unpublished.gif") no-repeat left center;
+}
+.tl_listing_container.parent_view ul > li .tl_content,
+.tl_listing_container.parent_view .tl_header {
+	border-bottom: 1px #e7e7e7 solid;
+}
