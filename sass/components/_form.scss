@@ -93,6 +93,10 @@ select {
     -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
+.tl_textarea {
+    min-height: 34px;
+    max-width: 100%;
+}
 .tl_checkbox_single_container {
 	margin-top: 40px;
 }
