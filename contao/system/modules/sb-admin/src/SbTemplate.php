@@ -29,7 +29,7 @@ class SbTemplate
 	{
 		// check them for back end user
 		$objUser = \BackendUser::getInstance();
-		if ($objUser === null || ($objUser !== null && $objUser->backendTheme != "sb-admin"))
+		if (\Config::get('backendTheme') != "sb-admin" && ($objUser !== null && $objUser->backendTheme != "sb-admin"))
 		{
 			return;
 		}
