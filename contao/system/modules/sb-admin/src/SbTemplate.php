@@ -27,14 +27,6 @@ class SbTemplate
 {
 	public function chooseTemplates()
 	{
-		$theme = $GLOBALS['TL_CONFIG']['backendTheme'];
-
-		// already set in autoload
-		if ($theme == "sb-admin")
-		{
-			return;
-		}
-
 		// check them for back end user
 		$objUser = \BackendUser::getInstance();
 		if ($objUser === null || ($objUser !== null && $objUser->backendTheme != "sb-admin"))
