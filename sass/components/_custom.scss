@@ -6,9 +6,9 @@ div.clear {
 }
 .logo-headline {
 	color: #8ab858;
-}
-.logo-headline img {
-	margin-right: 10px;
+	img {
+		margin-right: 10px;
+	}
 }
 #tl_breadcrumb {
     padding: 8px 15px;
@@ -17,26 +17,25 @@ div.clear {
     background-color: #f5f5f5;
     border-radius: 4px;
 	display: block;
-}
-#tl_breadcrumb > li {
-	display: inline-block;
-}
-#tl_breadcrumb > li + li:before {
-    padding: 0 5px 0 10px;
-    color: #ccc;
-    content: "/\00a0";
+	> li {
+		display: inline-block;
+		+ li:before {
+			padding: 0 5px 0 10px;
+			color: #ccc;
+			content: "/\00a0";
+		}
+	}
 }
 .bg-image {
-	background-image: url(../pics/login-screen.jpg);
-	background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+	background: url('../pics/login-screen.jpg') no-repeat fixed;
+	background-size: cover;
 }
 .sidebar-nav ul li ul {
 	li {
 		padding-left: 20px;
 	}
-	li.active, li:hover {
+	li.active,
+	li:hover {
 		background-color: #eee;
 	}
 }
@@ -60,11 +59,13 @@ div.clear {
 	cursor: pointer;
 	display:inline;
 }
-.panel-body nav .pagination {
-	margin: 0;
-}
-.panel-body > *:last-child {
-	margin-bottom: 0;
+.panel-body {
+	nav .pagination {
+		margin: 0;
+	}
+	> *:last-child {
+		margin-bottom: 0;
+	}
 }
 @media (max-width: 61.875em) {
 	.login-panel {
