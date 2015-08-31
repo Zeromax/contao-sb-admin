@@ -146,7 +146,7 @@
 										<ul class="nav nav-second-level" id="<?= $strGroup ?>" aria-expanded="<?=(($arrModules['modules']) ? 'true' : 'false'); ?>">
 											<?php if ($arrModules['modules']):?>
 												<?php foreach ($arrModules['modules'] as $arrConfig):?>
-													<li><a href="<?=$arrConfig['href']?>" class="<?=$arrConfig['class']?>" title="<?=$arrConfig['title']?>"<?= $arrConfig['icon'] ?>><?=$arrConfig['label']?></a></li>
+													<li class="<?=$arrConfig['class']?>"><a href="<?=$arrConfig['href']?>" class="<?=$arrConfig['class']?>" title="<?=$arrConfig['title']?>"<?= $arrConfig['icon'] ?>><?=$arrConfig['label']?></a></li>
 												<?php endforeach;?>
 											<?php endif;?>
 										</ul>

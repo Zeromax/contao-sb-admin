@@ -32,8 +32,13 @@ div.clear {
     background-attachment: fixed;
     background-size: cover;
 }
-.sidebar-nav ul li ul li {
-	padding-left: 20px;
+.sidebar-nav ul li ul {
+	li {
+		padding-left: 20px;
+	}
+	li.active, li:hover {
+		background-color: #eee;
+	}
 }
 /* drop zone */
 .dz-container {
