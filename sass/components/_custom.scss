@@ -55,6 +55,9 @@ div.clear {
 	cursor: pointer;
 	display:inline;
 }
+.panel-body nav .pagination {
+	margin: 0;
+}
 .panel-body > *:last-child {
 	margin-bottom: 0;
 }
