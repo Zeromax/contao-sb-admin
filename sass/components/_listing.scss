@@ -94,6 +94,66 @@ ul.tl_listing {
 				border-bottom: 1px #e7e7e7 solid;
 				padding: 10px;
 			}
+			.tl_content.wrapper_start,
+			.tl_content.wrapper_separator,
+			.tl_content.wrapper_stop {
+				background:#f3f3f3;
+			}
+			.tl_content.wrapper_start,
+			.tl_content.wrapper_separator {
+				border-bottom:0;
+			}
+			.tl_content.wrapper_stop,
+			.tl_content.wrapper_separator {
+				border-top:0;
+			}
+			.tl_content.wrapper_start h1 {
+				margin:0 0 9px 6px;
+			}
+			.tl_content.indent {
+				border-left: $indent-margin-left solid #f3f3f3;
+				border-right: $indent-margin-right solid #f3f3f3;
+			}
+			.tl_content.indent_1.wrapper_start,
+			.tl_content.indent_1.wrapper_separator,
+			.tl_content.indent_1.wrapper_stop {
+				background: #eaeaea;
+			}
+			.tl_content.indent_1.wrapper_stop {
+				border-bottom-color: #dbdbdb;
+			}
+			.tl_content.indent_2 {
+				margin-left: $indent-margin-left;
+				margin-right: $indent-margin-right;
+				box-shadow:-10px 0 #f3f3f3,10px 0 #f3f3f3;
+				border-left-color: #eaeaea;
+				border-right-color: #eaeaea;
+			}
+			.tl_content.indent_3 {
+				margin-left: $indent-margin-left * 2;
+				margin-right: $indent-margin-right * 2;
+				box-shadow: -10px 0 #eaeaea,10px 0 #eaeaea,-20px 0 #f3f3f3,20px 0 #f3f3f3;
+			}
+			.tl_content.indent_3.wrapper_start,
+			.tl_content.indent_3.wrapper_separator,
+			.tl_content.indent_3.wrapper_stop {
+				background: #eaeaea;
+			}
+			.tl_content.indent_3.wrapper_stop {
+				border-bottom-color: #dbdbdb;
+			}
+			.tl_content.indent_4 {
+				margin-left: $indent-margin-left * 3;
+				margin-right: $indent-margin-right * 3;
+				box-shadow: -10px 0 #f3f3f3,10px 0 #f3f3f3,-20px 0 #eaeaea,20px 0 #eaeaea,-30px 0 #f3f3f3,30px 0 #f3f3f3;
+				border-left-color: #eaeaea;
+				border-right-color: #eaeaea;
+			}
+			.tl_content.indent_5 {
+				margin-left: $indent-margin-left * 4;
+				margin-right: $indent-margin-right * 4;
+				box-shadow: -10px 0 #eaeaea,10px 0 #eaeaea,-20px 0 #f3f3f3,20px 0 #f3f3f3,-30px 0 #eaeaea,30px 0 #eaeaea,-40px 0 #f3f3f3,40px 0 #f3f3f3;
+			}
 		}
 	}
 }
