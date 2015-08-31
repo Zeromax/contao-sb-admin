@@ -55,7 +55,9 @@ div.clear {
 	cursor: pointer;
 	display:inline;
 }
-
+.panel-body > *:last-child {
+	margin-bottom: 0;
+}
 @media (max-width: 61.875em) {
 	.login-panel {
 		margin-top: 50px;
