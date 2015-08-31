@@ -31,7 +31,7 @@
 		<script src="<?php
 		$objCombiner = new Combiner();
 		$version = filemtime(TL_ROOT. '/system/themes/' . $this->theme . '/js/jquery.js');
-		$objCombiner->add('system/themes/' . $this->theme . '/js/jquery.js');
+		$objCombiner->add('system/themes/' . $this->theme . '/js/jquery.js', $version);
 		$objCombiner->add('assets/mootools/core/' . $GLOBALS['TL_ASSETS']['MOOTOOLS'] . '/mootools.js', $GLOBALS['TL_ASSETS']['MOOTOOLS']);
 		$objCombiner->add('assets/mootools/colorpicker/' . $GLOBALS['TL_ASSETS']['COLORPICKER'] . '/js/mooRainbow.js', $GLOBALS['TL_ASSETS']['COLORPICKER']);
 		$objCombiner->add('assets/mootools/chosen/chosen.js');
