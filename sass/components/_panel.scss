@@ -12,13 +12,13 @@
 	width: 100%;
 	text-align: right;
 	background-color: #f8f8f8;
-    border-top: 1px #e7e7e7 solid;
+    border-top: 1px $listing-border-color solid;
 	padding: 10px;
 }
 .tl_panel {
-    border-left: 1px #e7e7e7 solid;
-    border-right: 1px #e7e7e7 solid;
+    border-left: 1px $listing-border-color solid;
+    border-right: 1px $listing-border-color solid;
 }
 .tl_panel:last-child {
-	border-bottom: 1px #e7e7e7 solid;
+	border-bottom: 1px $listing-border-color solid;
 }

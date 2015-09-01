@@ -2,6 +2,9 @@
 $indent-margin-left: 10px !default;
 $indent-margin-right: 10px !default;
 
+// border color
+$listing-border-color: #e7e7e7 !default;
+
 @mixin border-top-radius($radius) {
     border-top-right-radius: $radius;
     border-top-left-radius: $radius;
