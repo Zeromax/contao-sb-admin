@@ -1,6 +1,71 @@
 #tl_buttons {
 	padding: 10px;
 	text-align: right;
+    vertical-align: middle;
+    display: block;
+    float: right;
+    > a {
+        @include bootstrap-panel-button;
+        position: relative;
+        float: left;
+        color: #333;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        text-decoration: none;
+        // Bring the "active" button to the front
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+            text-decoration: none;
+            z-index: 2;
+        }
+        &:hover {
+            color: #333;
+            background-color: #e6e6e6;
+            border-color: #adadad;
+        }
+    }
+    &:before,
+    &:after {
+        display: table;
+        content: " ";
+        clear: both;
+    }
+    a + a {
+        margin-left: -1px;
+    }
+    > a:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+        border-radius: 0;
+    }
+
+    // Set corners individual because sometimes a single button can be in a .btn-group and we need :first-child and :last-child to both match
+    > a:first-child {
+        margin-left: 0;
+        &:not(:last-child):not(.dropdown-toggle) {
+            @include border-right-radius(0);
+        }
+    }
+    // Need .dropdown-toggle since :last-child doesn't apply given a .dropdown-menu immediately after it
+    > a:last-child:not(:first-child),
+    > .dropdown-toggle:not(:first-child) {
+        @include border-left-radius(0);
+    }
+    + form:before,
+    + #paste_hint {
+        + form:before,
+        + .tl_listing_container:before {
+            clear: both;
+            content: " ";
+            display: table;
+        }
+    }
+    + form:before,
+    + .tl_listing_container:before {
+        clear: both;
+        content: " ";
+        display: table;
+    }
 }
 .tl_version_panel input[type="search"],
 .tl_version_panel input[type="text"],
@@ -20,25 +85,7 @@
 .tl_panel .tl_subpanel input[type="image"],
 .wizard a,
 input[type="submit"] {
-    display: inline-block;
-    padding: 6px 12px;
-    margin-bottom: 0;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.42857143;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-image: none;
-    border: 1px solid transparent;
-    border-radius: 4px;
+    @include bootstrap-button;
 }
 #save:before {
 	position: relative;

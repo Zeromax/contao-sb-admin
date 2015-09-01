@@ -82,18 +82,21 @@ fieldset.tl_box > legend:before {
     border-color: #ddd;
 }
 /* paste hint */
-#paste_hint + .tl_listing_container > ul.tl_listing:first-child {
-    margin-top: 40px;
+#paste_hint {
+    position: relative;
+    + .tl_listing_container > *:first-child {
+        margin-top: 50px;
+    }
 }
 #paste_hint p {
     position: absolute;
     font-family: "Architects Daughter",cursive;
     font-size: 1em;
     color: #8a6d3b;
-    top: 85px;
+    top: 48px;
     right: 0;
     padding: 10px 36px 20px 10px;
-    margin-right: 50px;
+    margin-right: 20px;
     margin-left: 15px;
     background: #fcf8e3 url("../images/arrow_right.png") bottom right no-repeat;
     margin-bottom: 20px;
