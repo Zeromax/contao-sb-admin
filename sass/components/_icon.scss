@@ -63,8 +63,8 @@
 .header_toggle:before {
 	content: "\f196";
 }
-.header_sync {
-	background-image:url("../images/sync.gif");
+.header_sync:before {
+	content: "\f021";
 }
 /* Navigation icons */
 .fa-contao-content:before {

@@ -26,6 +26,13 @@ fieldset.tl_box>legend {
 	font-size: 1.1em;
 	margin-bottom: 10px;
 }
+.tl_formbody {
+    margin-bottom: 10px;
+    .tl_select_trigger {
+        text-align: right;
+        padding-right: 10px;
+    }
+}
 .tl_tbox > div,
 .tl_formbody_edit fieldset > div {
 	//width: 100%;
