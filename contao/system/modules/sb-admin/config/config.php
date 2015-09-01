@@ -14,4 +14,5 @@
 if (TL_MODE == "BE")
 {
 	$GLOBALS['TL_HOOKS']['parseTemplate'][] = array('SbTemplate', 'chooseTemplates');
+	$GLOBALS['TL_HOOKS']['parseTemplate'][] = array('SbTemplate', 'parseTemplate');
 }
