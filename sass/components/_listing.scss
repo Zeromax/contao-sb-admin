@@ -14,7 +14,7 @@ ul {
         margin: 0;
     }
     li {
-        height: 30px;
+        line-height: 30px;
         border-bottom: 1px #e7e7e7 solid;
         &.parent {
             display: inline;
@@ -33,7 +33,14 @@ ul {
     .tl_file .tl_left {
         display: block;
         float: left;
-        padding-top: 4px;
+        > *:first-child {
+            margin-left: 10px;
+        }
+    }
+    .tl_file .tl_left {
+        > img {
+            margin: 0 0 0 32px !important;
+        }
     }
     .tl_folder_top .tl_right,
     .tl_folder .tl_right,
@@ -41,7 +48,6 @@ ul {
         display: block;
         float: right;
         padding-right: 10px;
-        padding-top: 5px;
     }
 }
 /* content element */
