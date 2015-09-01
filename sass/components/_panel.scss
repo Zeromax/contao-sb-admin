@@ -15,6 +15,12 @@
     border-top: 1px $listing-border-color solid;
 	padding: 10px;
 }
+.tl_version_panel {
+	margin-bottom: 10px;
+	.tl_formbody {
+		margin-bottom: 0;
+	}
+}
 .tl_panel {
     border-left: 1px $listing-border-color solid;
     border-right: 1px $listing-border-color solid;
