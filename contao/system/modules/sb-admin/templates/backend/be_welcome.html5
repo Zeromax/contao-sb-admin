@@ -37,7 +37,7 @@
 			<div class="panel-heading">
 				<i class="fa fa-history fa-fw"></i> <?= $GLOBALS['TL_LANG']['MSC']['latestChanges'] ?>
 			</div>
-			<div class="panel-body">
+			<div class="panel-body table-responsive">
 				<?php if (!empty($this->versions)): ?>
 					<table class="table table-striped table-bordered table-hover dataTable no-footer">
 					<thead>
