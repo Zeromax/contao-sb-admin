@@ -71,9 +71,9 @@ div.w50 {
     margin-bottom: 5px;
     font-weight: 700;
 }
-.tl_panel .tl_subpanel input[type="search"],
-.tl_panel .tl_subpanel input[type="text"],
-.tl_panel .tl_subpanel select,
+.tl_panel input[type="search"],
+.tl_panel input[type="text"],
+.tl_panel select,
 .tl_text,
 .tl_text_2,
 .tl_text_3,
@@ -99,6 +99,15 @@ select {
     -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
     -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.tl_panel {
+    input[type="search"],
+    input[type="text"],
+    select {
+        &.active {
+            background-color: #fcf8e3;
+        }
+    }
 }
 .tl_textarea {
     min-height: 34px;
