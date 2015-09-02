@@ -66,70 +66,68 @@
 						</button>
 						<a class="navbar-brand" href="<?=$this->base?>contao/main.php">Contao Open Source CMS <?=VERSION . '.' . BUILD?></a>
 					</div>
-					<!-- /.navbar-header -->
 
 					<ul class="nav navbar-top-links navbar-right">
-					<li class="dropdown">
-						<?$hasAlert = ($this->isCoreOnlyMode || $this->isMaintenanceMode || $this->needsCacheBuild) ? true : false; ?>
-						<a class="dropdown-toggle" data-toggle="dropdown" href="<?=$this->base?>contao/main.php#">
-							<i class="fa fa-bell fa-fw"></i> <span id="alert-count" class="label label-default" data-alert="<?=($hasAlert) ? 'true' : 'false'; ?>">0</span> <i class="fa fa-caret-down"></i>
-						</a>
-						<ul class="dropdown-menu dropdown-messages alert-messages">
-							<?if (!$hasAlert): ?>
-								<li>
-									<div>
-										Keine Systemmeldungen vorhanden.
-									</div>
-								</li>
-							<?endif; ?>
-							<? if ($this->isCoreOnlyMode):?>
-								<li>
-									<?php if ($this->isAdmin):?><a href="<?=$this->coreOnlyHref?>" title="<?=$this->coreOnlyOff?>"><?else: ?><div><?endif; ?>
-										<div>
-											<span class="label label-danger">Core only mode</span>
-										</div>
-										<div><?=$this->coreOnlyMode?></div>
-									<?php if ($this->isAdmin):?></a><?else: ?></div><?php endif;?>
-								</li>
-								<li class="divider"></li>
-							<?php endif;?>
-							<?php if ($this->isMaintenanceMode):?>
-								<li>
-									<?php if ($this->isAdmin):?><a href="<?=$this->maintenanceHref?>" title="<?=$this->maintenanceOff?>"><?else: ?><div><?endif; ?>
-										<div>
-											<span class="label label-danger">Wartungsmodus</span>
-										</div>
-										<div><?=$this->maintenanceMode?></div>
-									<?php if ($this->isAdmin):?></a><?else: ?></div><?php endif;?>
-								</li>
-								<li class="divider"></li>
-							<?php endif;?>
-							<?php if ($this->needsCacheBuild):?>
-								<li>
-									<?php if ($this->isAdmin):?><a href="<?=$this->buildCacheHref?>" title="<?=$this->buildCacheLink?>"><?else: ?><div><?endif; ?>
-										<div>
-											<span class="label label-danger">Build Cache</span>
-										</div>
-										<div><?=$this->buildCacheText?></div>
-									<?php if ($this->isAdmin):?></a><?else: ?></div><?php endif;?>
-								</li>
-							<?php endif;?>
-							</li>
-						</ul>
-					</li>
-						<li>
-							<a href="<?=$this->base?>contao/main.php?do=login&amp;ref=<?=TL_REFERER_ID?>" class="" title="<?=$this->account?>"><i class="fa fa-user fa-fw"></i> <span class="hidden-xs hidden-sm"><?=$this->username?></span></a>
-						</li>
-						<li>
-							<a href="<?=$this->base?>contao/preview.php<?=$this->frontendFile?>" target="_blank" class="" title="<?=$this->previewTitle?>" accesskey="f"><i class="fa fa-desktop fa-fw"></i> <span class="hidden-xs hidden-sm"><?=$this->preview?></span></a>
-						</li>
-						<li>
-							<a href="<?=$this->base?>contao/main.php" class="" title="Dashboard" accesskey="h"><i class="fa fa-dashboard fa-fw"></i> <span class="hidden-xs hidden-sm">Dashboard</span></a>
-						</li>
-						<li>
-							<a href="<?=$this->base?>contao/" class="" title="<?=$this->logoutTitle?>" accesskey="q"><i class="fa fa-sign-out fa-fw"></i> <span class="hidden-xs hidden-sm"><?=$this->logout?></span></a>
-						</li>
-					</ul>
+                        <li class="dropdown">
+                            <?$hasAlert = ($this->isCoreOnlyMode || $this->isMaintenanceMode || $this->needsCacheBuild) ? true : false; ?>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="<?=$this->base?>contao/main.php#">
+                                <i class="fa fa-bell fa-fw"></i> <span id="alert-count" class="label label-default" data-alert="<?=($hasAlert) ? 'true' : 'false'; ?>">0</span> <i class="fa fa-caret-down"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-messages alert-messages">
+                                <?if (!$hasAlert): ?>
+                                    <li>
+                                        <div>
+                                            Keine Systemmeldungen vorhanden.
+                                        </div>
+                                    </li>
+                                <?endif; ?>
+                                <? if ($this->isCoreOnlyMode):?>
+                                    <li>
+                                        <?php if ($this->isAdmin):?><a href="<?=$this->coreOnlyHref?>" title="<?=$this->coreOnlyOff?>"><?else: ?><div><?endif; ?>
+                                            <div>
+                                                <span class="label label-danger">Core only mode</span>
+                                            </div>
+                                            <div><?=$this->coreOnlyMode?></div>
+                                        <?php if (!$this->isAdmin):?></div><?else: ?></a><?php endif;?>
+                                    </li>
+                                    <li class="divider"></li>
+                                <?php endif;?>
+                                <?php if ($this->isMaintenanceMode):?>
+                                    <li>
+                                        <?php if ($this->isAdmin):?><a href="<?=$this->maintenanceHref?>" title="<?=$this->maintenanceOff?>"><?else: ?><div><?endif; ?>
+                                            <div>
+                                                <span class="label label-danger">Wartungsmodus</span>
+                                            </div>
+                                            <div><?=$this->maintenanceMode?></div>
+                                        <?php if (!$this->isAdmin):?></div><?else: ?></a><?php endif;?>
+                                    </li>
+                                    <li class="divider"></li>
+                                <?php endif;?>
+                                <?php if ($this->needsCacheBuild):?>
+                                    <li>
+                                        <?php if ($this->isAdmin):?><a href="<?=$this->buildCacheHref?>" title="<?=$this->buildCacheLink?>"><?else: ?><div><?endif; ?>
+                                            <div>
+                                                <span class="label label-danger">Build Cache</span>
+                                            </div>
+                                            <div><?=$this->buildCacheText?></div>
+                                        <?php if (!$this->isAdmin):?></div><?else: ?></a><?php endif;?>
+                                    </li>
+                                <?php endif;?>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="<?=$this->base?>contao/main.php?do=login&amp;ref=<?=TL_REFERER_ID?>" class="" title="<?=$this->account?>"><i class="fa fa-user fa-fw"></i> <span class="hidden-xs hidden-sm"><?=$this->username?></span></a>
+                        </li>
+                        <li>
+                            <a href="<?=$this->base?>contao/preview.php<?=$this->frontendFile?>" target="_blank" class="" title="<?=$this->previewTitle?>" accesskey="f"><i class="fa fa-desktop fa-fw"></i> <span class="hidden-xs hidden-sm"><?=$this->preview?></span></a>
+                        </li>
+                        <li>
+                            <a href="<?=$this->base?>contao/main.php" class="" title="Dashboard" accesskey="h"><i class="fa fa-dashboard fa-fw"></i> <span class="hidden-xs hidden-sm">Dashboard</span></a>
+                        </li>
+                        <li>
+                            <a href="<?=$this->base?>contao/" class="" title="<?=$this->logoutTitle?>" accesskey="q"><i class="fa fa-sign-out fa-fw"></i> <span class="hidden-xs hidden-sm"><?=$this->logout?></span></a>
+                        </li>
+                    </ul>
 
 					<div class="navbar-default sidebar" role="navigation">
 						<div class="sidebar-nav navbar-collapse">
