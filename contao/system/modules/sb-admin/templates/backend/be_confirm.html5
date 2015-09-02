@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="<?= $this->language ?>">
+<head>
+
+    <meta charset="<?= $this->charset ?>">
+    <title><?= $this->title ?> - Contao Open Source CMS <?= VERSION ?></title>
+    <base href="<?= $this->base ?>">
+    <meta name="generator" content="Contao Open Source CMS">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <link rel="stylesheet" href="<?php
+    $objCombiner = new Combiner();
+    $version = filemtime(TL_ROOT . '/system/themes/' . $this->theme . '/css/bootstrap.css');
+    $objCombiner->add('system/themes/' . $this->theme . '/css/bootstrap.css', $version);
+    $version = filemtime(TL_ROOT . '/system/themes/' . $this->theme . '/css/style.css');
+    $objCombiner->add('system/themes/' . $this->theme . '/css/style.css', $version);
+    echo $objCombiner->getCombinedFile();
+    ?>">
+    <!--[if IE]>
+    <link rel="stylesheet" href="<?=TL_ASSETS_URL?>system/themes/<?=$this->theme?>/iefixes.css"><![endif]-->
+    <?= $this->stylesheets ?>
+
+    <script><?= $this->getLocaleString() ?></script>
+    <script src="<?php
+    $objCombiner = new Combiner();
+    $objCombiner->add('assets/mootools/core/' . $GLOBALS['TL_ASSETS']['MOOTOOLS'] . '/mootools.js', $GLOBALS['TL_ASSETS']['MOOTOOLS']);
+    $objCombiner->add('assets/mootools/mootao/Mootao.js');
+    $objCombiner->add('assets/contao/js/core.js');
+    echo $objCombiner->getCombinedFile();
+    ?>"></script>
+    <script><?= $this->getDateString() ?></script>
+    <?= $this->javascripts ?>
+    <!--[if lt IE 9]>
+    <script src="<?=TL_ASSETS_URL?>assets/html5shiv/<?=$GLOBALS['TL_ASSETS']['HTML5SHIV']?>/html5shiv.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="<?= $this->ua ?>">
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="login-panel panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Contao Open Source CMS <?= VERSION ?></h3>
+                </div>
+                <form action="contao/confirm.php" class="tl_form" method="post">
+                    <div class="panel-body">
+                        <div class="tl_formbody_edit">
+                            <input type="hidden" name="FORM_SUBMIT" value="invalid_token_url">
+                            <input type="hidden" name="REQUEST_TOKEN" value="<?= REQUEST_TOKEN ?>">
+
+                            <h1 class="large-text text-danger text-center"><span class="fa fa-times-circle"></span></h1>
+
+                            <p id="link"><?= $this->link ?></p>
+                            <dl class="dl-horizontal">
+                                <?php foreach ($this->info as $key => $info): ?>
+                                    <dt><?= $this->labels[$key] ?></dt>
+                                    <dd><?= $info ?></dd>
+                                <?php endforeach; ?>
+                            </dl>
+                            <p><?= $this->explain ?></p>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <input type="submit" name="cancel" class="tl_submit" accesskey="s"
+                                  value="<?= $this->cancel ?>"> <a
+                                href="<?= $this->href ?>"><?= $this->continue ?></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
