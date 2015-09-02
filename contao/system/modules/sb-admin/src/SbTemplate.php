@@ -55,6 +55,7 @@ class SbTemplate
 
         // modified templates
         $arrTemplate = array(
+            'be_diff',
             'be_forbidden',
             'be_install',
             'be_login',

@@ -1,0 +1,51 @@
+/* Diff */
+#diff {
+    .change {
+        margin-bottom:13px;
+        border:1px solid #ddd;
+        background:#fcfcfc;
+        font-family:Courier,monospace;
+        border-radius:3px;
+        h2 {
+            color: #333;
+            background-color: #f5f5f5;
+            border-color: #ddd;
+            padding: 10px 15px;
+            border-bottom: 1px solid transparent;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            margin: 0;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+    }
+    .replace.left,
+    .delete.left {
+        background: #fdd;
+    }
+    .replace.right,
+    .insert.right {
+        background: #dfd;
+    }
+    .replace ins {
+        color:#060;
+        background: #bfb;
+    }
+    .replace del {
+        color:#a00;
+        background: #fbb;
+    }
+    ins,
+    del {
+        text-decoration: none;
+    }
+    dl {
+        margin:0;
+        padding:0;
+    }
+    dt,
+    dd {
+        margin:0;
+        padding:2px 6px 1px;
+    }
+}

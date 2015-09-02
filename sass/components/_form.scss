@@ -201,3 +201,21 @@ input.tl_imageSize_0.tl_text_4, input.tl_imageSize_1.tl_text_4 {
 .cbx label {
 	margin-bottom: 0;
 }
+.contao-diff label {
+    font-weight: normal;
+}
+.contao-diff .form-inline {
+    margin: 20px 0;
+}
+@media (min-width: 740px) {
+    .form-inline .form-control {
+        display: inline-block;
+        width: auto;
+        vertical-align: middle;
+    }
+    .form-inline .form-group {
+        display: inline-block;
+        margin-bottom: 0;
+        vertical-align: middle;
+    }
+}

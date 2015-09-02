@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="<?= $this->language ?>">
+<head>
+
+    <meta charset="<?= $this->charset ?>">
+    <title><?= $this->title ?> - Contao Open Source CMS <?= VERSION ?></title>
+    <base href="<?= $this->base ?>">
+    <meta name="generator" content="Contao Open Source CMS">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <link rel="stylesheet" href="<?php
+    $objCombiner = new Combiner();
+    $version = filemtime(TL_ROOT . '/system/themes/' . $this->theme . '/css/bootstrap.css');
+    $objCombiner->add('system/themes/' . $this->theme . '/css/bootstrap.css', $version);
+    $version = filemtime(TL_ROOT . '/system/themes/' . $this->theme . '/css/style.css');
+    $objCombiner->add('system/themes/' . $this->theme . '/css/style.css', $version);
+    #$objCombiner->add('system/themes/' . $this->theme . '/diff.css');
+    echo $objCombiner->getCombinedFile();
+    ?>">
+    <!--[if IE]>
+    <link rel="stylesheet" href="<?= TL_ASSETS_URL ?>system/themes/<?= $this->theme ?>/iefixes.css"><![endif]-->
+    <?= $this->stylesheets ?>
+
+    <script><?= $this->getLocaleString() ?></script>
+    <script src="<?php
+    $objCombiner = new Combiner();
+    $objCombiner->add('assets/mootools/core/' . $GLOBALS['TL_ASSETS']['MOOTOOLS'] . '/mootools.js', $GLOBALS['TL_ASSETS']['MOOTOOLS']);
+    echo $objCombiner->getCombinedFile();
+    ?>"></script>
+    <?= $this->javascripts ?>
+    <!--[if lt IE 9]>
+    <script
+        src="<?= TL_ASSETS_URL ?>assets/html5shiv/<?= $GLOBALS['TL_ASSETS']['HTML5SHIV'] ?>/html5shiv.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="<?= $this->ua ?>">
+
+<div id="wrapper" class="container contao-diff">
+    <div class="row">
+        <div class="col-lg-12">
+            <form action="<?= $this->action ?>" method="post" class="form-inline">
+                <input type="hidden" name="REQUEST_TOKEN" value="<?= REQUEST_TOKEN ?>">
+                <div class="form-group">
+                    <?php if ($this->staticFrom): ?>
+                        <label><?= $this->staticFrom ?></label>
+                    <?php else: ?>
+                        <select name="from" id="ctrl_from" class="form-control">
+                            <?php foreach ($this->versions as $k => $v): ?>
+                                <option
+                                    value="<?= $k ?>"<?php if ($v['version'] == $this->from): ?> selected="selected"<?php endif; ?>><?= $v['info'] ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    <?php endif; ?>
+                </div>
+                <div class="form-group">
+                    <label><strong><span class="fa fa-arrow-right"></span></strong></label>
+                </div>
+                <div class="form-group">
+                    <?php if ($this->staticTo): ?>
+                        <label><?= $this->staticTo ?></label>
+                    <?php else: ?>
+                        <select name="to" id="ctrl_to" class="form-control">
+                            <?php foreach ($this->versions as $k => $v): ?>
+                                <option
+                                    value="<?= $k ?>"<?php if ($v['version'] == $this->to): ?> selected="selected"<?php endif; ?>><?= $v['info'] ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    <?php endif; ?>
+                </div>
+                <button type="submit" class="btn btn-default" value="<?= $this->showLabel ?>" title="<?= $this->showLabel ?>"><span class="fa fa-exchange"></span></button>
+            </form>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div id="diff">
+                <?= $this->content ?>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
