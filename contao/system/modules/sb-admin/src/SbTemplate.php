@@ -58,6 +58,7 @@ class SbTemplate
             'be_diff',
             'be_error',
             'be_forbidden',
+            'be_help',
             'be_incomplete',
             'be_install',
             'be_login',

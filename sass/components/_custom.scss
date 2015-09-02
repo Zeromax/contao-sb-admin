@@ -92,6 +92,13 @@ div.clear {
 		margin-bottom: 0;
 	}
 }
+.tl_label {
+	font-weight: bold;
+}
+.contao-help-table td.headline {
+	font-size: 1.1em;
+	padding-top: 20px
+}
 @media (max-width: 61.875em) {
 	.login-panel {
 		margin-top: 50px;
