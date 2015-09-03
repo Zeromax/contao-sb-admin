@@ -84,7 +84,11 @@ div.clear {
 	cursor: pointer;
 	display:inline;
 }
+.panel-footer,
 .panel-body {
+	nav.pull-right {
+		height: 34px;
+	}
 	nav .pagination {
 		margin: 0;
 	}
