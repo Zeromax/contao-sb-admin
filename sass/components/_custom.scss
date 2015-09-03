@@ -59,23 +59,27 @@ div.clear {
     background-size: cover;
 }
 
-.sidebar-nav ul li ul {
-    li {
-        padding-left: 20px;
+.sidebar-nav ul li {
+    a {
+        display: block !important;
     }
-    li.active,
-    li:focus,
-    li:hover {
-        background-color: #eee;
+    ul {
+        li {
+            padding-left: 20px;
+        }
+        li.active,
+        li:focus,
+        li:hover {
+            background-color: #eee;
+        }
+        a {
+            display: block !important;
+        }
+        a:focus,
+        a:hover {
+            background-color: inherit;
+        }
     }
-    a:focus,
-    a:hover {
-        background-color: inherit;
-    }
-}
-
-.navbar {
-    margin-bottom: 0;
 }
 
 .breadcrumb {

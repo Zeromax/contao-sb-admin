@@ -57,5 +57,8 @@
 				$("#page-wrapper").css("min-height", (height) + "px");
 			}
 		});
+		$('.sidebar-nav a').tooltip({
+			placement: 'bottom'
+		});
 	});
 })(jQuery);

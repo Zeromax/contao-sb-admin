@@ -47,3 +47,4 @@ var BsAjaxRequest =
 		return false;
 	}
 };
+Tips.Contao = new Class ({});

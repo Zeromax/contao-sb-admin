@@ -48,3 +48,4 @@
 		return false;
 	}
 };
+Tips.Contao = new Class ({});

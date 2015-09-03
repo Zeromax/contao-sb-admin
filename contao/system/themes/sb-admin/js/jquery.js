@@ -82,5 +82,8 @@ d.trigger("activate.bs.scrollspy")},b.prototype.clear=function(){a(this.selector
 				$("#page-wrapper").css("min-height", (height) + "px");
 			}
 		});
+		$('.sidebar-nav a').tooltip({
+			placement: 'bottom'
+		});
 	});
 })(jQuery);
