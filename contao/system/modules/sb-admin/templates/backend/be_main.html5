@@ -197,8 +197,8 @@
 						<div class="col-lg-12">
                             <div class="text-right" id="footer">
                                 <div class="btn-group" role="group" aria-label="...">
-                                    <a href="contao/preview.php<?=$this->frontendFile?>" target="_blank" class="btn btn-default" title="<?=$this->previewTitle?>"><i class="fa fa-desktop fa-fw"></i> <?=$this->preview?></a>
-                                    <a href="<?=$this->request?>#top" class="btn btn-default" title="<?=$this->backToTop?>" accesskey="t"><i class="fa fa-arrow-up"></i> <?=$this->top?></a>
+                                    <a href="contao/preview.php<?=$this->frontendFile?>" target="_blank" class="btn btn-default" title="<?=$this->previewTitle?>" data-toggle="tooltip" data-placement="top"><i class="fa fa-desktop fa-fw"></i> <?=$this->preview?></a>
+                                    <a href="<?=$this->request?>#top" class="btn btn-default" title="<?=$this->backToTop?>" accesskey="t" data-toggle="tooltip" data-placement="top"><i class="fa fa-arrow-up"></i> <?=$this->top?></a>
                                 </div>
                             </div>
 							<?php if ($this->pageOffset):?>

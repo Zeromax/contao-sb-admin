@@ -53,7 +53,6 @@ d.trigger("activate.bs.scrollspy")},b.prototype.clear=function(){a(this.selector
 			collapsingClass: 'm-collapsing'
 		});
 
-
 		//Loads the correct sidebar on window load,
 		//collapses the sidebar on window resize.
 		// Sets the min-height of #page-wrapper to window size
@@ -74,8 +73,18 @@ d.trigger("activate.bs.scrollspy")},b.prototype.clear=function(){a(this.selector
 				$("#page-wrapper").css("min-height", (height) + "px");
 			}
 		});
-		$('.sidebar-nav a').tooltip({
+
+		$('.tl_tip').each(function(i, el) {
+			$(el).attr('title', $(el).html());
+			$(el).addClass('force-display');
+		});
+
+
+		$('body').tooltip({
+			selector: '[data-toggle="tooltip"], a, .tl_tip',
 			placement: 'bottom'
+		}).on('hide.bs.tooltip hidden.bs.tooltip show.bs.tooltip shown.bs.tooltip', function (el) {
+			el.target.addClass('force-display');
 		});
 	});
 })(jQuery);

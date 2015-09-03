@@ -84,9 +84,14 @@ div.clear {
         display: inherit !important;
     }
 }
-
+.force-display {
+    display: inline-block !important;
+}
 .navbar {
     margin-bottom: 0;
+    a {
+        display: block !important;
+    }
     .dropdown {
         display: inline-block !important;
     }
