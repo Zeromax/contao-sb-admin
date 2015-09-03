@@ -55,6 +55,14 @@ ul {
         float: right;
         padding-right: 10px;
     }
+	> tbody > tr:last-child > td,
+	> tbody > tr:last-child > th,
+	> tfoot > tr:last-child > td,
+	> tfoot > tr:last-child > th,
+	> thead > tr:last-child > td,
+	> thead > tr:last-child > th 	{
+		border-bottom: 1px solid #ddd;
+	}
 }
 .tl_file_list.tl_right_nowrap {
 	text-align: right;
