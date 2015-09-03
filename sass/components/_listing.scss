@@ -47,7 +47,7 @@ ul {
     }
     .tl_file .tl_left {
         > img {
-            margin: 0 0 0 32px !important;
+            margin: 0 0 10px 32px !important;
         }
     }
     .tl_folder_top .tl_right,
@@ -69,6 +69,12 @@ ul {
 
 .tl_file_list.tl_right_nowrap {
     text-align: right;
+}
+
+.tl_file_list {
+    > img {
+        margin-right: 20px;
+    }
 }
 
 .tl_folder_list,
