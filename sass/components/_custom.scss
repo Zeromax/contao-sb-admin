@@ -54,8 +54,13 @@ div.clear {
 		padding-left: 20px;
 	}
 	li.active,
+	li:focus,
 	li:hover {
 		background-color: #eee;
+	}
+	a:focus,
+	a:hover {
+		background-color: inherit;
 	}
 }
 .navbar {
