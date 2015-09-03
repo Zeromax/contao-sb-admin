@@ -1,6 +1,6 @@
 #tl_buttons {
-	padding-bottom: 10px;
-	text-align: right;
+    padding-bottom: 10px;
+    text-align: right;
     vertical-align: middle;
     display: block;
     float: right;
@@ -71,33 +71,37 @@
         display: table;
     }
 }
+
 .tl_version_panel input[type="search"],
 .tl_version_panel input[type="text"],
 .tl_version_panel select,
 .tl_panel .tl_subpanel input[type="search"],
 .tl_panel .tl_subpanel input[type="text"],
 .tl_panel .tl_subpanel select {
-	display: inline-block;
+    display: inline-block;
     width: auto;
     vertical-align: middle;
-	height: 30px;
+    height: 30px;
     padding: 5px 10px;
     font-size: 12px;
     line-height: 1.5;
     border-radius: 3px;
 }
+
 .tl_panel .tl_subpanel input[type="search"],
 .tl_panel .tl_subpanel input[type="text"],
 .tl_panel .tl_subpanel select {
     width: 120px;
 }
+
 .tl_panel .tl_subpanel input[type="image"],
 .wizard a,
 input[type="submit"] {
     @include bootstrap-button;
 }
+
 #save:before {
-	position: relative;
+    position: relative;
     top: 1px;
     display: inline-block;
     font-family: 'Glyphicons Halflings';
@@ -107,9 +111,11 @@ input[type="submit"] {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
 #save:before {
-	content: "\e166";
+    content: "\e166";
 }
+
 .tl_panel .tl_subpanel input[type="image"],
 .wizard a,
 input[type="submit"] {
@@ -117,6 +123,7 @@ input[type="submit"] {
     background-color: #fff;
     border-color: #ccc;
 }
+
 .tl_panel .tl_subpanel input[type="image"]:hover,
 input[type="submit"]:hover {
     color: #333;

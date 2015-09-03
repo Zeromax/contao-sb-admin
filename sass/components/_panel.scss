@@ -1,30 +1,35 @@
 .tl_panel > div {
-	display: inline;
-	margin-left: 8px;
+    display: inline;
+    margin-left: 8px;
 }
+
 .tl_submit_panel.tl_subpanel {
-	float: right;
+    float: right;
 }
+
 .tl_submit_container,
 .tl_panel,
 .tl_version_panel,
 .tl_listing_container.parent_view .tl_header {
-	width: 100%;
-	text-align: right;
-	background-color: #f8f8f8;
+    width: 100%;
+    text-align: right;
+    background-color: #f8f8f8;
     border-top: 1px $listing-border-color solid;
-	padding: 10px;
+    padding: 10px;
 }
+
 .tl_version_panel {
-	margin-bottom: 10px;
-	.tl_formbody {
-		margin-bottom: 0;
-	}
+    margin-bottom: 10px;
+    .tl_formbody {
+        margin-bottom: 0;
+    }
 }
+
 .tl_panel {
     border-left: 1px $listing-border-color solid;
     border-right: 1px $listing-border-color solid;
 }
+
 .tl_panel:last-child {
-	border-bottom: 1px $listing-border-color solid;
+    border-bottom: 1px $listing-border-color solid;
 }
