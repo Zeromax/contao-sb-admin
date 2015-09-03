@@ -165,12 +165,8 @@
 				<?php if (!$this->isPopup):?>
 					<div class="row">
 						<div class="col-lg-12">
-							<ol class="breadcrumb">
-								<?foreach (explode("»", $this->headline) as $key=>$value): ?>
-									<li><?=$value; ?></li>
-								<?endforeach; ?>
-							</ol>
-						</div>
+                            <h1 class="page-header"><? if ($this->headlineTrail): ?><small><?=$this->headlineTrail; ?></small><?endif; ?><?=$this->headline; ?></h1>
+                        </div>
 					</div>
 				<?endif; ?>
 				<?php if ($this->managerHref):?>

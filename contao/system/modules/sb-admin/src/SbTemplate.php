@@ -38,6 +38,12 @@ class SbTemplate
             '<table class="table table-hover dataTable no-footer',
             $objTemplate->main
         );
+        $arrHeadline = explode("»", $objTemplate->headline);
+        $objTemplate->headline = array_pop($arrHeadline);
+        if (count($arrHeadline) > 0)
+        {
+            $objTemplate->headlineTrail = implode(' <i class="fa fa-angle-right"></i> ', $arrHeadline) . ' <i class="fa fa-angle-right"></i> ';
+        }
     }
 
     /**
