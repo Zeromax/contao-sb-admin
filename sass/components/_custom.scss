@@ -80,6 +80,16 @@ div.clear {
             background-color: inherit;
         }
     }
+    .nav-second-level.collapsing {
+        display: inherit !important;
+    }
+}
+
+.navbar {
+    margin-bottom: 0;
+    .dropdown {
+        display: inline-block !important;
+    }
 }
 
 .breadcrumb {
