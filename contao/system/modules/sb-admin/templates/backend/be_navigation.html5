@@ -1,4 +1,5 @@
-
-<?php foreach ($this->modules as $strModule=>$arrConfig): ?>
-  <li class="<?= $arrConfig['class'] ?>"><a href="<?= $arrConfig['href'] ?>" class="<?= $arrConfig['class'] ?>" title="<?= $arrConfig['title'] ?>"<?= $arrConfig['icon'] ?>><?= $arrConfig['label'] ?></a></li>
+<?php foreach ($this->modules as $strModule => $arrConfig): ?>
+    <li class="<?= $arrConfig['class'] ?>">
+        <a href="<?= $arrConfig['href'] ?>" class="<?= $arrConfig['class'] ?>" title="<?= $arrConfig['title'] ?>"<?= $arrConfig['icon'] ?>><span class="icon-only"><?= $arrConfig['label'] ?></span></a>
+    </li>
 <?php endforeach; ?>

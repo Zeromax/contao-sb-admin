@@ -136,15 +136,15 @@
 									<a href="<?=$this->request?>#skipNavigation" class="hide"><?=$this->skipNavigation?></a>
 								</li>
 								<li>
-									<a href="<?=$this->base?>contao/main.php" title="<?=$GLOBALS['TL_LANG']['MSC']['dashboard'][1]; ?>"><i class="fa fa-dashboard fa-fw"></i> <?=$GLOBALS['TL_LANG']['MSC']['dashboard'][0]; ?></a>
+									<a href="<?=$this->base?>contao/main.php" title="<?=$GLOBALS['TL_LANG']['MSC']['dashboard'][1]; ?>"><i class="fa fa-dashboard fa-fw"></i><span class="icon-only"> <?=$GLOBALS['TL_LANG']['MSC']['dashboard'][0]; ?></span></a>
 								</li>
 								<?php foreach ($this->modules as $strGroup => $arrModules):?>
 									<li class="<?=$arrModules['class']?><?=((strpos($arrModules['class'], 'trail') > 0 || $arrModules['modules']) ? ' active' : ''); ?>">
-										<a href="<?=$arrModules['href']?>" title="<?=$arrModules['title']?>" onclick="return BsAjaxRequest.toggleNavigation(this,'<?= $strGroup ?>')"><i class="fa fa-contao-<?=$strGroup; ?> fa-fw"></i> <?=$arrModules['label']?> <span class="fa arrow"></span></a>
+										<a href="<?=$arrModules['href']?>" title="<?=$arrModules['title']?>" onclick="return BsAjaxRequest.toggleNavigation(this,'<?= $strGroup ?>')"><i class="fa fa-contao-<?=$strGroup; ?> fa-fw"></i><span class="icon-only"> <?=$arrModules['label']?> </span><span class="fa arrow"></span></a>
 										<ul class="nav nav-second-level" id="<?= $strGroup ?>" aria-expanded="<?=(($arrModules['modules']) ? 'true' : 'false'); ?>">
 											<?php if ($arrModules['modules']):?>
 												<?php foreach ($arrModules['modules'] as $arrConfig):?>
-													<li class="<?=$arrConfig['class']?>"><a href="<?=$arrConfig['href']?>" class="<?=$arrConfig['class']?>" title="<?=$arrConfig['title']?>"<?= $arrConfig['icon'] ?>><?=$arrConfig['label']?></a></li>
+													<li class="<?=$arrConfig['class']?>"><a href="<?=$arrConfig['href']?>" class="<?=$arrConfig['class']?>" title="<?=$arrConfig['title']?>"<?= $arrConfig['icon'] ?>><span class="icon-only"><?=$arrConfig['label']?></span></a></li>
 												<?php endforeach;?>
 											<?php endif;?>
 										</ul>
