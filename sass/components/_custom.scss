@@ -81,11 +81,11 @@ div.clear {
         }
     }
     .nav-second-level.collapsing {
-        display: inherit !important;
+        display: block !important;
     }
 }
 .force-display {
-    display: inline-block !important;
+    display: block !important;
 }
 .navbar {
     margin-bottom: 0;

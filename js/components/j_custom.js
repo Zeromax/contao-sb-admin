@@ -57,7 +57,8 @@
 
 		$('body').tooltip({
 			selector: '[data-toggle="tooltip"], a, .tl_tip',
-			placement: 'bottom'
+			placement: 'bottom',
+			container: 'body'
 		}).on('hide.bs.tooltip hidden.bs.tooltip show.bs.tooltip shown.bs.tooltip', function (el) {
 			el.target.addClass('force-display');
 		});
