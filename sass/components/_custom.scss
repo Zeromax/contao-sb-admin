@@ -160,6 +160,10 @@ div.clear {
     word-wrap: break-word;
 }
 
+.tl_right_nowrap {
+    white-space: nowrap;
+}
+
 @media (max-width: 61.875em) {
     .login-panel {
         margin-top: 50px;
