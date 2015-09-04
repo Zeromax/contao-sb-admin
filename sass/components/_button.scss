@@ -88,10 +88,12 @@
     border-radius: 3px;
 }
 
-.tl_panel .tl_subpanel input[type="search"],
-.tl_panel .tl_subpanel input[type="text"],
-.tl_panel .tl_subpanel select {
-    width: 120px;
+.tl_panel .tl_subpanel {
+    input[type="search"],
+    input[type="text"],
+    select {
+        width: 120px;
+    }
 }
 
 .tl_panel .tl_subpanel input[type="image"],
@@ -129,4 +131,18 @@ input[type="submit"]:hover {
     color: #333;
     background-color: #e6e6e6;
     border-color: #adadad;
+}
+
+@media (max-width: 48em) {
+    .tl_panel .tl_filter {
+        text-align: left;
+        input[type="search"],
+        input[type="text"],
+        select,
+        strong,
+        span {
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
 }

@@ -203,3 +203,17 @@ div.clear {
         display: none;
     }
 }
+
+@media (max-width: 48em) {
+    #tl_buttons > a:last-child:not(:first-child), #tl_buttons > .dropdown-toggle:not(:first-child),
+    #tl_buttons > a:first-child:not(:last-child):not(.dropdown-toggle) {
+        border-radius: 3px;
+    }
+    #tl_buttons a + a {
+        margin-top: -1px;
+    }
+    #tl_buttons > a {
+        float: none;
+        width: 100%;
+    }
+}

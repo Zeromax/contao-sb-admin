@@ -1,10 +1,15 @@
-.tl_panel > div {
-    display: inline;
-    margin-left: 8px;
+.tl_panel {
+    .tl_search,
+    .tl_limit {
+        display: inline;
+        margin-left: 8px;
+    }
+    text-align: right;
 }
 
 .tl_submit_panel.tl_subpanel {
     float: right;
+    margin-left: 10px;
 }
 
 .tl_submit_container,
@@ -12,10 +17,15 @@
 .tl_version_panel,
 .tl_listing_container.parent_view .tl_header {
     width: 100%;
-    text-align: right;
     background-color: #f8f8f8;
     border-top: 1px $listing-border-color solid;
     padding: 10px;
+}
+
+.tl_submit_container,
+.tl_version_panel,
+.tl_listing_container.parent_view .tl_header {
+    text-align: right;
 }
 
 .tl_version_panel {
