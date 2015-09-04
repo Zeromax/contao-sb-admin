@@ -28,7 +28,7 @@ class SbTemplate
 
     public function parseTemplate($objTemplate)
     {
-        if (TL_MODE != "BE" && $objTemplate->getName() != "be_main") {
+        if ($objTemplate->getName() != "be_main") {
             return;
         }
         $objTemplate->main = str_replace(
