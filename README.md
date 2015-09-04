@@ -10,11 +10,11 @@ https://github.com/Zeromax/contao-sb-admin/blob/master/LICENSE
 # Installation
 At the moment only a manual installation is possible
 
-1. downlaod the zip or clone the git Repo
-2. copy the content from the `contao` folder in you contao root
+1. download a zip or clone the git Repo
+2. copy the content from the `contao` folder in your Contao root folder
 3. clean up the internal cache
 4. log in and choose the theme `sb-admin` in your user settings
-5. if you add `$GLOBALS['TL_CONFIG']['backendTheme'] = 'sb-admin';` to your localconfig you will get the full support of the theme. You have to copy the following templates to your `template` Folder
+5. if you add `$GLOBALS['TL_CONFIG']['backendTheme'] = 'sb-admin';` to your localconfig you will get the full support of the theme and you have to copy the following templates to your `template` Folder
     * be_forbidden.html5
     * be_no_active.html5
     * be_no_forward.html5
