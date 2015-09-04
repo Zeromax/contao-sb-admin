@@ -84,9 +84,11 @@ div.clear {
         display: block !important;
     }
 }
+
 .force-display {
     display: inline-block !important;
 }
+
 .navbar {
     margin-bottom: 0;
     a {
@@ -170,4 +172,8 @@ div.clear {
     .login-panel {
         margin-top: 25px;
     }
+}
+
+.tooltip-inner {
+    word-wrap: break-word;
 }
