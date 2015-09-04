@@ -93,7 +93,12 @@
     input[type="text"],
     select {
         width: 120px;
+        margin-top: 10px;
     }
+}
+
+.tl_panel .tl_subpanel input[type="image"] {
+    margin-top: 10px;
 }
 
 .tl_panel .tl_subpanel input[type="image"],
