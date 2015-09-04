@@ -103,6 +103,24 @@ ul {
     }
 }
 
+.tl_folder_top .tl_right,
+.tl_folder .tl_right,
+.tl_file .tl_right,
+.tl_file_list,
+.tl_content_right {
+    a {
+        padding: 7px;
+        display: inline !important;
+    }
+    > img {
+        margin: 7px;
+    }
+}
+
+.drag-handle {
+    cursor: pointer;
+}
+
 div.comment_wrap {
     width: auto;
 }
