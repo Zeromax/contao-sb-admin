@@ -1,5 +1,12 @@
 (function($) {
 	$(function() {
+		// fix collapse conflict with mootools
+		$('.dropdown').on('hide.bs.dropdown hidden.bs.dropdown show.bs.dropdown shown.bs.dropdown', function () {
+			$(this).removeAttr('style');
+		});
+		$('.navbar-collapse').on('hide.bs.collapse hidden.bs.collapse show.bs.collapse shown.bs.collapse', function () {
+			$(this).removeAttr('style');
+		});
 		// messages
 		var alertCount = $('.alert-messages > li > *:first-child').length;
 		var elementAlert = $('#alert-count');
