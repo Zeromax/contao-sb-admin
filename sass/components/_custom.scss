@@ -59,32 +59,36 @@ div.clear {
     background-size: cover;
 }
 
-.sidebar-nav ul li {
-    a {
-        display: block !important;
-    }
-    ul {
-        li {
-            padding-left: 20px;
-        }
-        li.active,
-        li:focus,
-        li:hover {
-            background-color: #eee;
-        }
+.sidebar-nav {
+    ul li {
         a {
             display: block !important;
         }
-        a:focus,
-        a:hover {
-            background-color: inherit;
+        ul {
+            li {
+                padding-left: 20px;
+            }
+            li.active,
+            li:focus,
+            li:hover {
+                background-color: #eee;
+            }
+            a {
+                display: block !important;
+            }
+            a:focus,
+            a:hover {
+                background-color: inherit;
+            }
+        }
+        .nav-second-level.collapsing {
+            display: block !important;
         }
     }
-    .nav-second-level.collapsing {
+    &.collapsing {
         display: block !important;
     }
 }
-
 .force-display {
     display: inline-block !important;
 }
