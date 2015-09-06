@@ -27,7 +27,7 @@ fieldset.collapsed > legend:before {
 
 fieldset.tl_tbox > legend,
 fieldset.tl_box > legend {
-    color: #77ac45;
+    color: $color-green;
     cursor: pointer;
     font-size: 1.1em;
     margin-bottom: 10px;

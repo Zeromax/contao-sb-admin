@@ -5,6 +5,13 @@ $indent-margin-right: 10px !default;
 // border color
 $listing-border-color: #e7e7e7 !default;
 
+// color
+$color-green: #77ac45 !default;
+$color-red: #c33 !default;
+$color-gray: #999 !default;
+$color-blue: #4b85ba !default;
+$color-orange: #f90 !default;
+
 @mixin border-top-radius($radius) {
     border-top-right-radius: $radius;
     border-top-left-radius: $radius;

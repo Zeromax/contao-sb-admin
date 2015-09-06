@@ -37,6 +37,26 @@ div.clear {
     }
 }
 
+.tl_small, .tl_gray {
+    color: $color-gray;
+}
+
+.tl_green {
+    color: $color-green;
+}
+
+.tl_red {
+    color: $color-red;
+}
+
+.tl_blue {
+    color: $color-blue;
+}
+
+.tl_orange {
+    color: $color-orange;
+}
+
 #tl_breadcrumb {
     padding: 8px 15px;
     margin-bottom: 20px;
@@ -89,6 +109,7 @@ div.clear {
         display: block !important;
     }
 }
+
 .force-display {
     display: inline-block !important;
 }

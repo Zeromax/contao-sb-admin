@@ -131,7 +131,7 @@ div.comment_wrap {
 }
 
 .cte_type.published, .cte_type.published a {
-    color: #77ac45;
+    color: $color-green;
 }
 
 .cte_type.published {
@@ -140,7 +140,7 @@ div.comment_wrap {
 }
 
 .cte_type.unpublished, .cte_type.unpublished a {
-    color: #c33;
+    color: $color-red;
 }
 
 .cte_type.unpublished {
