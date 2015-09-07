@@ -28,7 +28,7 @@ class SbTemplate
 
     public function parseTemplate($objTemplate)
     {
-        if ($objTemplate->getName() != "be_main") {
+        if ($objTemplate->getName() != "be_main" || \Backend::getTheme() != "sb-admin") {
             return;
         }
         $objTemplate->main = str_replace(
