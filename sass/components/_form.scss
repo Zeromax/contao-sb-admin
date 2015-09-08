@@ -1,3 +1,45 @@
+.tl_panel input[type="search"],
+.tl_select,
+.tl_text,
+.tl_text_2,
+.tl_text_3,
+.tl_text_4,
+.tl_textarea,
+.tl_textarea,
+.tl_text_unit,
+.tl_text_trbl,
+.tl_text_interval {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.tl_panel {
+    input[type="search"],
+    .tl_text,
+    .tl_text_2,
+    .tl_text_3,
+    .tl_text_4,
+    .tl_select {
+        &.active {
+            background-color: #fcf8e3;
+        }
+    }
+}
+
 fieldset.hide {
     display: block !important;
 }
@@ -41,99 +83,64 @@ fieldset.tl_box > legend {
     }
 }
 
-.tl_tbox > div,
-.tl_formbody_edit fieldset > div {
-    //width: 100%;
-}
-
-.w50,
-.tl_tbox > div,
-.tl_formbody_edit fieldset > div {
-    display: block;
-    margin-bottom: 15px;
-    padding-right: 15px;
-    min-height: 115px;
+.w50 {
+    width: 50%;
+    float: left;
 }
 
 .clr {
     display: table;
     clear: both;
-    width: 100%;
-}
-
-div.w50 {
-    float: left;
     width: 50%;
 }
 
-.w50.cbx {
-    //margin-top: 10px;
-    //margin-bottom: 10px;
+.tl_box,
+.tl_tbox {
+    > div {
+        .tl_text,
+        .tl_select {
+            width: 47.5%
+        }
+        width: 100%;
+        &.long {
+            width: 97.5%;
+            .tl_text,
+            .tl_select {
+                width: 100%
+            }
+        }
+    }
+    div.w50 {
+        width: 50%;
+        .tl_text,
+        .tl_select {
+            width: 95%;
+        }
+    }
+    .cbx {
+        margin-top: 52px;
+        margin-bottom: 6px;
+    }
 }
 
-.m12 {
-    margin: 12px 0;
-}
-
-.long, div.long {
-    width: 100%;
-    padding-right: 15px;
+.tl_box,
+.tl_tbox {
+    .tl_text,
+    .tl_select {
+        width: 95%;
+    }
 }
 
 .tl_formbody_edit h3 {
-    font-size: 1em;
+    font-size: 1.1em;
     max-width: 100%;
     margin-bottom: 5px;
     font-weight: 700;
 }
 
-.tl_panel input[type="search"],
-.tl_panel input[type="text"],
-.tl_panel select,
-.tl_text,
-.tl_text_2,
-.tl_text_3,
-.tl_text_4,
-.tl_textarea,
-.tl_text_unit,
-.tl_text_trbl,
-.tl_text_interval,
-select {
-    display: block;
-    width: 100%;
-    height: 34px;
-    padding: 6px 12px;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #555;
-    background-color: #fff;
-    background-image: none;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
-    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
-    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-}
-
-.tl_panel {
-    input[type="search"],
-    input[type="text"],
-    select {
-        &.active {
-            background-color: #fcf8e3;
-        }
-    }
-}
-
 .tl_textarea {
     min-height: 34px;
     max-width: 100%;
-}
-
-.tl_checkbox_single_container {
-    margin-top: 40px;
 }
 
 .wizard {
@@ -252,5 +259,39 @@ input.tl_imageSize_0.tl_text_4, input.tl_imageSize_1.tl_text_4 {
         display: inline-block;
         margin-bottom: 0;
         vertical-align: middle;
+    }
+}
+
+@media (max-width: 48em) {
+    .tl_box,
+    .tl_tbox {
+        > div {
+            .tl_text,
+            .tl_select {
+                width: 100%
+            }
+            &.long {
+                width: 100%;
+            }
+        }
+        div.w50 {
+            width: 100%;
+            .tl_text,
+            .tl_select {
+                width: 100%;
+            }
+        }
+        .cbx {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    .tl_box,
+    .tl_tbox {
+        .tl_text,
+        .tl_select {
+            width: 100%;
+        }
     }
 }
