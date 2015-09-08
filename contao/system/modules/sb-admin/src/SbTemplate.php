@@ -38,10 +38,14 @@ class SbTemplate
             '<table class="table table-hover dataTable no-footer',
             $objTemplate->main
         );
+        $objTemplate->main = str_replace(
+            '<table class="tl_optionwizard',
+            '<table class="tl_optionwizard table',
+            $objTemplate->main
+        );
         $arrHeadline = explode("»", $objTemplate->headline);
         $objTemplate->headline = array_pop($arrHeadline);
-        if (count($arrHeadline) > 0)
-        {
+        if (count($arrHeadline) > 0) {
             $objTemplate->headlineTrail = implode(' <i class="fa fa-angle-right"></i> ', $arrHeadline) . ' <i class="fa fa-angle-right"></i> ';
         }
     }
