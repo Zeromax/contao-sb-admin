@@ -103,8 +103,13 @@
 
 .tl_panel .tl_subpanel input[type="image"],
 .wizard a,
-input[type="submit"] {
+input[type="submit"],
+a.tl_submit {
     @include bootstrap-button;
+}
+
+a.tl_submit {
+    text-decoration: none;
 }
 
 #save:before {
@@ -125,14 +130,16 @@ input[type="submit"] {
 
 .tl_panel .tl_subpanel input[type="image"],
 .wizard a,
-input[type="submit"] {
+input[type="submit"],
+a.tl_submit {
     color: #333;
     background-color: #fff;
     border-color: #ccc;
 }
 
 .tl_panel .tl_subpanel input[type="image"]:hover,
-input[type="submit"]:hover {
+input[type="submit"]:hover,
+a.tl_submit:hover {
     color: #333;
     background-color: #e6e6e6;
     border-color: #adadad;

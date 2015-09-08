@@ -263,6 +263,13 @@ input.tl_imageSize_0.tl_text_4, input.tl_imageSize_1.tl_text_4 {
     margin: 20px 0;
 }
 
+.selector_container {
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+}
+
 @media (min-width: 740px) {
     .form-inline .form-control {
         display: inline-block;
