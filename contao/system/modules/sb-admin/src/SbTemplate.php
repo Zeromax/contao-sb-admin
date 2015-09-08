@@ -43,6 +43,11 @@ class SbTemplate
             '<table class="tl_optionwizard table',
             $objTemplate->main
         );
+        $objTemplate->main = str_replace(
+            'class="tl_chmod',
+            'class="tl_chmod table table-striped table-hover',
+            $objTemplate->main
+        );
         $arrHeadline = explode("»", $objTemplate->headline);
         $objTemplate->headline = array_pop($arrHeadline);
         if (count($arrHeadline) > 0) {
@@ -85,6 +90,7 @@ class SbTemplate
             'be_password',
             'be_picker',
             'be_popup',
+            'be_purge_data',
             'be_referer',
             'be_switch',
             'be_unavailable',

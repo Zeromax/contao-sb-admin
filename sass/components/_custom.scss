@@ -37,6 +37,7 @@ div.clear {
     }
 }
 
+td.nw span,
 .tl_small, .tl_gray {
     color: $color-gray;
 }
@@ -185,6 +186,7 @@ div.clear {
     word-wrap: break-word;
 }
 
+td.nw,
 .tl_right_nowrap {
     white-space: nowrap;
 }
