@@ -98,8 +98,10 @@ ul {
     .tl_content_right {
         float: right;
     }
-    .tl_content_left {
-
+    &.toggle_select:after {
+        display: table;
+        content: " ";
+        clear: both;
     }
 }
 
