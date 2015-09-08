@@ -113,7 +113,7 @@ fieldset.tl_box > legend {
         .wizard {
             .tl_text,
             .tl_select {
-                width: calc(95% - 20px);
+                width: calc(95% - 46px);
             }
         }
     }
@@ -126,7 +126,7 @@ fieldset.tl_box > legend {
         &.wizard {
             .tl_text,
             .tl_select {
-                width: calc(95% - 20px);
+                width: calc(95% - 46px);
             }
 
         }
@@ -157,12 +157,6 @@ fieldset.tl_box > legend {
     max-width: 97.5%;
 }
 
-.wizard {
-    position: relative;
-    display: table;
-    border-collapse: separate;
-}
-
 .wizard input {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
@@ -170,7 +164,6 @@ fieldset.tl_box > legend {
     position: relative;
     z-index: 2;
     float: left;
-    width: 100%;
     margin-bottom: 0;
 }
 
@@ -179,10 +172,14 @@ div.wizard a {
     margin-left: -1px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    border-left: none;
     position: relative;
     display: table-cell;
-    height: 32px;
+    height: 34px;
     padding: 5px 12px;
+    &.force-display {
+        display: table-cell !important;
+    }
 }
 
 div.wizard h3 label {
@@ -268,6 +265,10 @@ input.tl_imageSize_0.tl_text_4, input.tl_imageSize_1.tl_text_4 {
         list-style: none;
         padding-left: 0;
     }
+}
+
+p.tl_help {
+    margin-right: 5%;
 }
 
 @media (min-width: 740px) {
