@@ -109,12 +109,25 @@ fieldset.tl_box > legend {
                 width: 100%
             }
         }
+        .wizard {
+            .tl_text,
+            .tl_select {
+                width: calc(95% - 20px);
+            }
+        }
     }
     div.w50 {
         width: 50%;
         .tl_text,
         .tl_select {
             width: 95%;
+        }
+        &.wizard {
+            .tl_text,
+            .tl_select {
+                width: calc(95% - 20px);
+            }
+
         }
     }
     .cbx {
