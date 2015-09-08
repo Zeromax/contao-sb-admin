@@ -25,6 +25,7 @@
     min-height: 0;
 }
 
+.tl_empty_parent_view,
 .tl_empty,
 .tl_message .tl_confirm,
 .tl_message .tl_new,
@@ -95,10 +96,15 @@ fieldset.tl_box > legend:before {
     border-color: #faebcc;
 }
 
+.tl_empty_parent_view,
 .tl_empty {
     color: #333;
     background-color: #f5f5f5;
     border-color: #ddd;
+}
+
+.tl_empty_parent_view {
+    margin-top: 10px;
 }
 
 /* paste hint */
