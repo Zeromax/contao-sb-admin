@@ -80,8 +80,8 @@
 				</table>
 				<?php if ($this->isImage):?>
 					<div id="preview">
-						<div class="checkerbox" style="width:<?=$this->width?>px;height:<?=$this->height?>px">
-							<img src="<?=$this->href?>" width="<?=$this->width?>" height="<?=$this->height?>" alt="">
+						<div class="checkerbox">
+							<img src="<?=$this->href?>" width="<?=$this->width?>" height="<?=$this->height?>" class="img-responsive" alt="">
 						</div>
 					</div>
 				<?php endif;?>
