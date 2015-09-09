@@ -53,6 +53,7 @@ class SbTemplate
         if (count($arrHeadline) > 0) {
             $objTemplate->headlineTrail = implode(' <i class="fa fa-angle-right"></i> ', $arrHeadline) . ' <i class="fa fa-angle-right"></i> ';
         }
+        $objTemplate->username = $GLOBALS['TL_LANG']['MSC']['user'];
     }
 
     /**
