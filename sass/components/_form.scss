@@ -292,6 +292,52 @@ ul {
     }
 }
 
+ul.tl_metawizard {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+    li {
+        padding: 10px;
+        &:nth-child(2) {
+            background-color: #eee;
+        }
+        &:last-child {
+            border-bottom: 1px solid $listing-border-color;
+        }
+        border-top: 1px solid $listing-border-color;
+        border-left: 1px solid $listing-border-color;
+        border-right: 1px solid $listing-border-color;
+    }
+    .lang {
+        display: block;
+        font-weight: bold;
+    }
+    label {
+        width: 130px;
+        text-align: right;
+        font-weight: normal;
+        padding-right: 10px;
+    }
+    .tl_text {
+        margin-bottom: 10px;
+        width: calc(100% - 150px)
+    }
+    .tl_metawizard_img {
+        float: right;
+        cursor: pointer;
+    }
+}
+
+.tl_metawizard_new {
+    div.tl_select {
+        float: left;
+        margin-right: 20px;
+    }
+    &:after {
+        @include clear();
+    }
+}
+
 p.tl_help {
     margin-right: 5%;
 }
