@@ -103,6 +103,10 @@ ul {
         content: " ";
         clear: both;
     }
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 .tl_folder_top .tl_right,
@@ -130,6 +134,10 @@ div.comment_wrap {
 /* content element */
 .limit_height {
     overflow: hidden;
+}
+
+.h64 {
+    min-height: 100px;
 }
 
 .cte_type.published, .cte_type.published a {
