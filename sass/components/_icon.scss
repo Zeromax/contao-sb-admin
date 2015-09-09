@@ -86,6 +86,9 @@
 }
 
 /* Navigation icons */
+[class*="fa-contao-"]:before {
+    content: "\f0f2";
+}
 .fa-contao-content:before {
     content: "\f044";
 }
