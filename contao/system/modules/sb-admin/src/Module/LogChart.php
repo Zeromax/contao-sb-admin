@@ -48,7 +48,7 @@ class LogChart extends \BackendModule
         if (!$this->hasAccess('log')) {
             return "";
         }
-        $objResult = \Database::getInstance()->prepare("SELECT tstamp,source,action FROM tl_log WHERE FROM_UNIXTIME(tstamp) BETWEEN (CURDATE() - INTERVAL 30 DAY) AND SYSDATE();")
+        $objResult = \Database::getInstance()->prepare("SELECT tstamp,source,action FROM tl_log WHERE FROM_UNIXTIME(tstamp) BETWEEN (CURDATE() - INTERVAL 30 DAY) AND SYSDATE() ORDER BY tstamp;")
             ->execute();
         if ($objResult->count() < 1) {
             return "";
@@ -69,7 +69,8 @@ class LogChart extends \BackendModule
             if (!isset($arrResult[$tstamp])) {
                 $arrResult[$tstamp] = $this->arrAction;
             }
-            $arrResult[$tstamp]['tstamp'] = $tstamp;
+            $arrResult[$tstamp]['date'] = $tstamp;
+            $arrResult[$tstamp]['tstamp'] = $data['tstamp'];
             $arrResult[$tstamp][strtolower($data['action'])] += 1;
         }
         $arrData = array();
@@ -86,7 +87,7 @@ class LogChart extends \BackendModule
         $this->Template->yKeys = "['" . implode("','", $arrAction) . "']";
         $this->Template->labels = "['" . implode("','", $arrLabels) . "']";
         $this->Template->lineColors = "['" . implode("','", $arrColor) . "']";
-        $this->Template->xKey = "tstamp";
+        $this->Template->xKey = "date";
         $this->Template->headline = $GLOBALS['TL_LANG']['MOD']['log'][0];
     }
 
