@@ -195,7 +195,7 @@ td.nw,
     white-space: nowrap;
 }
 
-@media (max-width: 61.875em) {
+@media (max-width: 61.9375em) {
     .login-panel {
         margin-top: 50px;
     }
@@ -207,13 +207,7 @@ td.nw,
     }
 }
 
-@media (max-width: 50em) {
-    .login-panel {
-        margin-top: 25px;
-    }
-}
-
-@media (min-width: 48em) and (max-width: 64em) {
+@media (min-width: 48em) and (max-width: 61.9375em) {
     #page-wrapper {
         margin-left: 50px;
     }
@@ -250,5 +244,8 @@ td.nw,
     #tl_buttons > a {
         float: none;
         width: 100%;
+    }
+    .login-panel {
+        margin-top: 25px;
     }
 }
