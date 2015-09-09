@@ -28,32 +28,15 @@ class SbTemplate
 
     public function parseTemplate($objTemplate)
     {
-        if ($objTemplate->getName() != "be_main" || \Backend::getTheme() != "sb-admin") {
+        $strTemplate = $objTemplate->getName();
+        if ($strTemplate != "be_main" || \Backend::getTheme() != "sb-admin") {
             return;
         }
-        $objTemplate->main = str_replace(
-            array(
-                '<table class="tl_listing',
-                '<table class="tl_show'),
-            '<table class="table table-hover no-footer',
-            $objTemplate->main
-        );
-        $objTemplate->main = str_replace(
-            '<table class="tl_optionwizard',
-            '<table class="tl_optionwizard table',
-            $objTemplate->main
-        );
-        $objTemplate->main = str_replace(
-            'class="tl_chmod',
-            'class="tl_chmod table table-striped table-hover',
-            $objTemplate->main
-        );
-        $arrHeadline = explode("»", $objTemplate->headline);
-        $objTemplate->headline = array_pop($arrHeadline);
-        if (count($arrHeadline) > 0) {
-            $objTemplate->headlineTrail = implode(' <i class="fa fa-angle-right"></i> ', $arrHeadline) . ' <i class="fa fa-angle-right"></i> ';
+        switch($strTemplate)
+        {
+            case "be_main":
+                $this->parseMainTemplate($objTemplate);
         }
-        $objTemplate->username = $GLOBALS['TL_LANG']['MSC']['user'];
     }
 
     /**
@@ -102,5 +85,37 @@ class SbTemplate
         if (in_array($objTemplate->getName(), $arrTemplate)) {
             \TemplateLoader::addFile($objTemplate->getName(), 'system/modules/sb-admin/templates/backend');
         }
+    }
+
+    /**
+     * parse be_main template
+     *
+     * @param \BackendTemplate $objTemplate
+     */
+    protected function parseMainTemplate($objTemplate)
+    {
+        $objTemplate->main = str_replace(
+            array(
+                '<table class="tl_listing',
+                '<table class="tl_show'),
+            '<table class="table table-hover no-footer',
+            $objTemplate->main
+        );
+        $objTemplate->main = str_replace(
+            '<table class="tl_optionwizard',
+            '<table class="tl_optionwizard table',
+            $objTemplate->main
+        );
+        $objTemplate->main = str_replace(
+            'class="tl_chmod',
+            'class="tl_chmod table table-striped table-hover',
+            $objTemplate->main
+        );
+        $arrHeadline = explode("»", $objTemplate->headline);
+        $objTemplate->headline = array_pop($arrHeadline);
+        if (count($arrHeadline) > 0) {
+            $objTemplate->headlineTrail = implode(' <i class="fa fa-angle-right"></i> ', $arrHeadline) . ' <i class="fa fa-angle-right"></i> ';
+        }
+        $objTemplate->username = $GLOBALS['TL_LANG']['MSC']['user'];
     }
 }
