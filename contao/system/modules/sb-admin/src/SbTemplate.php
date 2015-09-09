@@ -35,7 +35,7 @@ class SbTemplate
             array(
                 '<table class="tl_listing',
                 '<table class="tl_show'),
-            '<table class="table table-hover dataTable no-footer',
+            '<table class="table table-hover no-footer',
             $objTemplate->main
         );
         $objTemplate->main = str_replace(
