@@ -136,13 +136,12 @@ fieldset.tl_box > legend {
         margin-top: 52px;
         margin-bottom: 6px;
     }
-}
-
-.tl_box,
-.tl_tbox {
     .tl_text,
     .tl_select {
         width: 95%;
+    }
+    &:after {
+        @include clear();
     }
 }
 
@@ -337,10 +336,6 @@ p:empty.tl_help {
             margin-top: 0;
             margin-bottom: 0;
         }
-    }
-
-    .tl_box,
-    .tl_tbox {
         .tl_text,
         .tl_select {
             width: 100%;

@@ -12,6 +12,14 @@ $color-gray: #999 !default;
 $color-blue: #4b85ba !default;
 $color-orange: #f90 !default;
 
+// clear
+@mixin clear() {
+    display: table;
+    content: " ";
+    clear: both;
+}
+
+// border radius
 @mixin border-top-radius($radius) {
     border-top-right-radius: $radius;
     border-top-left-radius: $radius;

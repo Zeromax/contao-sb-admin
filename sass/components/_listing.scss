@@ -99,9 +99,7 @@ ul {
         float: right;
     }
     &.toggle_select:after {
-        display: table;
-        content: " ";
-        clear: both;
+        @include clear();
     }
     .row {
         margin-left: 0;

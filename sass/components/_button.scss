@@ -29,9 +29,7 @@
     &:before,
     &:after,
     + p:before {
-        display: table;
-        content: " ";
-        clear: both;
+        @include clear();
     }
     + .tl_message,
     + p {
@@ -60,16 +58,12 @@
     + #paste_hint {
         + form:before,
         + .tl_listing_container:before {
-            clear: both;
-            content: " ";
-            display: table;
+            @include clear();
         }
     }
     + form:before,
     + .tl_listing_container:before {
-        clear: both;
-        content: " ";
-        display: table;
+        @include clear();
     }
 }
 
