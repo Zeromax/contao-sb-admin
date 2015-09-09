@@ -1,35 +1,44 @@
 <div class="row">
     <div class="col-lg-6">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <i class="fa fa-bell fa-fw"></i> <?= $this->systemMessages ?>
+        <?if ($this->chartLog): ?>
+        <div class="row">
+            <div class="col-lg-12">
+        <?endif; ?>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-bell fa-fw"></i> <?= $this->systemMessages ?>
+                    </div>
+                    <div class="panel-body">
+                        <div class="list-group">
+                            <?php if (!empty($this->messages)): ?>
+                                <? $arrNessages = explode('</p>', $this->messages); ?>
+                                <? foreach ($arrNessages as $message): ?>
+                                    <? if (trim($message) != ""): ?>
+                                        <div class="alert-list-group-item bg-info text-info">
+                                            <?= $message; ?>
+                                        </div>
+                                    <? endif; ?>
+                                <? endforeach; ?>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </div>
+        <?if (!$this->chartLog): ?>
             </div>
-            <div class="panel-body">
-                <div class="list-group">
-                    <?php if (!empty($this->messages)): ?>
-                        <? $arrNessages = explode('</p>', $this->messages); ?>
-                        <? foreach ($arrNessages as $message): ?>
-                            <? if (trim($message) != ""): ?>
-                                <div class="alert-list-group-item bg-info text-info">
-                                    <?= $message; ?>
-                                </div>
-                            <? endif; ?>
-                        <? endforeach; ?>
-                    <?php endif; ?>
+            <div class="col-lg-6">
+        <?endif; ?>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-info fa-fw"></i> <?= $this->shortcuts ?>
+                    </div>
+                    <div class="panel-body">
+                        <?= $this->shortcutsLink ?>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="col-lg-6">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <i class="fa fa-info fa-fw"></i> <?= $this->shortcuts ?>
-            </div>
-            <div class="panel-body">
-                <?= $this->shortcutsLink ?>
-            </div>
-        </div>
-    </div>
+    <?=$this->chartLog; ?>
 </div>
 <div class="row">
     <div class="col-lg-12">

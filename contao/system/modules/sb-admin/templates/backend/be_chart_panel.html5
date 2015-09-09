@@ -1,0 +1,28 @@
+<div class="col-lg-6">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <i class="fa fa-bar-chart-o fa-fw"></i> <?= $this->headline; ?>
+        </div>
+        <div class="panel-body">
+            <div id="log-chart"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    (function ($) {
+        $(function () {
+            new Morris.Line({
+                element: 'log-chart',
+                data: <?=$this->data ;?>,
+                xkey: '<?=$this->xKey ;?>',
+                ykeys: <?=$this->yKeys ;?>,
+                lineColors: <?=$this->lineColors ;?>,
+                labels: <?=$this->labels ;?>,
+                hideHover: true,
+                resize: true
+            });
+        });
+    })(jQuery);
+
+</script>

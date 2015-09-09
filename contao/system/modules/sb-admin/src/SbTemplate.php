@@ -26,16 +26,24 @@ namespace SbAdmin;
 class SbTemplate
 {
 
+    /**
+     * switch the back end templates and extend them
+     *
+     * @param \BackendTemplate $objTemplate
+     */
     public function parseTemplate($objTemplate)
     {
         $strTemplate = $objTemplate->getName();
-        if ($strTemplate != "be_main" || \Backend::getTheme() != "sb-admin") {
+        if (\Backend::getTheme() != "sb-admin") {
             return;
         }
-        switch($strTemplate)
-        {
+        switch ($strTemplate) {
             case "be_main":
                 $this->parseMainTemplate($objTemplate);
+                break;
+            case "be_welcome":
+                $this->parseWelcomeTemplate($objTemplate);
+                break;
         }
     }
 
@@ -55,6 +63,7 @@ class SbTemplate
         // modified templates
         $arrTemplate = array(
             'be_changelog',
+            'be_chart_panel',
             'be_confirm',
             'be_diff',
             'be_error',
@@ -117,5 +126,16 @@ class SbTemplate
             $objTemplate->headlineTrail = implode(' <i class="fa fa-angle-right"></i> ', $arrHeadline) . ' <i class="fa fa-angle-right"></i> ';
         }
         $objTemplate->username = $GLOBALS['TL_LANG']['MSC']['user'];
+    }
+
+    /**
+     * parse be_welcome template
+     *
+     * @param \BackendTemplate $objTemplate
+     */
+    protected function parseWelcomeTemplate($objTemplate)
+    {
+        $objModule = new Module\LogChart();
+        $objTemplate->chartLog = $objModule->generate();
     }
 }
