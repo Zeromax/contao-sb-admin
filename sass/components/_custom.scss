@@ -129,8 +129,22 @@ td.nw span,
     }
 }
 
+.margin-one-btm,
 .breadcrumb {
     margin-bottom: 10px;
+}
+
+.margin-two {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
 }
 
 /* drop zone */
@@ -234,7 +248,7 @@ td.nw,
     }
 }
 
-@media (max-width: 48em) {
+@media (max-width: 47.775em) {
     #tl_buttons > a:last-child:not(:first-child), #tl_buttons > .dropdown-toggle:not(:first-child),
     #tl_buttons > a:first-child:not(:last-child):not(.dropdown-toggle) {
         border-radius: 3px;

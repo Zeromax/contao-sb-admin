@@ -170,10 +170,10 @@
 					</div>
 				<?endif; ?>
 				<?php if ($this->managerHref):?>
-					<div class="row">
+					<div class="row margin-two">
 						<div class="col-lg-12">
-							<div id="manager">
-								<a href="<?=$this->managerHref?>" class="close" title="<?=specialchars($this->manager)?>"><?=$this->manager?></a>
+							<div id="manager" class="text-left">
+								<a href="<?=$this->managerHref?>" class="btn btn-default" title="<?=specialchars($this->manager)?>"><i class="fa fa-chevron-left"></i> <?=$this->manager?></a>
 							</div>
 						</div>
 					</div>
