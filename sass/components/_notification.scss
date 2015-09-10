@@ -26,16 +26,37 @@
 }
 
 .tl_empty_parent_view,
-.tl_empty,
-.tl_message .tl_confirm,
-.tl_message .tl_new,
-.tl_message .tl_info,
-.tl_message .tl_raw,
-.tl_message .tl_error {
+.tl_empty {
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid transparent;
     border-radius: 4px;
+}
+
+p {
+    &.tl_confirm,
+    &.tl_new,
+    &.tl_info,
+    &.tl_raw,
+    &.tl_error {
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+    }
+}
+
+.list-group {
+    p {
+        &.tl_confirm,
+        &.tl_new,
+        &.tl_info,
+        &.tl_raw,
+        &.tl_error {
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+    }
 }
 
 .tl_error {
