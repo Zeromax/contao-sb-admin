@@ -34,6 +34,7 @@ class SbTemplate
     public function parseTemplate($objTemplate)
     {
         $strTemplate = $objTemplate->getName();
+
         if (\Backend::getTheme() != "sb-admin") {
             return;
         }
@@ -49,15 +50,21 @@ class SbTemplate
 
     /**
      * Choose the right template
-     *
-     * @param \BackendTemplate $objTemplate
      */
-    public function chooseTemplates($objTemplate)
+    public function chooseTemplates()
     {
-        // check them for back end user
-        $objUser = \BackendUser::getInstance();
-        if (\Config::get('backendTheme') != "sb-admin" && ($objUser !== null && $objUser->backendTheme != "sb-admin")) {
-            return;
+        // check theme for back end user
+        $theme = "";
+        if (TL_MODE == "BE") {
+            $objUser = \BackendUser::getInstance();
+            $objUser->authenticate();
+            $theme = $objUser->backendTheme;
+        }
+
+        if (\Config::get('backendTheme') != "sb-admin") {
+            if ($theme != "sb-admin") {
+                return;
+            }
         }
 
         // modified templates
@@ -91,8 +98,8 @@ class SbTemplate
         );
 
         // Register the template
-        if (in_array($objTemplate->getName(), $arrTemplate)) {
-            \TemplateLoader::addFile($objTemplate->getName(), 'system/modules/sb-admin/templates/backend');
+        foreach ($arrTemplate as $value) {
+            \TemplateLoader::addFile($value, 'system/modules/sb-admin/templates/backend');
         }
     }
 
