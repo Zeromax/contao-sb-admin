@@ -9,6 +9,10 @@ ul {
     }
 }
 
+.table-hover > tbody > tr:hover {
+    background-color: $line-hover-color;
+}
+
 .table,
 .tl_listing {
     ul {
@@ -23,6 +27,9 @@ ul {
             display: inline;
             padding-left: 0;
             padding-right: 0;
+        }
+        &.tl_file:hover {
+            background-color: $line-hover-color;
         }
     }
     th,
@@ -163,6 +170,9 @@ div.comment_wrap {
 .tl_listing_container {
     .tl_header {
         border-bottom: 1px $listing-border-color solid;
+        &:hover {
+            background-color: $line-hover-color;
+        }
         .tl_content_right {
             float: right;
         }
@@ -182,6 +192,9 @@ div.comment_wrap {
         }
         > li {
             list-style-type: none;
+            &:hover {
+                background-color: $line-hover-color;
+            }
             .tl_content {
                 border-bottom: 1px $listing-border-color solid;
                 padding: 10px;
