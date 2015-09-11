@@ -7,6 +7,9 @@ ul {
         padding-left: 0;
         list-style-type: none;
     }
+    label {
+        margin-bottom: 0;
+    }
 }
 
 .table-hover > tbody > tr:hover {
@@ -76,6 +79,7 @@ ul {
 
 .tl_file_list.tl_right_nowrap {
     text-align: right;
+    padding: 4px 8px;
 }
 
 .tl_file_list {
@@ -120,7 +124,6 @@ ul {
 .tl_file_list,
 .tl_content_right {
     a {
-        padding: 7px;
         display: inline !important;
     }
     > img {
@@ -149,22 +152,37 @@ div.comment_wrap {
     min-height: 100px;
 }
 
-.cte_type.published, .cte_type.published a {
-    color: $color-green;
-}
-
-.cte_type.published {
+.cte_type {
     padding: 1px 0 2px 20px;
-    background: url("../images/published.gif") no-repeat left center;
+    &.published,
+    &.published a {
+        color: $color-green;
+        background-repeat: no-repeat;
+    }
+    &.unpublished,
+    &.unpublished a {
+        color: $color-red;
+        background-repeat: no-repeat;
+    }
 }
 
-.cte_type.unpublished, .cte_type.unpublished a {
-    color: $color-red;
-}
-
-.cte_type.unpublished {
-    padding: 1px 0 2px 20px;
-    background: url("../images/unpublished.gif") no-repeat left center;
+.tl_content .cte_type {
+    padding: 1px 0 2px 2px;
+    &.published:before,
+    &.unpublished:before {
+        @include bootstrap-font-awesome(10px);
+    }
+    &.published {
+        &:before {
+            content: "\f06e";
+        }
+    }
+    &.unpublished {
+        padding: 1px 0 2px 2px;
+        &:before {
+            content: "\f070";
+        }
+    }
 }
 
 .tl_listing_container {

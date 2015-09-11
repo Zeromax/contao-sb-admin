@@ -19,6 +19,20 @@
     //margin-left:15px;
 }
 
+.fa.icon-disabled {
+    opacity: 0.5;
+}
+
+.action-icon {
+    padding: 7px;
+    &.fa-plus-square-o,
+    &.fa-minus-square-o {
+        padding: 7px 4px;
+    }
+    text-align: center;
+    width: 28px;
+}
+
 /* Header icons */
 .header_home {
     background-image: url("../images/home.gif");
@@ -89,6 +103,7 @@
 [class*="fa-contao-"]:before {
     content: "\f0f2";
 }
+
 .fa-contao-content:before {
     content: "\f044";
 }

@@ -25,6 +25,7 @@ ClassLoader::addNamespaces(array
 ClassLoader::addClasses(array
 (
     // Classes
+    'SbAdmin\Image' => 'system/modules/sb-admin/src/Image.php',
     'SbAdmin\SbTemplate' => 'system/modules/sb-admin/src/SbTemplate.php',
     'SbAdmin\Module\LogChart' => 'system/modules/sb-admin/src/Module/LogChart.php'
 ));
