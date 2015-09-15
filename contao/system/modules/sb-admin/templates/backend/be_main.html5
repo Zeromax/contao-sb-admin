@@ -41,7 +41,6 @@
 		$objCombiner->add('assets/mootools/simplemodal/' . $GLOBALS['TL_ASSETS']['SIMPLEMODAL'] . '/js/simplemodal.js', $GLOBALS['TL_ASSETS']['SIMPLEMODAL']);
 		$objCombiner->add('assets/mootools/datepicker/' . $GLOBALS['TL_ASSETS']['DATEPICKER'] . '/datepicker.js', $GLOBALS['TL_ASSETS']['DATEPICKER']);
 		$objCombiner->add('assets/mootools/mootao/Mootao.js');
-		$objCombiner->add('assets/contao/js/core.js');
 		$objCombiner->add('system/themes/' . $this->theme . '/js/hover.js');
 		$version = filemtime(TL_ROOT. '/system/themes/' . $this->theme . '/js/mootools.js');
 		$objCombiner->add('system/themes/' . $this->theme . '/js/mootools.js', $version);
@@ -142,7 +141,7 @@
 								</li>
 								<?php foreach ($this->modules as $strGroup => $arrModules):?>
 									<li class="<?=$arrModules['class']?><?=((strpos($arrModules['class'], 'trail') > 0 || $arrModules['modules']) ? ' active' : ''); ?>">
-										<a href="<?=$arrModules['href']?>" title="<?=$arrModules['title']?>" onclick="return BsAjaxRequest.toggleNavigation(this,'<?= $strGroup ?>')"><i class="fa fa-contao-<?=$strGroup; ?> fa-fw"></i><span class="icon-only"> <?=$arrModules['label']?> </span><span class="fa arrow"></span></a>
+										<a href="<?=$arrModules['href']?>" title="<?=$arrModules['title']?>" onclick="return AjaxRequest.toggleNavigation(this,'<?= $strGroup ?>')"><i class="fa fa-contao-<?=$strGroup; ?> fa-fw"></i><span class="icon-only"> <?=$arrModules['label']?> </span><span class="fa arrow"></span></a>
 										<ul class="nav nav-second-level" id="<?= $strGroup ?>" aria-expanded="<?=(($arrModules['modules']) ? 'true' : 'false'); ?>">
 											<?php if ($arrModules['modules']):?>
 												<?php foreach ($arrModules['modules'] as $arrConfig):?>

@@ -25,7 +25,8 @@
 			  $objCombiner = new Combiner();
 			  $objCombiner->add('assets/mootools/core/' . $GLOBALS['TL_ASSETS']['MOOTOOLS'] . '/mootools.js', $GLOBALS['TL_ASSETS']['MOOTOOLS']);
 			  $objCombiner->add('assets/mootools/mootao/Mootao.js');
-			  $objCombiner->add('assets/contao/js/core.js');
+			  $version = filemtime(TL_ROOT. '/system/themes/' . $this->theme . '/js/mootools.js');
+			  $objCombiner->add('system/themes/' . $this->theme . '/js/mootools.js', $version);
 			  echo $objCombiner->getCombinedFile();
 		?>"></script>
 		<script><?=$this->getDateString()?></script>
