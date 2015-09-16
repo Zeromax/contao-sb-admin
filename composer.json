@@ -4,7 +4,9 @@
     "keywords": [
         "theme",
         "backend",
-        "responsive"
+        "responsive",
+        "contao module",
+        "bootstrap"
     ],
     "type": "contao-module",
     "homepage": "http://www.brothers-project.de",
