@@ -130,25 +130,31 @@ fieldset.tl_box > legend:before {
 }
 
 /* paste hint */
+@font-face {
+    font-family: "Architects Daughter";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Architects Daughter"), url("../../../assets/fonts/ArchitectsDaughter.woff") format("woff");
+}
+
 #paste_hint {
     position: relative;
     + .tl_listing_container > *:first-child {
         margin-top: 50px;
     }
-}
-
-#paste_hint p {
-    position: absolute;
-    font-family: "Architects Daughter", cursive;
-    font-size: 1em;
-    color: #8a6d3b;
-    top: 48px;
-    right: 0;
-    padding: 10px 36px 20px 10px;
-    margin-right: 20px;
-    margin-left: 15px;
-    background: #fcf8e3 url("../images/arrow_right.png") bottom right no-repeat;
-    margin-bottom: 20px;
-    border: 1px solid #faebcc;
-    border-radius: 4px;
+    p {
+        position: absolute;
+        font-family: "Architects Daughter", cursive;
+        font-size: 1em;
+        color: #8a6d3b;
+        top: 48px;
+        right: 0;
+        padding: 10px 36px 20px 10px;
+        margin-right: 20px;
+        margin-left: 15px;
+        background: #fcf8e3 url("../images/arrow_right.png") bottom right no-repeat;
+        margin-bottom: 20px;
+        border: 1px solid #faebcc;
+        border-radius: 4px;
+    }
 }
