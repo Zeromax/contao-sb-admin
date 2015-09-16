@@ -1,3 +1,6 @@
+[![Version](http://img.shields.io/packagist/v/zeromax/contao-sb-admin.svg?style=flat-square)](http://packagist.com/packages/zeromax/contao-sb-admin)
+[![License](http://img.shields.io/packagist/l/zeromax/contao-sb-admin.svg?style=flat-square)](http://packagist.com/packages/zeromax/contao-sb-admin)
+
 # contao-sb-admin
 This is a back end theme for the Open Source CMS Contao https://contao.org.
 
