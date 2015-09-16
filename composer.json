@@ -8,7 +8,7 @@
     ],
     "type": "contao-module",
     "homepage": "http://www.brothers-project.de",
-    "license": "LGPL 3.0",
+    "license": "LGPL-3.0+",
     "authors": [
         {
             "name": "Andreas Nölke",
