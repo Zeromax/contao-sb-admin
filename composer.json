@@ -1,0 +1,44 @@
+{
+    "name": "zeromax/contao-sb-admin",
+    "description": "Responsive Backend Theme for Contao Based on Startbootstrap Admin 2.0",
+    "keywords": [
+        "theme",
+        "backend",
+        "responsive"
+    ],
+    "type": "contao-module",
+    "homepage": "http://www.brothers-project.de",
+    "license": "LGPL 3.0",
+    "authors": [
+        {
+            "name": "Andreas Nölke",
+            "email": "zero@brothers-project.de",
+            "homepage": "http://www.brothers-project.de",
+            "role": "Project Lead"
+        }
+    ],
+    "support": {
+        "email": "zero@brothers-project.de",
+        "issues": "https://github.com/Zeromax/contao-sb-admin/issues",
+        "source": "https://github.com/Zeromax/contao-sb-admin"
+    },
+    "require": {
+        "php": ">=5.3",
+        "contao/core": ">=3.5,<4.0",
+        "contao-community-alliance/composer-plugin": "~2.2"
+    },
+    "replace": {
+        "contao-legacy/sb-admin": "*"
+    },
+    "extra": {
+        "contao": {
+            "sources": {
+                "contao/system/modules/sb-admin": "system/modules/sb-admin",
+                "contao/system/themes/sb-admin": "system/themes/sb-admin"
+            }
+        },
+        "branch-alias": {
+            "master": "1.0.x-dev"
+        }
+    }
+}
