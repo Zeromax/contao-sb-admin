@@ -25,9 +25,11 @@
 
 .action-icon {
     padding: 7px;
+    &.fa-globe,
     &.fa-plus-square-o,
     &.fa-minus-square-o {
-        padding: 7px 4px;
+        padding: 7px 0px;
+        width: 20px;
     }
     text-align: center;
     width: 28px;
