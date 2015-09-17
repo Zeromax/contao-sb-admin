@@ -57,13 +57,13 @@ $backendUserLogIn = sha1(session_id() . (!Config::get('disableIpCheck') ? Enviro
                     <p><?= $lang->incompleteExplain ?></p>
 
                 </div>
-                <? if ($backendUserLogIn === true): ?>
+                <?php if ($backendUserLogIn === true): ?>
                     <div class="panel-footer">
                         <p class="text-muted">
                             <small><?php printf($lang->hint, 'templates/be_incomplete.html5'); ?></small>
                         </p>
                     </div>
-                <? endif; ?>
+                <?php endif; ?>
             </div>
         </div>
     </div>

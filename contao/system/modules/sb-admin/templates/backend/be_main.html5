@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="<?=$this->language?>">
+<html lang="<?= $this->language ?>">
 	<head>
 
-		<meta charset="<?=$this->charset?>">
-		<title><?=$this->title?> - Contao Open Source CMS <?=VERSION?></title>
-		<base href="<?=$this->base?>">
+		<meta charset="<?= $this->charset ?>">
+		<title><?= $this->title ?> - Contao Open Source CMS <?= VERSION ?></title>
+		<base href="<?= $this->base ?>">
 		<meta name="generator" content="Contao Open Source CMS">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
@@ -19,11 +19,11 @@
 		$version = filemtime(TL_ROOT. '/system/themes/' . $this->theme . '/css/style.css');
 		$objCombiner->add('system/themes/' . $this->theme . '/css/style.css', $version);
 		echo $objCombiner->getCombinedFile();
-		?>">
-		<!--[if IE]><link rel="stylesheet" href="<?=TL_ASSETS_URL?>system/themes/<?=$this->theme?>/iefixes.css"><![endif]-->
-		<?=$this->stylesheets?>
+		 ?>">
+		<!--[if IE]><link rel="stylesheet" href="<?= TL_ASSETS_URL ?>system/themes/<?= $this->theme ?>/iefixes.css"><![endif]-->
+		<?= $this->stylesheets ?>
 
-		<script><?=$this->getLocaleString()?></script>
+		<script><?= $this->getLocaleString() ?></script>
 		<script src="<?php
 		$objCombiner = new Combiner();
 		$version = filemtime(TL_ROOT. '/system/themes/' . $this->theme . '/js/jquery.js');
@@ -32,7 +32,7 @@
 			$objCombiner->add('system/themes/' . $this->theme . '/js/morris.js', $version);
 		endif;
 		echo $objCombiner->getCombinedFile();
-		?>"></script>
+		 ?>"></script>
 		<script src="<?php
 		$objCombiner = new Combiner();
 		$objCombiner->add('assets/mootools/core/' . $GLOBALS['TL_ASSETS']['MOOTOOLS'] . '/mootools.js', $GLOBALS['TL_ASSETS']['MOOTOOLS']);
@@ -45,17 +45,17 @@
 		$version = filemtime(TL_ROOT. '/system/themes/' . $this->theme . '/js/mootools.js');
 		$objCombiner->add('system/themes/' . $this->theme . '/js/mootools.js', $version);
 		echo $objCombiner->getCombinedFile();
-		?>"></script>
-		<script><?=$this->getDateString()?></script>
-		<?=$this->javascripts?>
-		<!--[if lt IE 9]><script src="<?=TL_ASSETS_URL?>assets/html5shiv/<?=$GLOBALS['TL_ASSETS']['HTML5SHIV']?>/html5shiv.min.js"></script><![endif]-->
+		 ?>"></script>
+		<script><?= $this->getDateString() ?></script>
+		<?= $this->javascripts ?>
+		<!--[if lt IE 9]><script src="<?= TL_ASSETS_URL ?>assets/html5shiv/<?= $GLOBALS['TL_ASSETS']['HTML5SHIV'] ?>/html5shiv.min.js"></script><![endif]-->
 
 	</head>
-	<body id="top" class="<?=$this->ua?><?php if ($this->isPopup) echo ' popup';?>">
+	<body id="top" class="<?= $this->ua ?><?php if ($this->isPopup) echo ' popup'; ?>">
 
 		<div id="wrapper">
 
-			<?php if (!$this->isPopup):?>
+			<?php if (!$this->isPopup): ?>
 				<!-- Navigation -->
 				<nav class="navbar navbar-default navbar-static-top" role="navigation">
 					<div class="navbar-header">
@@ -65,68 +65,68 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="<?=$this->base?>contao/main.php">Contao Open Source CMS <?=VERSION . '.' . BUILD?></a>
+						<a class="navbar-brand" href="<?= $this->base ?>contao/main.php">Contao Open Source CMS <?= VERSION . '.' . BUILD ?></a>
 					</div>
 
 					<ul class="nav navbar-top-links navbar-right">
                         <li class="dropdown">
-                            <?$hasAlert = ($this->isCoreOnlyMode || $this->isMaintenanceMode || $this->needsCacheBuild) ? true : false; ?>
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="<?=$this->base?>contao/main.php#">
-                                <i class="fa fa-bell fa-fw"></i> <span id="alert-count" class="label label-default" data-alert="<?=($hasAlert) ? 'true' : 'false'; ?>">0</span> <i class="fa fa-caret-down"></i>
+                            <?php $hasAlert = ($this->isCoreOnlyMode || $this->isMaintenanceMode || $this->needsCacheBuild) ? true : false; ?>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="<?= $this->base ?>contao/main.php#">
+                                <i class="fa fa-bell fa-fw"></i> <span id="alert-count" class="label label-default" data-alert="<?= ($hasAlert) ? 'true' : 'false'; ?>">0</span> <i class="fa fa-caret-down"></i>
                             </a>
                             <ul class="dropdown-menu dropdown-messages alert-messages">
-                                <?if (!$hasAlert): ?>
+                                <?php if (!$hasAlert): ?>
                                     <li>
                                         <div>
                                             Keine Systemmeldungen vorhanden.
                                         </div>
                                     </li>
-                                <?endif; ?>
-                                <? if ($this->isCoreOnlyMode):?>
+                                <?php endif; ?>
+                                <?php if ($this->isCoreOnlyMode): ?>
                                     <li>
-                                        <?php if ($this->isAdmin):?><a href="<?=$this->coreOnlyHref?>" title="<?=$this->coreOnlyOff?>"><?else: ?><div><?endif; ?>
+                                        <?php if ($this->isAdmin): ?><a href="<?= $this->coreOnlyHref ?>" title="<?= $this->coreOnlyOff ?>"><?php else: ?><div><?php endif; ?>
                                             <div>
                                                 <span class="label label-danger">Core only mode</span>
                                             </div>
-                                            <div><?=$this->coreOnlyMode?></div>
-                                        <?php if (!$this->isAdmin):?></div><?else: ?></a><?php endif;?>
+                                            <div><?= $this->coreOnlyMode ?></div>
+                                        <?php if (!$this->isAdmin): ?></div><?php else: ?></a><?php endif; ?>
                                     </li>
                                     <li class="divider"></li>
-                                <?php endif;?>
-                                <?php if ($this->isMaintenanceMode):?>
+                                <?php endif; ?>
+                                <?php if ($this->isMaintenanceMode): ?>
                                     <li>
-                                        <?php if ($this->isAdmin):?><a href="<?=$this->maintenanceHref?>" title="<?=$this->maintenanceOff?>"><?else: ?><div><?endif; ?>
+                                        <?php if ($this->isAdmin): ?><a href="<?= $this->maintenanceHref ?>" title="<?= $this->maintenanceOff ?>"><?php else: ?><div><?php endif; ?>
                                             <div>
                                                 <span class="label label-danger">Wartungsmodus</span>
                                             </div>
-                                            <div><?=$this->maintenanceMode?></div>
-                                        <?php if (!$this->isAdmin):?></div><?else: ?></a><?php endif;?>
+                                            <div><?= $this->maintenanceMode ?></div>
+                                        <?php if (!$this->isAdmin): ?></div><?php else: ?></a><?php endif; ?>
                                     </li>
                                     <li class="divider"></li>
-                                <?php endif;?>
-                                <?php if ($this->needsCacheBuild):?>
+                                <?php endif; ?>
+                                <?php if ($this->needsCacheBuild): ?>
                                     <li>
-                                        <?php if ($this->isAdmin):?><a href="<?=$this->buildCacheHref?>" title="<?=$this->buildCacheLink?>"><?else: ?><div><?endif; ?>
+                                        <?php if ($this->isAdmin): ?><a href="<?= $this->buildCacheHref ?>" title="<?= $this->buildCacheLink ?>"><?php else: ?><div><?php endif; ?>
                                             <div>
                                                 <span class="label label-danger">Build Cache</span>
                                             </div>
-                                            <div><?=$this->buildCacheText?></div>
-                                        <?php if (!$this->isAdmin):?></div><?else: ?></a><?php endif;?>
+                                            <div><?= $this->buildCacheText ?></div>
+                                        <?php if (!$this->isAdmin): ?></div><?php else: ?></a><?php endif; ?>
                                     </li>
-                                <?php endif;?>
+                                <?php endif; ?>
                             </ul>
                         </li>
                         <li>
-                            <a href="<?=$this->base?>contao/main.php?do=login&amp;ref=<?=TL_REFERER_ID?>" class="" title="<?=$this->account?>"><i class="fa fa-user fa-fw"></i> <span class="hidden-xs hidden-sm"><?=$this->username?></span></a>
+                            <a href="<?= $this->base ?>contao/main.php?do=login&amp;ref=<?= TL_REFERER_ID ?>" class="" title="<?= $this->account ?>"><i class="fa fa-user fa-fw"></i> <span class="hidden-xs hidden-sm"><?= $this->username ?></span></a>
                         </li>
                         <li>
-                            <a href="<?=$this->base?>contao/preview.php<?=$this->frontendFile?>" target="_blank" class="" title="<?=$this->previewTitle?>" accesskey="f"><i class="fa fa-desktop fa-fw"></i> <span class="hidden-xs hidden-sm"><?=$this->preview?></span></a>
+                            <a href="<?= $this->base ?>contao/preview.php<?= $this->frontendFile ?>" target="_blank" class="" title="<?= $this->previewTitle ?>" accesskey="f"><i class="fa fa-desktop fa-fw"></i> <span class="hidden-xs hidden-sm"><?= $this->preview ?></span></a>
                         </li>
                         <li>
-                            <a href="<?=$this->base?>contao/main.php" class="" title="<?=$GLOBALS['TL_LANG']['MSC']['dashboard'][1]; ?>" accesskey="h"><i class="fa fa-dashboard fa-fw"></i> <span class="hidden-xs hidden-sm"><?=$GLOBALS['TL_LANG']['MSC']['dashboard'][0]; ?></span></a>
+                            <a href="<?= $this->base ?>contao/main.php" class="" title="<?= $GLOBALS['TL_LANG']['MSC']['dashboard'][1]; ?>" accesskey="h"><i class="fa fa-dashboard fa-fw"></i> <span class="hidden-xs hidden-sm"><?= $GLOBALS['TL_LANG']['MSC']['dashboard'][0]; ?></span></a>
                         </li>
                         <li>
-                            <a href="<?=$this->base?>contao/" class="" title="<?=$this->logoutTitle?>" accesskey="q"><i class="fa fa-sign-out fa-fw"></i> <span class="hidden-xs hidden-sm"><?=$this->logout?></span></a>
+                            <a href="<?= $this->base ?>contao/" class="" title="<?= $this->logoutTitle ?>" accesskey="q"><i class="fa fa-sign-out fa-fw"></i> <span class="hidden-xs hidden-sm"><?= $this->logout ?></span></a>
                         </li>
                     </ul>
 
@@ -134,23 +134,23 @@
 						<div class="sidebar-nav navbar-collapse">
 							<ul class="nav" id="side-menu">
 								<li class="hide">
-									<a href="<?=$this->request?>#skipNavigation" class="hide"><?=$this->skipNavigation?></a>
+									<a href="<?= $this->request ?>#skipNavigation" class="hide"><?= $this->skipNavigation ?></a>
 								</li>
 								<li>
-									<a href="<?=$this->base?>contao/main.php" title="<?=$GLOBALS['TL_LANG']['MSC']['dashboard'][1]; ?>"><i class="fa fa-dashboard fa-fw"></i><span class="icon-only"> <?=$GLOBALS['TL_LANG']['MSC']['dashboard'][0]; ?></span></a>
+									<a href="<?= $this->base ?>contao/main.php" title="<?= $GLOBALS['TL_LANG']['MSC']['dashboard'][1]; ?>"><i class="fa fa-dashboard fa-fw"></i><span class="icon-only"> <?= $GLOBALS['TL_LANG']['MSC']['dashboard'][0]; ?></span></a>
 								</li>
-								<?php foreach ($this->modules as $strGroup => $arrModules):?>
-									<li class="<?=$arrModules['class']?><?=((strpos($arrModules['class'], 'trail') > 0 || $arrModules['modules']) ? ' active' : ''); ?>">
-										<a href="<?=$arrModules['href']?>" title="<?=$arrModules['title']?>" onclick="return AjaxRequest.toggleNavigation(this,'<?= $strGroup ?>')"><i class="fa fa-contao-<?=$strGroup; ?> fa-fw"></i><span class="icon-only"> <?=$arrModules['label']?> </span><span class="fa arrow"></span></a>
-										<ul class="nav nav-second-level" id="<?= $strGroup ?>" aria-expanded="<?=(($arrModules['modules']) ? 'true' : 'false'); ?>">
-											<?php if ($arrModules['modules']):?>
-												<?php foreach ($arrModules['modules'] as $arrConfig):?>
-													<li class="<?=$arrConfig['class']?>"><a href="<?=$arrConfig['href']?>" class="<?=$arrConfig['class']?>" title="<?=$arrConfig['title']?>"<?= $arrConfig['icon'] ?>><span class="icon-only"><?=$arrConfig['label']?></span></a></li>
-												<?php endforeach;?>
-											<?php endif;?>
+								<?php foreach ($this->modules as $strGroup => $arrModules): ?>
+									<li class="<?= $arrModules['class'] ?><?= ((strpos($arrModules['class'], 'trail') > 0 || $arrModules['modules']) ? ' active' : ''); ?>">
+										<a href="<?= $arrModules['href'] ?>" title="<?= $arrModules['title'] ?>" onclick="return AjaxRequest.toggleNavigation(this,'<?= $strGroup ?>')"><i class="fa fa-contao-<?= $strGroup; ?> fa-fw"></i><span class="icon-only"> <?= $arrModules['label'] ?> </span><span class="fa arrow"></span></a>
+										<ul class="nav nav-second-level" id="<?= $strGroup ?>" aria-expanded="<?= (($arrModules['modules']) ? 'true' : 'false'); ?>">
+											<?php if ($arrModules['modules']): ?>
+												<?php foreach ($arrModules['modules'] as $arrConfig): ?>
+													<li class="<?= $arrConfig['class'] ?>"><a href="<?= $arrConfig['href'] ?>" class="<?= $arrConfig['class'] ?>" title="<?= $arrConfig['title'] ?>"<?= $arrConfig['icon'] ?>><span class="icon-only"><?= $arrConfig['label'] ?></span></a></li>
+												<?php endforeach; ?>
+											<?php endif; ?>
 										</ul>
 									</li>
-								<?php endforeach;?>
+								<?php endforeach; ?>
 
 								<li class="hide">
 									<a id="skipNavigation" class="hide">&nbsp;</a>
@@ -163,54 +163,54 @@
 			<?php endif; ?>
 
 			<div id="page-wrapper">
-				<?php if (!$this->isPopup):?>
+				<?php if (!$this->isPopup): ?>
 					<div class="row">
 						<div class="col-lg-12">
-                            <h1 class="page-header"><? if ($this->headlineTrail): ?><small><?=$this->headlineTrail; ?></small><?endif; ?><?=$this->headline; ?></h1>
+                            <h1 class="page-header"><?php if ($this->headlineTrail): ?><small><?= $this->headlineTrail; ?></small><?php endif; ?><?= $this->headline; ?></h1>
                         </div>
 					</div>
-				<?endif; ?>
-				<?php if ($this->managerHref):?>
+				<?php endif; ?>
+				<?php if ($this->managerHref): ?>
 					<div class="row margin-two">
 						<div class="col-lg-12">
 							<div id="manager" class="text-left">
-								<a href="<?=$this->managerHref?>" class="btn btn-default" title="<?=specialchars($this->manager)?>"><i class="fa fa-chevron-left"></i> <?=$this->manager?></a>
+								<a href="<?= $this->managerHref ?>" class="btn btn-default" title="<?= specialchars($this->manager) ?>"><i class="fa fa-chevron-left"></i> <?= $this->manager ?></a>
 							</div>
 						</div>
 					</div>
-				<?php endif;?>
-				<?php if ($this->error):?>
+				<?php endif; ?>
+				<?php if ($this->error): ?>
 					<div class="row">
 						<div class="col-lg-12">
-							<p class="tl_gerror"><?=$this->error?></p>
+							<p class="tl_gerror"><?= $this->error ?></p>
 						</div>
 					</div>
-				<?php endif;?>
+				<?php endif; ?>
 				<div class="row">
 					<div class="col-lg-12">
 						<!-- MAIN start -->
-						<?=$this->main; ?>
+						<?= $this->main; ?>
 						<!-- MAIN stop -->
 					</div>
 				</div>
-				<?php if (!$this->isPopup):?>
+				<?php if (!$this->isPopup): ?>
 					<div class="row">
 						<div class="col-lg-12">
                             <div class="text-right" id="footer">
                                 <div class="btn-group" role="group" aria-label="...">
-                                    <a href="contao/preview.php<?=$this->frontendFile?>" target="_blank" class="btn btn-default" title="<?=$this->previewTitle?>" data-toggle="tooltip" data-placement="top"><i class="fa fa-desktop fa-fw"></i> <?=$this->preview?></a>
-                                    <a href="<?=$this->request?>#top" class="btn btn-default" title="<?=$this->backToTop?>" accesskey="t" data-toggle="tooltip" data-placement="top"><i class="fa fa-arrow-up"></i> <?=$this->top?></a>
+                                    <a href="contao/preview.php<?= $this->frontendFile ?>" target="_blank" class="btn btn-default" title="<?= $this->previewTitle ?>" data-toggle="tooltip" data-placement="top"><i class="fa fa-desktop fa-fw"></i> <?= $this->preview ?></a>
+                                    <a href="<?= $this->request ?>#top" class="btn btn-default" title="<?= $this->backToTop ?>" accesskey="t" data-toggle="tooltip" data-placement="top"><i class="fa fa-arrow-up"></i> <?= $this->top ?></a>
                                 </div>
                             </div>
-							<?php if ($this->pageOffset):?>
-								<script>Backend.vScrollTo($('paste_hint') ? <?=$this->pageOffset + 50?> : <?=$this->pageOffset?>)</script>
-								<?php System::setCookie('BE_PAGE_OFFSET', 0, 0);?>
-							<?php endif;?>
+							<?php if ($this->pageOffset): ?>
+								<script>Backend.vScrollTo($('paste_hint') ? <?= $this->pageOffset + 50 ?> : <?= $this->pageOffset ?>)</script>
+								<?php System::setCookie('BE_PAGE_OFFSET', 0, 0); ?>
+							<?php endif; ?>
 						</div>
 					</div>
-				<?php endif;?>
+				<?php endif; ?>
 			</div>
 		</div>
-		<?=$this->mootools?>
+		<?= $this->mootools ?>
 	</body>
 </html>

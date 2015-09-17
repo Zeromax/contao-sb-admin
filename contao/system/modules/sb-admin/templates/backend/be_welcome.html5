@@ -1,9 +1,9 @@
 <div class="row">
     <div class="col-lg-6">
-        <?if ($this->chartLog): ?>
+        <?php if ($this->chartLog): ?>
         <div class="row">
             <div class="col-lg-12">
-        <?endif; ?>
+                <?php endif; ?>
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <i class="fa fa-bell fa-fw"></i> <?= $this->systemMessages ?>
@@ -11,22 +11,22 @@
                     <div class="panel-body">
                         <div class="list-group">
                             <?php if (!empty($this->messages)): ?>
-                                <? $arrNessages = explode('</p>', $this->messages); ?>
-                                <? foreach ($arrNessages as $message): ?>
-                                    <? if (trim($message) != ""): ?>
+                                <?php $arrNessages = explode('</p>', $this->messages); ?>
+                                <?php foreach ($arrNessages as $message): ?>
+                                    <?php if (trim($message) != ""): ?>
                                         <div class="alert-list-group-item bg-info text-info">
                                             <?= $message; ?>
                                         </div>
-                                    <? endif; ?>
-                                <? endforeach; ?>
+                                    <?php endif; ?>
+                                <?php endforeach; ?>
                             <?php endif; ?>
                         </div>
                     </div>
                 </div>
-        <?if (!$this->chartLog): ?>
+                <?php if (!$this->chartLog): ?>
             </div>
             <div class="col-lg-6">
-        <?endif; ?>
+                <?php endif; ?>
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <i class="fa fa-info fa-fw"></i> <?= $this->shortcuts ?>
@@ -38,7 +38,7 @@
             </div>
         </div>
     </div>
-    <?=$this->chartLog; ?>
+    <?= $this->chartLog; ?>
 </div>
 <div class="row">
     <div class="col-lg-12">
@@ -98,7 +98,7 @@
                     <p><?= $GLOBALS['TL_LANG']['MSC']['noVersions'] ?></p>
                 <?php endif; ?>
             </div>
-            <? if ($this->pagination): ?>
+            <?php if ($this->pagination): ?>
                 <div class="panel-footer clearfix">
                     <?= $this->pagination ?>
                 </div>

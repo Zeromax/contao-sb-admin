@@ -49,11 +49,11 @@ $backendUserLogIn = sha1(session_id() . (!Config::get('disableIpCheck') ? Enviro
 							<h3><?=$lang->howToFix?></h3>
 							<p><?php printf($lang->notFoundFix, Environment::get('base'), StringUtil::encodeEmail('mailto:' . Config::get('adminEmail')));?></p>
 						</div>
-						<?if ($backendUserLogIn === true):?>
+						<?php if ($backendUserLogIn === true):?>
 							<div class="panel-footer">
 								<p class="text-muted"><small><?php printf($lang->hint, 'templates/be_no_page.html5');?></small></p>
 							</div>
-						<?endif;?>
+						<?php endif;?>
 					</div>
 				</div>
 			</div>

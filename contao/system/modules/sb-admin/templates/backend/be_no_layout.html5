@@ -52,11 +52,11 @@ $backendUserLogIn = sha1(session_id() . (!Config::get('disableIpCheck') ? Enviro
 							<h4><?=$lang->more?></h4>
 							<p><?=$lang->noLayoutExplain?></p>
 						</div>
-						<?if ($backendUserLogIn === true):?>
+						<?php if ($backendUserLogIn === true):?>
 							<div class="panel-footer">
 								<p class="text-muted"><small><?php printf($lang->hint, 'templates/be_no_layout.html5');?></small></p>
 							</div>
-						<?endif;?>
+						<?php endif;?>
 					</div>
 				</div>
 			</div>
