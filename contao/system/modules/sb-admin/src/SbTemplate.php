@@ -127,6 +127,11 @@ class SbTemplate
             'class="tl_chmod table table-striped table-hover',
             $objTemplate->main
         );
+        $objTemplate->main = str_replace(
+            array("'height':161", "'height':132"),
+            array("'height':274", "'height':228"),
+            $objTemplate->main
+        );
         $arrHeadline = explode("»", $objTemplate->headline);
         $objTemplate->headline = array_pop($arrHeadline);
         if (count($arrHeadline) > 0) {

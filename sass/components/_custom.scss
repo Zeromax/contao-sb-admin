@@ -147,6 +147,18 @@ td.nw span,
     text-align: right;
 }
 
+.popup .table {
+    margin-bottom: 0;
+    tr {
+        &:first-child td {
+            border-top: none;
+        }
+        &:last-child td {
+            border-bottom: none;
+        }
+    }
+}
+
 /* drop zone */
 .dz-container {
     min-height: 20px;

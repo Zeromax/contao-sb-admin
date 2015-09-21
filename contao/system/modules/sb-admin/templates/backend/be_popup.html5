@@ -37,7 +37,7 @@
 
 		<div id="container">
 			<div id="main">
-				<table class="table table-striped table-bordered table-hover no-footer">
+				<table class="table table-striped table-hover no-footer">
 					<tr>
 						<td class="tl_label"><?=$this->label_ctime?>:</td>
 						<td><?=$this->ctime?></td>
