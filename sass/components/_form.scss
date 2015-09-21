@@ -88,6 +88,9 @@ fieldset.tl_box > legend {
 .w50 {
     width: 50%;
     float: left;
+    .tl_radio_table {
+        width: 100%;
+    }
 }
 
 .clr {
@@ -197,7 +200,7 @@ div.wizard h3 {
 }
 
 .tl_radio_table {
-    width: 100%;
+    width: 50%;
 }
 
 input.tl_text_2 {
