@@ -1,5 +1,6 @@
 .tl_panel input[type="search"],
 .tl_select,
+.tl_select_column,
 .tl_select_unit,
 .tl_text,
 .tl_text_2,
@@ -106,6 +107,13 @@ fieldset.tl_box > legend {
         .tl_select {
             width: 47.5%
         }
+        td {
+            .tl_text,
+            .tl_select,
+            .tl_select_column {
+                width: 95%
+            }
+        }
         width: 100%;
         &.long {
             width: 97.5%;
@@ -211,6 +219,18 @@ div.wizard h3 {
     }
 }
 
+.tl_modulewizard {
+    td:last-child {
+        text-align: right;
+        width: 220px;
+        white-space: nowrap;
+    }
+    .mw_enable {
+        cursor: pointer;
+    }
+    width: 100%;
+}
+
 input.tl_text_2 {
     width: 47%;
     display: inline-block;
@@ -248,6 +268,7 @@ select.tl_select_interval {
 .tl_text_trbl[disabled],
 .tl_text_interval[disabled],
 .tl_select[disabled],
+.tl_select_column[disabled],
 .tl_text[readonly],
 .tl_text_2[readonly],
 .tl_text_3[readonly],
@@ -259,6 +280,11 @@ select.tl_select_interval {
     background-color: #eee;
     opacity: 1;
     cursor: not-allowed;
+}
+
+.tl_modulewizard img.mw_enable,
+.js .tl_modulewizard input.mw_enable {
+    display: none;
 }
 
 input.tl_imageSize_0.tl_text_4, input.tl_imageSize_1.tl_text_4 {

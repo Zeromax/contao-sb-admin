@@ -52,6 +52,7 @@ class Image extends \Contao\Image
             'cut.gif' => 'sort',
             'delete.gif' => 'trash-o',
             'edit.gif' => 'pencil',
+            'edit_.gif' => 'pencil icon-disabled',
             'editor.gif' => 'file-code-o',
             'editor_.gif' => 'file-code-o icon-disabled',
             'featured_.gif' => 'star-o',
@@ -90,8 +91,10 @@ class Image extends \Contao\Image
         if (array_key_exists($src, $arrImage)) {
             preg_match('/class=\"([^\"]*)\"/', $attributes, $matches);
             $cssClass = isset($matches[1]) ? " " . $matches[1] : "";
+            preg_match('/style=\"([^\"]*)\"/', $attributes, $matches);
+            $style = isset($matches[1]) ? ' style="' . $matches[1] . '"' : "";
 
-            return sprintf('<i class="fa fa-%s%s action-icon"></i>', $arrImage[$src], $cssClass);
+            return sprintf('<i class="fa fa-%s%s action-icon"%s></i>', $arrImage[$src], $cssClass, $style);
         }
 
         return parent::getHtml($src, $alt, $attributes);

@@ -1946,10 +1946,10 @@ var Backend =
 
 		if (el.value > 0) {
 			td.getElement('a.module_link').setStyle('display', 'inline');
-			td.getElement('img.module_image').setStyle('display', 'none');
+			td.getElement('i.module_image').setStyle('display', 'none');
 		} else {
 			td.getElement('a.module_link').setStyle('display', 'none');
-			td.getElement('img.module_image').setStyle('display', 'inline');
+			td.getElement('i.module_image').setStyle('display', 'inline');
 		}
 	},
 
@@ -1957,7 +1957,7 @@ var Backend =
 	 * Convert the "enable module" checkboxes
 	 */
 	convertEnableModules: function() {
-		$$('img.mw_enable').filter(function(el) {
+		$$('i.mw_enable').filter(function(el) {
 			return !el.hasEvent('click');
 		}).each(function(el) {
 			el.addEvent('click', function() {
@@ -1965,10 +1965,12 @@ var Backend =
 				var cbx = el.getNext('input');
 				if (cbx.checked) {
 					cbx.checked = '';
-					el.src = el.src.replace('visible.gif', 'invisible.gif');
+					el.addClass('fa-eye-slash');
+					el.removeClass('fa-eye');
 				} else {
 					cbx.checked = 'checked';
-					el.src = el.src.replace('invisible.gif', 'visible.gif');
+					el.addClass('fa-eye');
+					el.removeClass('fa-eye-slash');
 				}
 			});
 		});
