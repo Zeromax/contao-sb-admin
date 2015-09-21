@@ -58,17 +58,13 @@ class SbTemplate
         $objUser = \Controller::importStatic('BackendUser');
         $loggedIn = $this->beUserLoggedIn($objUser);
 
-        if ($loggedIn === false) {
+        if ($loggedIn === false && TL_MODE == "FE") {
             return;
         }
 
-        $objUser->authenticate();
         $theme = $objUser->backendTheme;
-
-        if (\Config::get('backendTheme') != "sb-admin") {
-            if ($theme != "sb-admin") {
-                return;
-            }
+        if (($loggedIn === false && \Config::get('backendTheme') != "sb-admin") || ($theme !== null && $theme  != "sb-admin")) {
+            return;
         }
 
         // modified templates
