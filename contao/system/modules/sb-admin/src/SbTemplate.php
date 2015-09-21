@@ -54,12 +54,16 @@ class SbTemplate
     public function chooseTemplates()
     {
         // check theme for back end user
-        $theme = "";
-        if (TL_MODE == "BE") {
-            $objUser = \BackendUser::getInstance();
-            $objUser->authenticate();
-            $theme = $objUser->backendTheme;
+        /** @var \BackendUser $objUser */
+        $objUser = \Controller::importStatic('BackendUser');
+        $loggedIn = $this->beUserLoggedIn($objUser);
+
+        if ($loggedIn === false) {
+            return;
         }
+
+        $objUser->authenticate();
+        $theme = $objUser->backendTheme;
 
         if (\Config::get('backendTheme') != "sb-admin") {
             if ($theme != "sb-admin") {
@@ -144,5 +148,53 @@ class SbTemplate
     {
         $objModule = new Module\LogChart();
         $objTemplate->chartLog = $objModule->generate();
+    }
+
+    /**
+     * check if be user is logged in
+     *
+     * @param \BackendUser $objUser
+     *
+     * @return bool
+     */
+    public function beUserLoggedIn($objUser)
+    {
+        $objUser->strIp = \Environment::get('ip');
+        $strCookie = 'BE_USER_AUTH';
+        $objUser->strHash = \Input::cookie($strCookie);
+        // Check the cookie hash
+        if ($objUser->strHash != sha1(session_id() . (!\Config::get('disableIpCheck') ? $objUser->strIp : '') . $strCookie)) {
+            return false;
+        }
+
+        $objSession = \Database::getInstance()->prepare("SELECT * FROM tl_session WHERE hash=? AND name=?")
+            ->execute($objUser->strHash, $strCookie);
+
+        // Try to find the session in the database
+        if ($objSession->numRows < 1) {
+            \Controller::log('Could not find the session record', __METHOD__, TL_ACCESS);
+
+            return false;
+        }
+
+        $time = time();
+
+        // Validate the session
+        if ($objSession->sessionID != session_id() || (!\Config::get('disableIpCheck') && $objSession->ip != $objUser->strIp) || $objSession->hash != $objUser->strHash || ($objSession->tstamp + \Config::get('sessionTimeout')) < $time) {
+            \Controller::log('Could not verify the session', __METHOD__, TL_ACCESS);
+
+            return false;
+        }
+
+        $objUser->intId = $objSession->pid;
+
+        // Load the user object
+        if ($objUser->findBy('id', $objUser->intId) == false) {
+            \Controller::log('Could not find the session user', __METHOD__, TL_ACCESS);
+
+            return false;
+        }
+
+        return true;
     }
 }
