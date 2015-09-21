@@ -203,6 +203,14 @@ div.wizard h3 {
     width: 50%;
 }
 
+.tl_checkbox_container {
+    .sortable {
+        span {
+            display: block;
+        }
+    }
+}
+
 input.tl_text_2 {
     width: 47%;
     display: inline-block;
