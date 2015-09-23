@@ -41,10 +41,10 @@ ul {
         padding-right: 10px !important;
     }
     .tl_folder_top {
-        background-color: #eee;
+        background-color: $gray-lighter;
     }
     .tl_folder {
-        background-color: #f8f8f8;
+        background-color: $gray-lightest;
     }
     .tl_folder_top .tl_left,
     .tl_folder .tl_left,

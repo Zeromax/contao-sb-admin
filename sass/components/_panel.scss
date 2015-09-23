@@ -3,7 +3,7 @@
 .tl_version_panel,
 .tl_listing_container.parent_view .tl_header {
     width: 100%;
-    background-color: #f8f8f8;
+    background-color: $gray-lightest;
     border-top: 1px $listing-border-color solid;
     padding: 10px;
 }

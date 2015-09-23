@@ -96,7 +96,7 @@ td.nw span,
             li.active,
             li:focus,
             li:hover {
-                background-color: #eee;
+                background-color: $gray-lighter;
             }
             a {
                 display: block !important;
