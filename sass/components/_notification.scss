@@ -20,9 +20,14 @@
     margin: 0;
 }
 
-.navbar-top-links .alert-messages.dropdown-menu li > div {
-    padding: 3px 20px;
-    min-height: 0;
+.navbar-top-links .alert-messages {
+    &.dropdown-menu li > div {
+        padding: 3px 20px;
+        min-height: 0;
+    }
+    li.divider:last-child {
+        display: none;
+    }
 }
 
 .tl_empty_parent_view,
