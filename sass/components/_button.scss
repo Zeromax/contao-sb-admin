@@ -28,7 +28,9 @@
     }
     &:before,
     &:after,
-    + p:before {
+    + p:before,
+    + h2:before,
+    + .sub_headline:before {
         @include clear();
     }
     + .tl_message,

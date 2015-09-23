@@ -1,0 +1,47 @@
+.composer_package_list {
+	.col_select {
+		width: 33px;
+	}
+	.col_type,
+	.col_pin,
+	.col_remove {
+		width: 36px;
+		img {
+			margin: 0;
+		}
+	}
+	.col_icon {
+		width: 26px;
+		padding-right: 0px !important;
+		text-align: right;
+		img {
+			margin: 0;
+		}
+	}
+}
+form#tl_composer_search {
+	float: none !important;
+	.tl_text {
+		float: left;
+		width: 40%;
+	}
+	.tl_submit {
+		float:left;
+	}
+}
+.showColumns {
+	.col_version,
+	.col_requested_version {
+		white-space: nowrap;
+		word-wrap: normal;
+	}
+	.col_dependants {
+		padding: 0 !important;
+	}
+}
+div.composer_package_type_contao_module {
+	background: none;
+}
+#tl_composer_install .type {
+	color: #333;
+}
