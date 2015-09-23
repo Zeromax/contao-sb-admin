@@ -12,6 +12,13 @@ $color-red: #c33 !default;
 $color-gray: #999 !default;
 $color-blue: #4b85ba !default;
 $color-orange: #f90 !default;
+$color-icon: #859099 !default;
+$color-icon-hover: #23527c !default;
+$color-icon-disabled: #c5c0c9 !default;
+
+// publish and unpublish
+$color-visible: #2BBE83 !default;
+$color-invisible: #CA3C00 !default;
 
 // clear
 @mixin clear() {

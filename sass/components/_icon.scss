@@ -20,7 +20,7 @@
 }
 
 .fa.icon-disabled {
-    opacity: 0.5;
+    color: $color-icon-disabled;
 }
 
 .action-icon {
@@ -33,6 +33,25 @@
     }
     text-align: center;
     width: 28px;
+}
+
+a {
+    &:hover .action-icon {
+        color: $color-icon-hover;
+    }
+    .action-icon {
+        color: $color-icon;
+    }
+    &:hover .fa-eye,
+    .fa-eye {
+        color: $color-visible;
+    }
+    &:hover .fa-trash-o,
+    .fa-trash-o,
+    &:hover .fa-eye-slash,
+    .fa-eye-slash {
+        color: $color-invisible;
+    }
 }
 
 /* Header icons */

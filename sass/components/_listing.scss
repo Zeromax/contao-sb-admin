@@ -156,12 +156,12 @@ div.comment_wrap {
     padding: 1px 0 2px 20px;
     &.published,
     &.published a {
-        color: $color-green;
+        color: $color-visible;
         background-repeat: no-repeat;
     }
     &.unpublished,
     &.unpublished a {
-        color: $color-red;
+        color: $color-invisible;
         background-repeat: no-repeat;
     }
 }
