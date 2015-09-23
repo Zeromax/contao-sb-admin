@@ -8,6 +8,9 @@
             <trans-unit id="MSC.dashboard.1">
                 <source>Back to the Dashboard</source>
             </trans-unit>
+            <trans-unit id="MSC.noSystemMessage">
+                <source>No System message available</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

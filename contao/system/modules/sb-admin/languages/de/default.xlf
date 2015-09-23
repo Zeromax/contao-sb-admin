@@ -9,6 +9,10 @@
                 <source>Back to the Dashboard</source>
                 <target>Zurück zum Dashboard</target>
             </trans-unit>
+            <trans-unit id="MSC.noSystemMessage">
+                <source>No System message available</source>
+                <target>Keine Systemmeldungen vorhanden</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

@@ -78,7 +78,7 @@
                                 <?php if (!$hasAlert): ?>
                                     <li>
                                         <div>
-                                            Keine Systemmeldungen vorhanden.
+                                            <?= $this->noSystemMessage; ?>
                                         </div>
                                     </li>
                                 <?php endif; ?>
