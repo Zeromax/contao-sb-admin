@@ -63,7 +63,7 @@ class SbTemplate
         }
 
         $theme = $objUser->backendTheme;
-        if (($loggedIn === false && \Config::get('backendTheme') != "sb-admin") || ($theme !== null && $theme  != "sb-admin")) {
+        if (($loggedIn === false && \Config::get('backendTheme') != "sb-admin") || ($theme !== null && $theme != "sb-admin")) {
             return;
         }
 
@@ -139,6 +139,49 @@ class SbTemplate
         }
         $objTemplate->username = $GLOBALS['TL_LANG']['MSC']['user'];
         $objTemplate->noSystemMessage = $GLOBALS['TL_LANG']['MSC']['noSystemMessage'];
+        $objTemplate->systemMessages = $this->getSystemMessages($objTemplate);
+    }
+
+    /**
+     * generate the system message array
+     *
+     * @param $objTemplate
+     *
+     * @return array
+     */
+    protected function getSystemMessages($objTemplate)
+    {
+        $arrResult = array();
+        $objTemplate->isAdmin;
+
+        if ($objTemplate->isCoreOnlyMode) {
+            $arrResult[] = array(
+                'text' => $objTemplate->coreOnlyMode,
+                'title' => $objTemplate->coreOnlyOff,
+                'href' => $objTemplate->coreOnlyHref,
+                'label' => 'Core only mode'
+            );
+        }
+
+        if ($objTemplate->isMaintenanceMode) {
+            $arrResult[] = array(
+                'text' => $objTemplate->maintenanceMode,
+                'title' => $objTemplate->maintenanceOff,
+                'href' => $objTemplate->maintenanceHref,
+                'label' => 'Wartungsmodus'
+            );
+        }
+
+        if ($objTemplate->needsCacheBuild) {
+            $arrResult[] = array(
+                'text' => $objTemplate->buildCacheText,
+                'title' => $objTemplate->buildCacheLink,
+                'href' => $objTemplate->buildCacheHref,
+                'label' => 'Build Cache'
+            );
+        }
+
+        return $arrResult;
     }
 
     /**

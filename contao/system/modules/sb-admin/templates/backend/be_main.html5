@@ -70,49 +70,28 @@
 
 					<ul class="nav navbar-top-links navbar-right">
                         <li class="dropdown">
-                            <?php $hasAlert = ($this->isCoreOnlyMode || $this->isMaintenanceMode || $this->needsCacheBuild) ? true : false; ?>
                             <a class="dropdown-toggle" data-toggle="dropdown" href="<?= $this->base ?>contao/main.php#">
-                                <i class="fa fa-bell fa-fw"></i> <span id="alert-count" class="label label-default" data-alert="<?= ($hasAlert) ? 'true' : 'false'; ?>">0</span> <i class="fa fa-caret-down"></i>
+                                <i class="fa fa-bell fa-fw"></i> <span id="alert-count" class="label label-default" data-alert="<?= (empty($this->systemMessages)) ? 'false' : 'true'; ?>">0</span> <i class="fa fa-caret-down"></i>
                             </a>
                             <ul class="dropdown-menu dropdown-messages alert-messages">
-                                <?php if (!$hasAlert): ?>
+                                <?php if (empty($this->systemMessages)): ?>
                                     <li>
                                         <div>
                                             <?= $this->noSystemMessage; ?>
                                         </div>
                                     </li>
-                                <?php endif; ?>
-                                <?php if ($this->isCoreOnlyMode): ?>
-                                    <li>
-                                        <?php if ($this->isAdmin): ?><a href="<?= $this->coreOnlyHref ?>" title="<?= $this->coreOnlyOff ?>"><?php else: ?><div><?php endif; ?>
-                                            <div>
-                                                <span class="label label-danger">Core only mode</span>
-                                            </div>
-                                            <div><?= $this->coreOnlyMode ?></div>
-                                        <?php if (!$this->isAdmin): ?></div><?php else: ?></a><?php endif; ?>
-                                    </li>
-                                    <li class="divider"></li>
-                                <?php endif; ?>
-                                <?php if ($this->isMaintenanceMode): ?>
-                                    <li>
-                                        <?php if ($this->isAdmin): ?><a href="<?= $this->maintenanceHref ?>" title="<?= $this->maintenanceOff ?>"><?php else: ?><div><?php endif; ?>
-                                            <div>
-                                                <span class="label label-danger">Wartungsmodus</span>
-                                            </div>
-                                            <div><?= $this->maintenanceMode ?></div>
-                                        <?php if (!$this->isAdmin): ?></div><?php else: ?></a><?php endif; ?>
-                                    </li>
-                                    <li class="divider"></li>
-                                <?php endif; ?>
-                                <?php if ($this->needsCacheBuild): ?>
-                                    <li>
-                                        <?php if ($this->isAdmin): ?><a href="<?= $this->buildCacheHref ?>" title="<?= $this->buildCacheLink ?>"><?php else: ?><div><?php endif; ?>
-                                            <div>
-                                                <span class="label label-danger">Build Cache</span>
-                                            </div>
-                                            <div><?= $this->buildCacheText ?></div>
-                                        <?php if (!$this->isAdmin): ?></div><?php else: ?></a><?php endif; ?>
-                                    </li>
+                                <?php else: ?>
+                                	<?php foreach($this->systemMessages as $value): ?>
+										<li>
+											<?php if ($this->isAdmin): ?><a href="<?= $value['href'] ?>" title="<?= $value['title'] ?>"><?php else: ?><div><?php endif; ?>
+											<div>
+												<span class="label label-danger"><?= $value['label'] ?></span>
+											</div>
+											<div><?= $value['text'] ?></div>
+											<?php if (!$this->isAdmin): ?></div><?php else: ?></a><?php endif; ?>
+										</li>
+										<li class="divider"></li>
+									<?php endforeach; ?>
                                 <?php endif; ?>
                             </ul>
                         </li>
