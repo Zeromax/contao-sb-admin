@@ -8,7 +8,7 @@
         @include bootstrap-panel-button;
         position: relative;
         float: left;
-        color: #333;
+        color: $gray-dark;
         background-color: #fff;
         border: 1px solid #ccc;
         text-decoration: none;
@@ -21,7 +21,7 @@
             z-index: 2;
         }
         &:hover {
-            color: #333;
+            color: $gray-dark;
             background-color: #e6e6e6;
             border-color: #adadad;
         }
@@ -129,7 +129,7 @@ a.tl_submit {
 .wizard a,
 input[type="submit"],
 .tl_submit {
-    color: #333;
+    color: $gray-dark;
     background-color: #fff;
     border-color: #ccc;
 }
@@ -137,7 +137,7 @@ input[type="submit"],
 .tl_panel .tl_subpanel input[type="image"]:hover,
 input[type="submit"]:hover,
 .tl_submit:hover {
-    color: #333;
+    color: $gray-dark;
     background-color: #e6e6e6;
     border-color: #adadad;
 }
