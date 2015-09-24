@@ -83,6 +83,9 @@ class LogChart extends \BackendModule
         $arrLabels = $arrAction;
         $arrLabels = array_map("ucfirst", $arrLabels);
 
+        $this->Template->inputAction = $arrAction;
+        $this->Template->inputLabel = $arrLabels;
+        $this->Template->inputLabelColor = $arrColor;
         $this->Template->data = json_encode($arrData);
         $this->Template->yKeys = "['" . implode("','", $arrAction) . "']";
         $this->Template->labels = "['" . implode("','", $arrLabels) . "']";
