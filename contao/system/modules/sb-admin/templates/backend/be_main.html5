@@ -190,7 +190,7 @@
 		<?php if (\Config::get('addChart') === true): ?>
 			<script src="<?php
 			$objCombiner = new Combiner();
-				$objCombiner->add('system/themes/' . $this->theme . '/js/morris.js', $version);
+			$objCombiner->add('system/themes/' . $this->theme . '/js/morris.js', $version);
 			echo $objCombiner->getCombinedFile();
 			?>"></script>
 		<?php endif; ?>
