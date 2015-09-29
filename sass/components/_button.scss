@@ -74,7 +74,8 @@
 .tl_version_panel select,
 .tl_panel .tl_subpanel input[type="search"],
 .tl_panel .tl_subpanel input[type="text"],
-.tl_panel .tl_subpanel select {
+.tl_panel .tl_subpanel select,
+.tl_panel_bottom .tl_subpanel select {
     display: inline-block;
     width: auto;
     vertical-align: middle;
@@ -85,6 +86,7 @@
     border-radius: 3px;
 }
 
+.tl_panel_bottom .tl_subpanel,
 .tl_panel .tl_subpanel {
     input[type="search"],
     input[type="text"],
@@ -92,12 +94,12 @@
         width: 120px;
         margin-top: 10px;
     }
+    input[type="image"] {
+        margin-top: 10px;
+    }
 }
 
-.tl_panel .tl_subpanel input[type="image"] {
-    margin-top: 10px;
-}
-
+.tl_panel_bottom .tl_subpanel input[type="image"],
 .tl_panel .tl_subpanel input[type="image"],
 .wizard a,
 input[type="submit"],
@@ -125,6 +127,7 @@ a.tl_submit {
     content: "\e166";
 }
 
+.tl_panel_bottom .tl_subpanel input[type="image"],
 .tl_panel .tl_subpanel input[type="image"],
 .wizard a,
 input[type="submit"],
@@ -134,6 +137,7 @@ input[type="submit"],
     border-color: #ccc;
 }
 
+.tl_panel_bottom .tl_subpanel input[type="image"]:hover,
 .tl_panel .tl_subpanel input[type="image"]:hover,
 input[type="submit"]:hover,
 .tl_submit:hover {

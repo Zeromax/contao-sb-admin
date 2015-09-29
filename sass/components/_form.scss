@@ -30,7 +30,8 @@
     transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 
-.tl_panel {
+.tl_panel,
+.tl_panel_bottom {
     input[type="search"],
     .tl_text,
     .tl_text_2,
