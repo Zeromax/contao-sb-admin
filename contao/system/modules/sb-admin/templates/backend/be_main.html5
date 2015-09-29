@@ -1,6 +1,4 @@
-<?
-var_dump($GLOBALS['TL_ASSETS']);
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="<?= $this->language ?>">
 	<head>
 
