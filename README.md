@@ -10,14 +10,16 @@ It is based on bootstrap and the theme from https://github.com/IronSummitMedia/s
 contao-sb-admin is licensed under the terms of the GNU Lesser General Public License version 3.
 https://github.com/Zeromax/contao-sb-admin/blob/master/LICENSE
 
-# Installation
-At the moment only a manual installation is possible
+# Requirements
+* PHP >= 5.4.0
+* Contao >= 3.2
 
-1. download a zip or clone the git Repo
-2. copy the content from the `contao` folder in your Contao root folder
-3. clean up the internal cache
-4. log in and choose the theme `sb-admin` in your user settings
-5. if you add `$GLOBALS['TL_CONFIG']['backendTheme'] = 'sb-admin';` to your localconfig you will get the full support of the theme and you have to copy the following templates to your `template` Folder
+# Installation
+Installation via composer or Extension Repository from Contao
+
+1. install the Extension
+2. log in and choose the theme `sb-admin` in your user settings
+3. if you add `$GLOBALS['TL_CONFIG']['backendTheme'] = 'sb-admin';` to your localconfig you will get the full support of the theme and you have to copy the following templates to your `template` Folder
     * be_forbidden.html5
     * be_no_active.html5
     * be_no_forward.html5
