@@ -2,6 +2,29 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             <i class="fa fa-bar-chart-o fa-fw"></i> <?= $this->headline; ?>
+            <div class="pull-right">
+                <div class="btn-group force-display">
+                    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        Filter
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu pull-right" id="log-chart-filter" role="menu">
+	                    <?php foreach ($this->inputAction as $key=>$value): ?>
+	                        <li>
+	                            <div class="checkbox">
+	                                <label>
+	                                    <input name="<?= $value; ?>" type="checkbox" value="<?= $key ?>" checked><span style="color: <?= $this->inputLabelColor[$key]; ?>;"><?= $this->inputLabel[$key]; ?></span>
+	                                </label>
+	                            </div>
+	                        </li>
+	                    <?php endforeach; ?>
+                        <li class="divider"></li>
+                        <li>
+	                        <a href="#" id="reset-log-chart-filter">Reset</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="panel-body">
             <div id="log-chart"></div>
@@ -15,21 +38,10 @@
 </div>
 
 <script>
-    (function ($) {
-        $(function () {
-            new Morris.Line({
-                element: 'log-chart',
-                data: <?=$this->data ;?>,
-                xkey: '<?=$this->xKey ;?>',
-                ykeys: <?=$this->yKeys ;?>,
-                lineColors: <?=$this->lineColors ;?>,
-                labels: <?=$this->labels ;?>,
-                hideHover: true,
-                resize: true
-            }).on('click', function (i, row) {
-                    $('#log-chart-tstamp').val(row.tstamp);
-                    $('#form-filter-log').submit();
-                });
-        });
-    })(jQuery);
+    var logChart = null;
+    var logChartData = <?=$this->data ;?>;
+    var logChartKeys = <?=$this->yKeys ;?>;
+    var logChartLineColors = <?=$this->lineColors ;?>;
+    var logChartLabels = <?=$this->labels ;?>;
+    var logChartKey = '<?=$this->xKey ;?>';
 </script>

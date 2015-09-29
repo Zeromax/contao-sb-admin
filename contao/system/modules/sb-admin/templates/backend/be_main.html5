@@ -32,9 +32,6 @@
 		$objCombiner = new Combiner();
 		$version = filemtime(TL_ROOT. '/system/themes/' . $this->theme . '/js/jquery.js');
 		$objCombiner->add('system/themes/' . $this->theme . '/js/jquery.js', $version);
-		if (\Config::get('addChart') === true):
-			$objCombiner->add('system/themes/' . $this->theme . '/js/morris.js', $version);
-		endif;
 		echo $objCombiner->getCombinedFile();
 		 ?>"></script>
 		<script src="<?php
@@ -194,6 +191,13 @@
 				<?php endif; ?>
 			</div>
 		</div>
+		<?php if (\Config::get('addChart') === true): ?>
+			<script src="<?php
+			$objCombiner = new Combiner();
+			$objCombiner->add('system/themes/' . $this->theme . '/js/morris.js', $version);
+			echo $objCombiner->getCombinedFile();
+			?>"></script>
+		<?php endif; ?>
 		<?= $this->mootools ?>
 	</body>
 </html>
