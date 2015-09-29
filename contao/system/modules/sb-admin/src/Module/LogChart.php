@@ -53,7 +53,12 @@ class LogChart extends \BackendModule
         if ($objResult->count() < 1) {
             return "";
         }
-        \Config::set('addChart', true);
+        if (version_compare(VERSION, '3.2', '<=')) {
+            $GLOBALS['TL_CONFIG']['addChart'] = true;
+        }
+        else {
+            \Config::set('addChart', true);
+        }
         $this->arrLog = $objResult->fetchAllAssoc();
         return parent::generate();
     }
