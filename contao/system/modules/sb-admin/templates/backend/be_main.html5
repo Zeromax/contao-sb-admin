@@ -12,10 +12,14 @@
 		$objCombiner = new Combiner();
 		$version = filemtime(TL_ROOT. '/system/themes/' . $this->theme . '/css/bootstrap.css');
 		$objCombiner->add('system/themes/' . $this->theme . '/css/bootstrap.css', $version);
-		$objCombiner->add('assets/mootools/colorpicker/'. $GLOBALS['TL_ASSETS']['COLORPICKER'] .'/css/mooRainbow.css', $GLOBALS['TL_ASSETS']['COLORPICKER']);
+		$objCombiner->add('assets/mootools/colorpicker/' . $GLOBALS['TL_ASSETS']['COLORPICKER'] . '/css/mooRainbow.css', $GLOBALS['TL_ASSETS']['COLORPICKER']);
 		$objCombiner->add('assets/mootools/chosen/chosen.css');
-		$objCombiner->add('assets/mootools/simplemodal/'. $GLOBALS['TL_ASSETS']['SIMPLEMODAL'] .'/css/simplemodal.css', $GLOBALS['TL_ASSETS']['SIMPLEMODAL']);
-		$objCombiner->add('assets/mootools/datepicker/'. $GLOBALS['TL_ASSETS']['DATEPICKER'] .'/datepicker.css', $GLOBALS['TL_ASSETS']['DATEPICKER']);
+		$objCombiner->add('assets/mootools/simplemodal/' . $GLOBALS['TL_ASSETS']['SIMPLEMODAL'] . '/css/simplemodal.css', $GLOBALS['TL_ASSETS']['SIMPLEMODAL']);
+		if (version_compare(VERSION, '3.2', '<=')) {
+			$objCombiner->add('assets/mootools/datepicker/' . $GLOBALS['TL_ASSETS']['DATEPICKER'] . '/dashboard.css', $GLOBALS['TL_ASSETS']['DATEPICKER']);
+		} else {
+			$objCombiner->add('assets/mootools/datepicker/' . $GLOBALS['TL_ASSETS']['DATEPICKER'] . '/datepicker.css', $GLOBALS['TL_ASSETS']['DATEPICKER']);
+		}
 		$version = filemtime(TL_ROOT. '/system/themes/' . $this->theme . '/css/style.css');
 		$objCombiner->add('system/themes/' . $this->theme . '/css/style.css', $version);
 		echo $objCombiner->getCombinedFile();
