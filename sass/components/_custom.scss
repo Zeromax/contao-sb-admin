@@ -182,6 +182,29 @@ td.nw span,
     display: inline;
 }
 
+.tl_edit_preview {
+    margin-top: 18px;
+    img {
+        padding: 2px;
+        border: 1px solid #ddd;
+        background: #fff;
+        box-shadow: 0 1px 3px #ddd;
+    }
+}
+
+.tl_edit_preview_enabled {
+    position: relative;
+    cursor: crosshair;
+}
+
+.tl_edit_preview_important_part {
+    position: absolute;
+    margin: -1px;
+    border: 1px solid #000;
+    box-shadow: 0 0 0 1px #fff, inset 0 0 0 1px #fff;
+    opacity: 0.5;
+}
+
 .panel-footer,
 .panel-body {
     nav.pull-right {
