@@ -673,8 +673,7 @@ var AjaxRequest =
 
 		overlay.set({
 			'styles': {
-				'display': 'block',
-				'top': scroll.y + 'px'
+				'display': 'block'
 			}
 		});
 
@@ -687,8 +686,7 @@ var AjaxRequest =
 		box.set({
 			'html': message,
 			'styles': {
-				'display': 'block',
-				'top': (scroll.y + 100) + 'px'
+				'display': 'block'
 			}
 		})
 	},
