@@ -350,6 +350,7 @@ ul.tl_metawizard {
     .lang {
         display: block;
         font-weight: bold;
+        height: 28px;
     }
     label {
         width: 130px;
@@ -428,5 +429,12 @@ p:empty.tl_help {
     }
     .tl_textarea {
         max-width: 100%;
+    }
+    ul.tl_metawizard .tl_text {
+        margin-bottom: 10px;
+        width: calc(100% - 150px)
+    }
+    .tl_metawizard_new div.tl_select {
+        width: calc(100% - 175px)
     }
 }
