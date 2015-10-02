@@ -101,3 +101,27 @@ $color-invisible: #CA3C00 !default;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+@mixin css-transition($element, $time, $effect) {
+    -webkit-transition: $element $time $effect;
+    -o-transition: $element $time $effect;
+    -moz-transition: $element $time $effect;
+    -ms-transition: $element $time $effect;
+    -kthtml-transition: $element $time $effect;
+    transition: $element $time $effect;
+}
+
+@mixin css-transition-delay($time) {
+    -webkit-transition-delay: $time;
+    -o-transition-delay: $time;
+    -moz-transition-delay: $time;
+    -ms-transition-delay: $time;
+    -kthtml-transition-delay: $time;
+    transition-delay: $time;
+}
+
+@mixin css-box-shadow($blur, $spread, $color) {
+    -webkit-box-shadow: 0 0 $blur $spread $color;
+    -moz-box-shadow: 0 0 $blur $spread $color;
+    box-shadow: 0 0 $blur $spread $color;
+}

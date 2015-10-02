@@ -7,14 +7,6 @@
 		$('.navbar-collapse').on('hide.bs.collapse hidden.bs.collapse show.bs.collapse shown.bs.collapse', function () {
 			$(this).removeAttr('style');
 		});
-		// messages
-		var alertCount = $('.alert-messages > li > *:first-child').length;
-		var elementAlert = $('#alert-count');
-		if (alertCount > 0 && elementAlert.data('alert') === true) {
-			elementAlert.removeClass('label-default');
-			elementAlert.addClass('label-danger');
-			elementAlert.text(alertCount);
-		}
 
 		// fix missing CSS classes for tree listing
 		$('li .tl_folder .tl_left').each(function() {
@@ -72,6 +64,11 @@
 			container: 'body'
 		}).on('hide.bs.tooltip hidden.bs.tooltip show.bs.tooltip shown.bs.tooltip', function (el) {
 			el.target.addClass('force-display');
+		});
+		var notifyMe = $('.notify-me');
+		notifyMe.addClass('shadow');
+		notifyMe.mouseover(function() {
+			$(this).removeClass('shadow');
 		});
 	});
 })(jQuery);
