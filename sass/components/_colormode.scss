@@ -1,6 +1,5 @@
 .dark-theme {
 	background-color: #222;
-	color: #A9B7C6;
 	.sidebar-nav,
 	.navbar {
 		@extend .navbar-inverse;
@@ -8,9 +7,6 @@
 	.sidebar ul li,
 	#page-wrapper {
 		border-color: #080808;
-	}
-	#page-wrapper {
-		background-color: #2B2B2B;
 	}
 	.sidebar-nav ul li ul li {
 		&.active,
@@ -30,19 +26,6 @@
 		}
 	}
 	#tl_ajaxOverlay {
-		background-color: #222;
-	}
-	.chzn-container-single .chzn-single,
-	select,
-	input[type="text"] {
-		background-color: #2B2B2B;
-		color: #A9B7C6;
-	}
-	.tl_submit_container,
-	.tl_panel,
-	.tl_panel_bottom,
-	.tl_version_panel,
-	.tl_listing_container.parent_view .tl_header {
 		background-color: #222;
 	}
 }
