@@ -85,8 +85,14 @@ td.nw span,
 }
 
 .sidebar-nav {
+    .navbar-nav,
+    .navbar-nav > li {
+        float: none;
+    }
     ul li {
         a {
+			padding-top: 10px;
+			padding-bottom: 10px;
             display: block !important;
         }
         ul {
