@@ -163,3 +163,13 @@ fieldset.tl_box > legend:before {
         border-radius: 4px;
     }
 }
+
+.notify-me {
+    @include css-transition(box-shadow, 0.5s, ease-in-out);
+}
+
+.notify-me.shadow {
+    @include css-box-shadow(6px, 3px, $color-red);
+    @include css-transition(box-shadow, 0.5s, ease-in-out);
+    @include css-transition-delay(2s);
+}
