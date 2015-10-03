@@ -4,3 +4,8 @@ div.mod_repository table tr.info {
         font-size: 1em;
     }
 }
+
+.extension,
+.installs {
+    @extend .table;
+}
