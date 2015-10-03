@@ -45,4 +45,28 @@
 	.tl_listing_container.parent_view .tl_header {
 		background-color: #222;
 	}
+	.table-hover > tbody > tr:hover {
+		background-color: #080808;
+	}
+	.tl_listing {
+		li {
+			&.tl_file:hover {
+				background-color: #080808;
+			}
+		}
+	}
+	.tl_listing_container {
+		.tl_header {
+			&:hover {
+				background-color: #080808;
+			}
+		}
+		> ul {
+			> li {
+				&:hover {
+					background-color: #080808;
+				}
+			}
+		}
+	}
 }
