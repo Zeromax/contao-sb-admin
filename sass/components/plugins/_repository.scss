@@ -5,8 +5,32 @@ div.mod_repository table tr.info {
     }
 }
 
+.color_green,
+.color_red,
+.color_blue,
+.color_darkorange {
+    @extend .alert;
+}
+
+.color_green {
+    @extend .alert-success;
+}
+
+.color_red {
+    @extend .alert-danger;
+}
+
+.color_blue {
+    @extend .alert-info;
+}
+
+.color_darkorange {
+    @extend .alert-warning;
+}
+
 .extension,
-.installs {
+.installs,
+#sql_table {
     width: 100%;
     max-width: 100%;
     margin-bottom: $line-height-computed;
@@ -48,6 +72,17 @@ div.mod_repository table tr.info {
     // Nesting
     .table {
         background-color: $body-bg;
+    }
+}
+
+.mod_repository #sql_table td pre {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    label {
+        font-size: 1em;
+        margin: 0;
     }
 }
 
