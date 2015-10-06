@@ -1,5 +1,63 @@
+/*!
+ * Bootstrap v3.3.5 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+// Core variables and mixins
+@import "../components/bootstrap/sass/bootstrap/variables";
+@import "../components/bootstrap/sass/bootstrap/mixins";
+
+// Reset and dependencies
+@import "../components/bootstrap/sass/bootstrap/normalize";
+@import "../components/bootstrap/sass/bootstrap/print";
+@import "../components/bootstrap/sass/bootstrap/glyphicons";
+
+// Core CSS
+@import "../components/bootstrap/sass/bootstrap/scaffolding";
+@import "../components/bootstrap/sass/bootstrap/type";
+@import "../components/bootstrap/sass/bootstrap/code";
+@import "../components/bootstrap/sass/bootstrap/grid";
+@import "../components/bootstrap/sass/bootstrap/tables";
+@import "../components/bootstrap/sass/bootstrap/forms";
+@import "../components/bootstrap/sass/bootstrap/buttons";
+
+// Components
+@import "../components/bootstrap/sass/bootstrap/component-animations";
+@import "../components/bootstrap/sass/bootstrap/dropdowns";
+@import "../components/bootstrap/sass/bootstrap/button-groups";
+@import "../components/bootstrap/sass/bootstrap/input-groups";
+@import "../components/bootstrap/sass/bootstrap/navs";
+@import "../components/bootstrap/sass/bootstrap/navbar";
+@import "../components/bootstrap/sass/bootstrap/breadcrumbs";
+@import "../components/bootstrap/sass/bootstrap/pagination";
+@import "../components/bootstrap/sass/bootstrap/pager";
+@import "../components/bootstrap/sass/bootstrap/labels";
+@import "../components/bootstrap/sass/bootstrap/badges";
+@import "../components/bootstrap/sass/bootstrap/jumbotron";
+@import "../components/bootstrap/sass/bootstrap/thumbnails";
+@import "../components/bootstrap/sass/bootstrap/alerts";
+@import "../components/bootstrap/sass/bootstrap/progress-bars";
+@import "../components/bootstrap/sass/bootstrap/media";
+@import "../components/bootstrap/sass/bootstrap/list-group";
+@import "../components/bootstrap/sass/bootstrap/panels";
+@import "../components/bootstrap/sass/bootstrap/responsive-embed";
+@import "../components/bootstrap/sass/bootstrap/wells";
+@import "../components/bootstrap/sass/bootstrap/close";
+
+// Components w/ JavaScript
+@import "../components/bootstrap/sass/bootstrap/modals";
+@import "../components/bootstrap/sass/bootstrap/tooltip";
+@import "../components/bootstrap/sass/bootstrap/popovers";
+@import "../components/bootstrap/sass/bootstrap/carousel";
+
+// Utility classes
+@import "../components/bootstrap/sass/bootstrap/utilities";
+@import "../components/bootstrap/sass/bootstrap/responsive-utilities";
+
+
 /* sb.admin components */
-@import "../components/bootstrap/css/_bootstrap.min.scss";
+//@import "../components/bootstrap/css/_bootstrap.min.scss";
 @import "../components/metisMenu/css/metisMenu.min";
 @import "../components/morris/morris";
 @import "../components/startbootstrap-sb-admin-2/sass/variables";
