@@ -9,3 +9,10 @@ div.mod_repository table tr.info {
 .installs {
     @extend .table;
 }
+
+.extension {
+    .leftblock a {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
