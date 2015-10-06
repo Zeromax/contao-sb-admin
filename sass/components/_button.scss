@@ -158,4 +158,10 @@ input[type="submit"]:hover,
             margin-top: 10px;
         }
     }
+    #tl_buttons {
+        float: none;
+        + p {
+            margin-top: 0;
+        }
+    }
 }
