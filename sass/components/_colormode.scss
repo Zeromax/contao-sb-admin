@@ -1,72 +1,103 @@
-.dark-theme {
-	background-color: #222;
-	color: #A9B7C6;
+@mixin color-mode($font-color, $wrapper-color, $prim-background, $sec-color, $sidebar-link, $sidebar-link-hover) {
+	background-color: $prim-background;
+	color: $font-color;
 	.sidebar-nav,
 	.navbar {
 		@extend .navbar-inverse;
 	}
 	.sidebar ul li,
 	#page-wrapper {
-		border-color: #080808;
+		border-color: $sec-color;
 	}
-	#page-wrapper {
-		background-color: #2B2B2B;
+	#page-wrapper,
+	.panel,
+	.dropdown-menu {
+		background-color: $wrapper-color;
 	}
 	.sidebar-nav ul li ul li {
 		&.active,
 		&:focus,
 		&:hover {
-			background-color: #080808;
+			background-color: $sec-color;
 		}
 		a {
-			color: #9d9d9d;
+			color: $sidebar-link;
 			opacity: 0.9;
 		}
 		a.active,
 		a:focus,
 		a:hover {
-			background-color: #080808;
-			color: #fff;
+			background-color: $sec-color;
+			color: $sidebar-link-hover;
 		}
 	}
+	.panel-heading,
+	.panel-footer,
+	.table-striped > tbody > tr:nth-of-type(odd),
 	#tl_ajaxOverlay {
-		background-color: #222;
+		background-color: $prim-background;
+	}
+	.panel-heading {
+		color: $sidebar-link;
 	}
 	.chzn-container-single .chzn-single,
 	select,
+	textarea,
 	input[type="text"] {
-		background-color: #2B2B2B;
-		color: #A9B7C6;
+		background-color: $wrapper-color;
+		color: $font-color;
 	}
 	.tl_submit_container,
 	.tl_panel,
 	.tl_panel_bottom,
 	.tl_version_panel,
 	.tl_listing_container.parent_view .tl_header {
-		background-color: #222;
+		background-color: $prim-background;
 	}
 	.table-hover > tbody > tr:hover {
-		background-color: #080808;
+		background-color: $sec-color;
 	}
 	.tl_listing {
 		li {
 			&.tl_file:hover {
-				background-color: #080808;
+				background-color: $sec-color;
 			}
 		}
 	}
 	.tl_listing_container {
 		.tl_header {
 			&:hover {
-				background-color: #080808;
+				background-color: $sec-color;
 			}
 		}
 		> ul {
 			> li {
 				&:hover {
-					background-color: #080808;
+					background-color: $sec-color;
 				}
 			}
 		}
 	}
+}
+
+.dark-theme {
+	@include color-mode(
+			#A9B7C6,    // $font-color
+			#2B2B2B,    // $wrapper-color
+			#222222,    // $prim-background
+			#080808,    // $sec-color
+			#9d9d9d,    // $sidebar-link
+			#FFFFFF     // $sidebar-link-hover
+	);
+}
+
+.coffee-theme {
+	@include color-mode(
+			#716358,    // $font-color
+			#D7D2CC,    // $wrapper-color
+			#FFFFFF,    // $prim-background
+			#6F625A,    // $sec-color
+			#D7D2CC,    // $sidebar-link
+			#FFFFFF     // $sidebar-link-hover
+	);
 }
