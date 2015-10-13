@@ -46,13 +46,19 @@ ul {
     .tl_folder {
         background-color: $gray-lightest;
     }
-    .tl_folder_top .tl_left,
-    .tl_folder .tl_left,
-    .tl_file .tl_left {
-        display: block;
-        float: left;
-        > *:first-child {
-            margin-left: 10px;
+    .tl_folder_top,
+    .tl_folder,
+    .tl_file {
+        .tl_left {
+            display: block;
+            float: left;
+            > *:first-child {
+                margin-left: 10px;
+            }
+            .fa-minus-square-o,
+            .fa-plus-square-o {
+                margin-right: 0 !important;
+            }
         }
     }
     .tl_file .tl_left {
