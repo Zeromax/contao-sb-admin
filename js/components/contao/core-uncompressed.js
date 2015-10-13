@@ -466,23 +466,34 @@ var AjaxRequest =
 
 		var img = null,
 			image = $(el).getFirst('i'),
-			publish = (image.hasClass('fa-eye-slash')),
+			publish = (image.get('data-state') == 1),
 			div = el.getParent('div'),
 			next;
+
+		// Backwards compatibility
+		if (image.get('data-state') === null) {
+			publish = (image.hasClass('fa-eye-slash'));
+			console.warn('Using a visibility toggle without a "data-state" attribute is deprecated. Please adjust your Contao DCA file.');
+		}
 
 		// Find the icon depending on the view (tree view, list view, parent view)
 		if (div.hasClass('tl_right')) {
 			img = div.getPrevious('div').getElement('img');
 		} else if (div.hasClass('tl_listing_container')) {
 			img = el.getParent('td').getPrevious('td').getFirst('div.list_icon');
-			if (img == null) { // Comments
+			if (img === null) { // comments
 				img = el.getParent('td').getPrevious('td').getElement('div.cte_type');
 			}
-			if (img == null) { // showColumns
+			if (img === null) { // showColumns
 				img = el.getParent('tr').getFirst('td').getElement('div.list_icon_new');
 			}
-		} else if ((next = div.getNext('div')) && next.hasClass('cte_type')) {
-			img = next;
+		} else if (next = div.getNext('div')) {
+			if (next.hasClass('cte_type')) {
+				img = next;
+			}
+			if (img === null) { // newsletter recipients
+				img = next.getFirst('div.list_icon');
+			}
 		}
 
 		// Change the icon
