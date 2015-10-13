@@ -99,17 +99,22 @@ a {
     content: "\f15b";
 }
 
-.header_css_import {
-    background-image: url("../images/cssimport.gif");
-}
-
-.header_theme_import {
-    background-image: url("../images/theme_import.gif");
-}
-
-.header_store {
-    padding-left: 18px;
-    background-image: url("../images/store.gif");
+#tl_buttons > a {
+    &.header_css_import,
+    &.header_theme_import,
+    &.header_store {
+        padding-left: 31px;
+        background: no-repeat 12px center;
+    }
+    &.header_css_import {
+        background-image: url("../images/cssimport.gif");
+    }
+    &.header_theme_import {
+        background-image: url("../images/theme_import.gif");
+    }
+    &.header_store {
+        background-image: url("../images/store.gif");
+    }
 }
 
 .header_toggle:before {
