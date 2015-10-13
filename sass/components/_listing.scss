@@ -68,6 +68,11 @@ ul {
         float: right;
         padding-right: 10px;
     }
+    .tl_file .tl_left {
+        br + img {
+            margin: 0 0 10px 32px !important;
+        }
+    }
     > tbody > tr:last-child > td,
     > tbody > tr:last-child > th,
     > tfoot > tr:last-child > td,
