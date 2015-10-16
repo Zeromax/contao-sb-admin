@@ -115,7 +115,8 @@ ul {
     .tl_content_right {
         float: right;
     }
-    &.toggle_select:after {
+    &.odd:after,
+    &.even:after {
         @include clear();
     }
     .row {
