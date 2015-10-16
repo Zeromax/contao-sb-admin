@@ -115,13 +115,16 @@ ul {
     .tl_content_right {
         float: right;
     }
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
     &.odd:after,
     &.even:after {
         @include clear();
     }
-    .row {
-        margin-left: 0;
-        margin-right: 0;
+    &:hover {
+        background-color: $line-hover-color;
     }
 }
 
@@ -226,9 +229,6 @@ div.comment_wrap {
         }
         > li {
             list-style-type: none;
-            &:hover {
-                background-color: $line-hover-color;
-            }
             .tl_content {
                 border-bottom: 1px $listing-border-color solid;
                 padding: 10px;
