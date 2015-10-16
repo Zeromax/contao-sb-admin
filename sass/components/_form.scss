@@ -157,11 +157,13 @@ fieldset.tl_box > legend {
     }
 }
 
+.tl_checkbox_container legend,
 .tl_formbody_edit h3 {
     font-size: 1.1em;
     max-width: 100%;
     margin-bottom: 5px;
     font-weight: 700;
+    border: none;
 }
 
 .tl_textarea {
