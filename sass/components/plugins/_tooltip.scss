@@ -3,7 +3,7 @@
     overflow: hidden;
     cursor: pointer;
     display: block;
-    height: 18px;
+    height: 20px;
     margin-top: 5px;
     margin-bottom: 10px;
     color: #737373;
@@ -43,4 +43,10 @@
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
     border-bottom: 7px solid #666;
+}
+
+.tl_error.tl_tip {
+    height: 20px;
+    padding: 2px 5px;
+    margin-right: 5%;
 }
