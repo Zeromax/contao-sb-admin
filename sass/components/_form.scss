@@ -308,10 +308,28 @@ input.tl_imageSize_0.tl_text_4, input.tl_imageSize_1.tl_text_4 {
 }
 
 .selector_container {
+    position: relative;
     ul {
         list-style: none;
         padding-left: 0;
     }
+}
+
+.gimage {
+    margin: 2px;
+    border: 1px solid $legend-border-color;
+}
+
+ul.sgallery li {
+    float: left;
+}
+
+ul.sortable li {
+    cursor: move;
+}
+
+ul:after {
+    @include clear();
 }
 
 ul {

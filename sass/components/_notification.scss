@@ -164,6 +164,22 @@ fieldset.tl_box > legend:before {
     }
 }
 
+.sort_hint {
+    position: absolute;
+    font-family: "Architects Daughter", cursive;
+    font-size: 1em;
+    color: #8a6d3b;
+    top: -50px;
+    left:300px;
+    padding: 10px 10px 20px 36px;
+    margin-right: 20px;
+    margin-left: 15px;
+    background: #fcf8e3 url("../images/arrow_left.png") bottom left no-repeat;
+    margin-bottom: 20px;
+    border: 1px solid #faebcc;
+    border-radius: 4px;
+}
+
 .notify-me {
     @include css-transition(box-shadow, 0.5s, ease-in-out);
 }
