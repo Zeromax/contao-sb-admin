@@ -205,6 +205,9 @@ div.comment_wrap {
 }
 
 .tl_listing_container {
+    &:before {
+        @include clear();
+    }
     .tl_header {
         border-bottom: 1px $listing-border-color solid;
         &:hover {
