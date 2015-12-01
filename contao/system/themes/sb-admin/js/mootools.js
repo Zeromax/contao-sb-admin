@@ -1634,9 +1634,7 @@ var Backend =
 				}
 				tr.inject(parent, 'after');
 				tr.getElement('.chzn-container').destroy();
-				tr.getElement('.tl_select_column').destroy();
 				new Chosen(tr.getElement('select.tl_select'));
-				Stylect.convertSelects();
 				Backend.convertEnableModules();
 				break;
 			case 'up':
@@ -1957,9 +1955,11 @@ var Backend =
 
 		if (el.value > 0) {
 			td.getElement('a.module_link').setStyle('display', 'inline');
+			td.getElement('a.module_link').addClass('force-display');
 			td.getElement('i.module_image').setStyle('display', 'none');
 		} else {
 			td.getElement('a.module_link').setStyle('display', 'none');
+			td.getElement('a.module_link').removeClass('force-display');
 			td.getElement('i.module_image').setStyle('display', 'inline');
 		}
 	},
