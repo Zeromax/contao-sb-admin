@@ -132,6 +132,11 @@ class SbTemplate
             array("'height':274", "'height':228"),
             $objTemplate->main
         );
+        $objTemplate->main = str_replace(
+            "x:-211,y:-209",
+            "x:-257,y:-261",
+            $objTemplate->main
+        );
         $arrHeadline = explode("»", $objTemplate->headline);
         $objTemplate->headline = array_pop($arrHeadline);
         if (count($arrHeadline) > 0) {
