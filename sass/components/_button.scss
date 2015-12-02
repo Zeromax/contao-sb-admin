@@ -146,6 +146,10 @@ input[type="submit"]:hover,
     border-color: #adadad;
 }
 
+.drag-handle {
+    cursor: move;
+}
+
 @media (max-width: 48em) {
     .tl_panel .tl_filter {
         text-align: left;
