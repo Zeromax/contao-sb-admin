@@ -93,8 +93,10 @@ class Image extends \Contao\Image
             $cssClass = isset($matches[1]) ? " " . $matches[1] : "";
             preg_match('/style=\"([^\"]*)\"/', $attributes, $matches);
             $style = isset($matches[1]) ? ' style="' . $matches[1] . '"' : "";
+            preg_match('/title=\"([^\"]*)\"/', $attributes, $matches);
+            $title = isset($matches[1]) ? ' title="' . $matches[1] . '"' : "";
 
-            return sprintf('<i class="fa fa-%s%s action-icon"%s></i>', $arrImage[$src], $cssClass, $style);
+            return sprintf('<i class="fa fa-%s%s action-icon"%s%s></i>', $arrImage[$src], $cssClass, $style, $title);
         }
 
         return parent::getHtml($src, $alt, $attributes);

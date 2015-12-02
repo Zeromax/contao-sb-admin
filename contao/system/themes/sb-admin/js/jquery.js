@@ -52,8 +52,8 @@ d.trigger("activate.bs.scrollspy")},b.prototype.clear=function(){a(this.selector
 			collapsingClass: 'm-collapsing'
 		});
 
-		//Loads the correct sidebar on window load,
-		//collapses the sidebar on window resize.
+		// Loads the correct sidebar on window load,
+		// collapses the sidebar on window resize.
 		// Sets the min-height of #page-wrapper to window size
 		$(window).bind("load resize", function() {
 			var topOffset = 50;
@@ -84,7 +84,7 @@ d.trigger("activate.bs.scrollspy")},b.prototype.clear=function(){a(this.selector
 
 
 		$('body').tooltip({
-			selector: '[data-toggle="tooltip"], a, .tl_tip',
+			selector: '[data-toggle="tooltip"], a, .tl_tip, i[title]',
 			placement: 'bottom',
 			container: 'body'
 		}).on('hide.bs.tooltip hidden.bs.tooltip show.bs.tooltip shown.bs.tooltip', function (el) {
