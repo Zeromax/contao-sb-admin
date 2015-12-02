@@ -90,9 +90,6 @@ fieldset.tl_box > legend {
 .w50 {
     width: 50%;
     float: left;
-    .tl_radio_table {
-        width: 100%;
-    }
 }
 
 .clr {
@@ -210,8 +207,8 @@ div.wizard h3 {
     display: table-row;
 }
 
-.tl_radio_table {
-    width: 50%;
+.tl_radio_table td {
+    min-width: 80px;
 }
 
 .tl_checkbox_container {
