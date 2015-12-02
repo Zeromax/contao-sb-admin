@@ -1634,6 +1634,10 @@ var Backend =
 				tr.getElement('.chzn-container').destroy();
 				new Chosen(tr.getElement('select.tl_select'));
 				Backend.convertEnableModules();
+				if ($($(el).getAttribute('aria-describedby')) !== null) {
+					$($(el).getAttribute('aria-describedby')).destroy();
+					$(el).removeAttribute('aria-describedby');
+				}
 				break;
 			case 'up':
 				if (tr = parent.getPrevious('tr')) {
@@ -1651,6 +1655,9 @@ var Backend =
 				break;
 			case 'delete':
 				if (rows.length > 1) {
+					if ($($(el).getAttribute('aria-describedby')) !== null) {
+						$($(el).getAttribute('aria-describedby')).destroy();
+					}
 					parent.destroy();
 				}
 				break;
