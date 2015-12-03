@@ -1,5 +1,7 @@
-[![Version](http://img.shields.io/packagist/v/zeromax/contao-sb-admin.svg?style=flat-square)](http://packagist.com/packages/zeromax/contao-sb-admin)
-[![License](http://img.shields.io/packagist/l/zeromax/contao-sb-admin.svg?style=flat-square)](http://packagist.com/packages/zeromax/contao-sb-admin)
+[![Latest Stable Version](https://poser.pugx.org/zeromax/contao-sb-admin/v/stable)](https://packagist.org/packages/zeromax/contao-sb-admin)
+[![Total Downloads](https://poser.pugx.org/zeromax/contao-sb-admin/downloads)](https://packagist.org/packages/zeromax/contao-sb-admin)
+[![Latest Unstable Version](https://poser.pugx.org/zeromax/contao-sb-admin/v/unstable)](https://packagist.org/packages/zeromax/contao-sb-admin)
+[![License](https://poser.pugx.org/zeromax/contao-sb-admin/license)](https://packagist.org/packages/zeromax/contao-sb-admin)
 
 # contao-sb-admin
 This is a back end theme for the Open Source CMS Contao https://contao.org.
