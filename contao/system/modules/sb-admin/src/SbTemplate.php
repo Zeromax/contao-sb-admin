@@ -53,12 +53,17 @@ class SbTemplate
      */
     public function chooseTemplates()
     {
+        // do not choose backend templates in the frontend see #27
+        if (TL_MODE == "FE") {
+            return;
+        }
+
         // check theme for back end user
         /** @var \BackendUser $objUser */
         $objUser = \Controller::importStatic('BackendUser');
         $loggedIn = $this->beUserLoggedIn($objUser);
 
-        if ($loggedIn === false && TL_MODE == "FE") {
+        if ($loggedIn === false) {
             return;
         }
 
