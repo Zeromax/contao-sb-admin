@@ -11,10 +11,7 @@
  * @copyright brothers-project 2015
  */
 
-if (TL_MODE == "BE")
-{
-	$GLOBALS['TL_HOOKS']['parseTemplate'][] = array('SbTemplate', 'parseTemplate');
-}
+$GLOBALS['TL_HOOKS']['parseTemplate'][] = array('SbTemplate', 'parseTemplate');
 $GLOBALS['TL_HOOKS']['initializeSystem'][] = array('SbTemplate', 'chooseTemplates');
 
 if (version_compare(VERSION, '3.2', '<='))

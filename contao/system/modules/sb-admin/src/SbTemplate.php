@@ -35,7 +35,7 @@ class SbTemplate
     {
         $strTemplate = $objTemplate->getName();
 
-        if (\Backend::getTheme() != "sb-admin") {
+        if (\Backend::getTheme() != "sb-admin" || strpos($strTemplate, 'be_') === false ) {
             return;
         }
         switch ($strTemplate) {
@@ -44,6 +44,9 @@ class SbTemplate
                 break;
             case "be_welcome":
                 $this->parseWelcomeTemplate($objTemplate);
+                break;
+            case "be_switch":
+                \TemplateLoader::addFile('be_switch', 'system/modules/sb-admin/templates/backend');
                 break;
         }
     }
@@ -62,10 +65,6 @@ class SbTemplate
         /** @var \BackendUser $objUser */
         $objUser = \Controller::importStatic('BackendUser');
         $loggedIn = $this->beUserLoggedIn($objUser);
-
-        if ($loggedIn === false) {
-            return;
-        }
 
         $theme = $objUser->backendTheme;
         if (($loggedIn === false && \Config::get('backendTheme') != "sb-admin") || ($theme !== null && $theme != "sb-admin")) {
