@@ -82,11 +82,11 @@ d.trigger("activate.bs.scrollspy")},b.prototype.clear=function(){a(this.selector
 			$(el).addClass('force-display');
 		});
 
-
 		$('body').tooltip({
 			selector: '[data-toggle="tooltip"], a, .tl_tip, i[title]',
 			placement: 'bottom',
-			container: 'body'
+			container: 'body',
+			delay: { "show": 1500, "hide": 0 }
 		}).on('hide.bs.tooltip hidden.bs.tooltip show.bs.tooltip shown.bs.tooltip', function (el) {
 			el.target.addClass('force-display');
 		});
