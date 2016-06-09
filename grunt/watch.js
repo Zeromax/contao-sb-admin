@@ -6,7 +6,7 @@ module.exports = {
         ],
         tasks: [
             'sass:development',
-            // 'sass:production',
+            'sass:production',
             'notify:watchScss'
         ]
     },
