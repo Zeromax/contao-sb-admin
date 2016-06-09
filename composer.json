@@ -32,6 +32,11 @@
     "replace": {
         "contao-legacy/sb-admin": "*"
     },
+    "autoload": {
+        "psr-4": {
+            "SbAdmin\\": "contao/system/modules/sb-admin/src/"
+        }
+    },
     "extra": {
         "contao": {
             "sources": {
