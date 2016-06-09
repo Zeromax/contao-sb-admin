@@ -1,0 +1,24 @@
+{
+  "name": "zeromax-contao-sb-admin",
+  "version": "1.0.2",
+  "private": true,
+  "description": "Responsive Backend Theme for Contao Based on Startbootstrap Admin 2.0",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zeromax/contao-sb-admin"
+  },
+  "author": "",
+  "license": "LGPL-3.0+",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-notify": "^0.4.3",
+    "grunt-sass": "^1.1.0",
+    "load-grunt-config": "^0.19.1",
+    "load-grunt-tasks": "^3.4.0"
+  }
+}
