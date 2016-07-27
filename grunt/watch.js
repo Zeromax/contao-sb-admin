@@ -10,6 +10,16 @@ module.exports = {
             'notify:watchScss'
         ]
     },
+    js: {
+        files: [
+            'js/components/**/*.js'
+        ],
+        tasks: [
+            'newer:concat:jquery',
+            'newer:concat:mootools',
+            'newer:concat:morris'
+        ]
+    },
     grunt: {
         files: [
             'grunt/*',
