@@ -1,8 +1,14 @@
 module.exports = {
     watchScss: {
         options: {
-            title: 'Scss successful parsed',
-            message: 'Scss for sb-admin is successful parsed'
+            title: 'Contao sb-admin',
+            message: 'Scss successful parsed'
+        }
+    },
+    watchJs: {
+        options: {
+            title: 'Contao sb-admin',
+            message: 'JavaScript successful parsed'
         }
     }
 };

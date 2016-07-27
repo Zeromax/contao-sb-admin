@@ -1,6 +1,4 @@
-//@prepros-append components/contao/core-uncompressed.js
-//@prepros-append components/m_custom.js
-;/**
+/**
  * Contao Open Source CMS
  *
  * Copyright (c) 2005-2015 Leo Feyer
