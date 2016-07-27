@@ -9395,7 +9395,9 @@ td.nw span,
   background-size: cover; }
 
 .sidebar-nav ul li a {
-  display: block !important; }
+  display: block !important;
+  padding-top: 6px;
+  padding-bottom: 6px; }
 
 .sidebar-nav ul li ul li {
   padding-left: 20px; }
@@ -9578,7 +9580,7 @@ td.nw,
       width: 50px; }
   .sidebar-nav ul li > a {
     width: 50px;
-    height: 40px;
+    height: 32px;
     padding-right: 6px; }
   .sidebar-nav ul li
 .icon-only {
