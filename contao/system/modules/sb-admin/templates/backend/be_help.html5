@@ -10,8 +10,8 @@
 
     <link rel="stylesheet" href="<?php
     $objCombiner = new Combiner();
-    $version = filemtime(TL_ROOT . '/system/themes/' . $this->theme . '/css/style.css');
-    $objCombiner->add('system/themes/' . $this->theme . '/css/style.css', $version);
+    $version = filemtime(TL_ROOT . '/system/themes/' . $this->theme . '/css/style.min.css');
+    $objCombiner->add('system/themes/' . $this->theme . '/css/style.min.css', $version);
     echo $objCombiner->getCombinedFile();
     ?>">
     <!--[if IE]>

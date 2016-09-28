@@ -23,8 +23,8 @@ $backendUserLogIn = sha1(session_id() . (!Config::get('disableIpCheck') ? Enviro
 
 		<link rel="stylesheet" href="<?php
 		$objCombiner = new Combiner();
-		$version = filemtime(TL_ROOT . '/system/themes/' . $theme . '/css/style.css');
-		$objCombiner->add('system/themes/' . $theme . '/css/style.css', $version);
+		$version = filemtime(TL_ROOT . '/system/themes/' . $theme . '/css/style.min.css');
+		$objCombiner->add('system/themes/' . $theme . '/css/style.min.css', $version);
 		echo $objCombiner->getCombinedFile();
 		?>">
 

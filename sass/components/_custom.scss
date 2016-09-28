@@ -88,6 +88,8 @@ td.nw span,
     ul li {
         a {
             display: block !important;
+            padding-top: 6px;
+            padding-bottom: 6px;
         }
         ul {
             li {
@@ -314,7 +316,7 @@ td.nw,
         }
         > a {
             width: 50px;
-            height: 40px;
+            height: 32px;
             padding-right: 6px;
         }
     }

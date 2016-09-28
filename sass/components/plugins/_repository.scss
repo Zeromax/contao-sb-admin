@@ -5,11 +5,31 @@ div.mod_repository table tr.info {
     }
 }
 
-.color_green,
-.color_red,
-.color_blue,
-.color_darkorange {
+div.color_green,
+div.color_red,
+div.color_blue,
+div.color_darkorange {
     @extend .alert;
+}
+
+.col_status {
+    div.color_green,
+    div.color_red,
+    div.color_blue,
+    div.color_darkorange {
+        padding: 4px;
+        margin: 0;
+        font-size: 14px;
+    }
+}
+
+.installlog {
+    div.color_green,
+    div.color_red,
+    div.color_blue,
+    div.color_darkorange {
+        margin-top: $line-height-computed;
+    }
 }
 
 .color_green {
@@ -26,6 +46,13 @@ div.mod_repository table tr.info {
 
 .color_darkorange {
     @extend .alert-warning;
+}
+
+span.color_green,
+span.color_red,
+span.color_blue,
+span.color_darkorange {
+    background: none;
 }
 
 table.extension,
