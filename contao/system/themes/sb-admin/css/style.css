@@ -4353,38 +4353,38 @@ a.thumbnail:focus,
 a.thumbnail.active {
   border-color: #337ab7; }
 
-.alert, .color_green,
-.color_red,
-.color_blue,
-.color_darkorange {
+.alert, div.color_green,
+div.color_red,
+div.color_blue,
+div.color_darkorange {
   padding: 15px;
   margin-bottom: 20px;
   border: 1px solid transparent;
   border-radius: 4px; }
-  .alert h4, .color_green h4,
-  .color_red h4,
-  .color_blue h4,
-  .color_darkorange h4 {
+  .alert h4, div.color_green h4,
+  div.color_red h4,
+  div.color_blue h4,
+  div.color_darkorange h4 {
     margin-top: 0;
     color: inherit; }
-  .alert .alert-link, .color_green .alert-link,
-  .color_red .alert-link,
-  .color_blue .alert-link,
-  .color_darkorange .alert-link {
+  .alert .alert-link, div.color_green .alert-link,
+  div.color_red .alert-link,
+  div.color_blue .alert-link,
+  div.color_darkorange .alert-link {
     font-weight: bold; }
-  .alert > p, .color_green > p,
-  .color_red > p,
-  .color_blue > p,
-  .color_darkorange > p,
-  .alert > ul, .color_green > ul,
-  .color_red > ul,
-  .color_blue > ul,
-  .color_darkorange > ul {
+  .alert > p, div.color_green > p,
+  div.color_red > p,
+  div.color_blue > p,
+  div.color_darkorange > p,
+  .alert > ul, div.color_green > ul,
+  div.color_red > ul,
+  div.color_blue > ul,
+  div.color_darkorange > ul {
     margin-bottom: 0; }
-  .alert > p + p, .color_green > p + p,
-  .color_red > p + p,
-  .color_blue > p + p,
-  .color_darkorange > p + p {
+  .alert > p + p, div.color_green > p + p,
+  div.color_red > p + p,
+  div.color_blue > p + p,
+  div.color_darkorange > p + p {
     margin-top: 5px; }
 
 .alert-dismissable,
@@ -9162,6 +9162,26 @@ div.mod_repository table tr.info th,
 div.mod_repository table tr.info td {
   font-size: 1em; }
 
+.col_status div.color_green,
+.col_status div.color_red,
+.col_status div.color_blue,
+.col_status div.color_darkorange {
+  padding: 4px;
+  margin: 0;
+  font-size: 14px; }
+
+.installlog div.color_green,
+.installlog div.color_red,
+.installlog div.color_blue,
+.installlog div.color_darkorange {
+  margin-top: 20px; }
+
+span.color_green,
+span.color_red,
+span.color_blue,
+span.color_darkorange {
+  background: none; }
+
 table.extension,
 .installs,
 #sql_table {
@@ -9582,8 +9602,7 @@ td.nw,
     width: 50px;
     height: 32px;
     padding-right: 6px; }
-  .sidebar-nav ul li
-.icon-only {
+  .sidebar-nav ul li .icon-only {
     display: none; } }
 
 @media (max-width: 47.775em) {
